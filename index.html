@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beatriz Medina · Product Designer & iOS Specialist</title>
+  <meta name="description" content="Portfólio de Product Design de Beatriz Medina. Produtos iOS reais que conectam necessidades do usuário aos objetivos de negócio, da imersão à validação." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV BAR ===================== -->
+  <nav class="nav" aria-label="Navegação principal">
+    <div class="nav-inner">
+      <a href="#sobre" class="nav-brand">Beatriz Medina</a>
+      <div class="nav-links">
+        <a href="#sobre" class="nav-section" data-en="About">Sobre</a>
+        <a href="#trabalhos" class="nav-section" data-en="Work">Trabalhos</a>
+        <a href="#contato" class="nav-section" data-en="Contact">Contato</a>
+        <div class="lang" role="group" aria-label="Seletor de idioma">
+          <button type="button" class="active" data-lang="pt" aria-pressed="true">PT</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO (SOBRE) ===================== -->
+  <header id="sobre" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow" data-en="Product Designer &amp; iOS Specialist">Product Designer &amp; iOS Specialist</span>
+        <h1 data-en="Hi, I'm Beatriz Medina.">Olá, eu sou a Beatriz Medina.</h1>
+        <p class="role" data-en="I design digital products that blend user experience with technical feasibility.">Desenho produtos digitais que unem experiência do usuário e viabilidade técnica.</p>
+        <p data-en="I'm a Product Designer with a solid technical background, currently pursuing a degree in Computer Science and a graduate of the Systems Analysis and Development technical program at Porto Digital. As a Designer in the Apple Developer Academy program in Brasília, I built a deep understanding of the iOS ecosystem, where I align interface, experience and the reality of what can actually be built.">Sou Product Designer com sólida bagagem técnica, graduanda em Ciência da Computação e formada no curso técnico de Análise e Desenvolvimento de Sistemas pelo Porto Digital. Como Designer no programa Apple Developer Academy em Brasília, construí uma visão profunda do ecossistema iOS, onde alinho interface, experiência e a realidade do que é possível construir.</p>
+        <p data-en="My work starts in immersion and ends in validation. I translate real user needs into product decisions, always connected to business goals. I've won team awards in more than 8 hackathons as a product designer, leading processes from the initial hypothesis to the high-fidelity interface.">Meu trabalho começa na imersão e termina na validação. Traduzo necessidades reais de usuário em decisões de produto, sempre conectadas aos objetivos de negócio. Já conquistei premiações em equipe em mais de 8 hackathons atuando como product designer, liderando processos da hipótese inicial até a interface de alta fidelidade.</p>
+        <div class="tag-row">
+          <span class="tag" data-en="Research &amp; Immersion">Pesquisa &amp; Imersão</span>
+          <span class="tag" data-en="UX / UI Design">UX / UI Design</span>
+          <span class="tag">FigJam</span>
+          <span class="tag">Figma</span>
+          <span class="tag" data-en="iOS &amp; watchOS">iOS &amp; watchOS</span>
+          <span class="tag" data-en="Validation &amp; Testing">Validação e Testes</span>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/profile.jpg" alt="Retrato de Beatriz Medina, Product Designer" />
+      </div>
+    </div>
+
+    <!-- Manifesto -->
+    <div class="container">
+      <div class="manifesto">
+        <span class="quote-mark gradient-text" aria-hidden="true">&ldquo;</span>
+        <blockquote>
+          <span data-en="Love the process and">Ame o processo e</span>
+          <span class="accent gradient-text" data-en="the result will be just a consequence.">o resultado será apenas uma consequência.</span>
+        </blockquote>
+        <cite data-en="My design essence">A minha essência no design</cite>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== PROJETOS GRID ===================== -->
+  <section id="trabalhos" class="work">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-en="Real products">Produtos reais</span>
+        <h2 data-en="Live on the App Store, designed end to end.">No ar na App Store, desenhados de ponta a ponta.</h2>
+        <p data-en="Each product shows the reasoning behind the screens: how research becomes a hypothesis, the hypothesis becomes a flow, and the flow becomes a validated, shipped interface.">Cada produto mostra a linha de raciocínio por trás das telas: como a pesquisa vira hipótese, a hipótese vira fluxo e o fluxo vira uma interface validada e publicada.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Produto 1 -->
+        <div class="project-card">
+          <div class="pc-body">
+            <span class="pc-cat" data-en="iOS App · Experience discovery">App iOS · Descoberta de experiências</span>
+            <h3>BorAli? Explore Brasília</h3>
+            <p data-en="An app that reduces the friction of going out and turns intention into real social experiences across the city.">Um app que reduz a fricção de sair de casa e transforma intenção em experiências sociais reais na cidade.</p>
+            <div class="pc-media">
+              <img src="assets/borali/screenshots.png" alt="Telas do app BorAli? Explore Brasília" loading="lazy" />
+            </div>
+            <div class="pc-actions">
+              <a href="#borali" class="pc-link" data-en="See the product <span>&rarr;</span>">Conheça o produto <span>&rarr;</span></a>
+              <a href="https://apps.apple.com/br/app/borali-explore-bras%C3%ADlia/id6764412373?l=en-GB" target="_blank" rel="noopener" class="appstore" aria-label="BorAli na App Store">
+                <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                <span data-en="App Store">App Store</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="project-card">
+          <div class="pc-body">
+            <span class="pc-cat" data-en="iOS + watchOS App · Sport &amp; performance">App iOS + watchOS · Esporte &amp; performance</span>
+            <h3>SETE</h3>
+            <p data-en="Training metrics tracking for court-sport players, bringing to amateurs the data that used to belong only to elite athletes.">Acompanhamento de métricas de treino para atletas de quadra, democratizando dados que antes eram só do alto rendimento.</p>
+            <div class="pc-media">
+              <img src="assets/sete/screenshots.png" alt="Telas do app SETE" loading="lazy" />
+            </div>
+            <div class="pc-actions">
+              <a href="#sete" class="pc-link" data-en="See the product <span>&rarr;</span>">Conheça o produto <span>&rarr;</span></a>
+              <a href="https://apps.apple.com/br/app/sete-esporte-e-performance/id6751563867?l=en-GB" target="_blank" rel="noopener" class="appstore" aria-label="SETE na App Store">
+                <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                <span data-en="App Store">App Store</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produto 3 (placeholder) -->
+        <div class="project-card coming" aria-label="Produto em breve">
+          <div class="pc-body">
+            <span class="badge-soon" data-en="Coming soon">Em breve</span>
+            <h3 data-en="Product 03">Produto 03</h3>
+            <p data-en="A new product in the making. Soon, another full design process right here.">Novo produto em produção. Em breve, mais um processo completo de design por aqui.</p>
+            <div class="placeholder-skeleton" aria-hidden="true"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+
+        <!-- Produto 4 (placeholder) -->
+        <div class="project-card coming" aria-label="Produto em breve">
+          <div class="pc-body">
+            <span class="badge-soon" data-en="Coming soon">Em breve</span>
+            <h3 data-en="Product 04">Produto 04</h3>
+            <p data-en="Reserved space for the next product. Coming soon.">Espaço reservado para o próximo produto. Coming soon.</p>
+            <div class="placeholder-skeleton" aria-hidden="true"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUTO 1: BORALI ===================== -->
+  <section id="borali" class="case">
+    <div class="container">
+      <div class="case-hero">
+        <div class="ch-text">
+          <span class="eyebrow" data-en="Product 01 · On the App Store">Produto 01 · Na App Store</span>
+          <h2>BorAli? Explore Brasília</h2>
+          <p class="ch-sub" data-en="Turning the desire to go out into action, reducing the emotional and logistical friction of living the city.">Como transformar o desejo de sair de casa em ação, reduzindo a fricção emocional e logística de viver a cidade.</p>
+          <div class="ch-cta">
+            <a href="https://apps.apple.com/br/app/borali-explore-bras%C3%ADlia/id6764412373?l=en-GB" target="_blank" rel="noopener" class="appstore">
+              <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span data-en="Download on the App Store">Baixar na App Store</span>
+            </a>
+          </div>
+          <dl class="case-meta">
+            <div><dt data-en="Role">Papel</dt><dd data-en="Product Designer (UX/UI)">Product Designer (UX/UI)</dd></div>
+            <div><dt data-en="Platform">Plataforma</dt><dd>iOS (iPhone)</dd></div>
+            <div><dt data-en="Context">Contexto</dt><dd>Apple Developer Academy · Challenge 13</dd></div>
+            <div><dt data-en="Tools">Ferramentas</dt><dd>FigJam, Figma</dd></div>
+            <div><dt data-en="Team">Time</dt><dd data-en="5 people (design, code and product)">5 pessoas (design, código e produto)</dd></div>
+          </dl>
+        </div>
+        <div class="case-hero-media">
+          <img src="assets/borali/hi-overview.png" alt="Visão geral da interface do BorAli?" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="case-block">
+        <span class="phase-label"><span class="dot"></span><span data-en="Strategy · Engage">Estratégia · Engage</span></span>
+        <h3 data-en="The starting point">O ponto de partida</h3>
+        <p data-en="The product grew out of a Big Idea about immersion. The essential question that guided the team was direct: how can we broaden people's view of the world through an immersive experience? As we refined it, we realized the real problem wasn't lack of interest, but excess friction. People want to go out, but they don't want the emotional and logistical effort it takes.">O produto nasceu de uma Big Idea sobre imersão. A pergunta essencial que guiou o time foi direta: como podemos ampliar a visão de mundo das pessoas por meio de uma experiência imersiva? Ao refinar essa questão, percebemos que o problema real não era falta de interesse, e sim excesso de fricção. As pessoas querem sair, mas não querem o esforço emocional e logístico que isso exige.</p>
+        <p class="muted" data-en="Refined challenge statement: encourage experiences outside the home, connecting people to the community.">Challenge statement refinado: incentivar experiências fora de casa, conectando pessoas à comunidade.</p>
+      </div>
+
+      <div class="case-block">
+        <span class="phase-label"><span class="dot"></span><span data-en="Research in FigJam · Investigate">Pesquisa no FigJam · Investigate</span></span>
+        <h3 data-en="Understand behavior before designing the solution">Entender o comportamento antes de desenhar a solução</h3>
+        <p data-en="I ran the discovery phase in FigJam, organizing benchmarking, interviews and synthesis in a single collaborative space. The goal was to separate what people say from what actually holds them back. The recurring reading was clear: staying home makes you want to stay home, social media sparks the desire (FOMO) but doesn't ease the action, and almost no one goes out alone. Belonging depends on identification, acceptance and active interaction.">Conduzi a fase de descoberta no FigJam, organizando benchmarking, entrevistas e síntese em um único espaço colaborativo. O objetivo era separar o que as pessoas dizem do que de fato as trava. A leitura recorrente foi clara: ficar em casa gera mais vontade de ficar em casa, redes sociais despertam o desejo (FOMO) mas não facilitam a ação, e quase ninguém sai sozinho. Pertencimento depende de identificação, aceitação e interação ativa.</p>
+        <div class="media-2">
+          <figure class="fig"><img src="assets/borali/benchmarking.png" alt="Benchmarking de aplicativos concorrentes" loading="lazy" /><figcaption data-en="Competitive benchmarking">Benchmarking competitivo</figcaption></figure>
+          <figure class="fig"><img src="assets/borali/entrevistas.png" alt="Síntese das entrevistas com usuários" loading="lazy" /><figcaption data-en="Interviews and insight synthesis">Entrevistas e síntese de insights</figcaption></figure>
+        </div>
+        <p data-en="The most valuable insights came from emotional nuance. Cancelling at the last minute turned out to be a protection mechanism, not disinterest. And the urban environment (light, sound, density) guides decisions without people noticing. The conclusion that drove the design: people like to explore, but they don't like uncertainty. The ideal isn't free discovery, it's guided discovery.">Os insights mais valiosos vieram da nuance emocional. Cancelar de última hora se mostrou um mecanismo de proteção, não desinteresse. E o ambiente urbano (luz, som, densidade) guia decisões sem que a pessoa perceba. A conclusão que orientou o design: as pessoas gostam de explorar, mas não gostam de incerteza. O ideal não é descoberta livre, é descoberta guiada.</p>
+      </div>
+
+      <div class="case-block">
+        <span class="phase-label"><span class="dot"></span><span data-en="Personas">Personas</span></span>
+        <h3 data-en="Who we're designing for">Para quem estamos desenhando</h3>
+        <p data-en="I translated the research patterns into two personas that represent distinct motivations and blockers, keeping the team aligned on product decisions throughout the project.">Traduzi os padrões da pesquisa em duas personas que representam motivações e travas distintas, mantendo o time alinhado sobre as decisões de produto ao longo do projeto.</p>
+        <div class="media-2">
+          <figure class="fig"><img src="assets/borali/persona-1.png" alt="Persona 1 do BorAli?" loading="lazy" /><figcaption data-en="Primary persona">Persona primária</figcaption></figure>
+          <figure class="fig"><img src="assets/borali/persona-2.png" alt="Persona 2 do BorAli?" loading="lazy" /><figcaption data-en="Secondary persona">Persona secundária</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <span class="phase-label"><span class="dot"></span><span data-en="Ideation &amp; Prioritization">Ideação &amp; Priorização</span></span>
+        <h3 data-en="From journey to scope decisions">Da jornada às decisões de escopo</h3>
+        <p data-en="I mapped the user journey and the usage stories to see where friction really happened. With the effort versus impact matrix, I prioritized what would make it into the first version, protecting the scope of one core feature instead of spreading effort across secondary ones.">Mapeei a jornada do usuário e as histórias de uso para enxergar onde a fricção realmente acontecia. Com a matriz de esforço por impacto, priorizei o que entraria na primeira versão, protegendo o escopo de uma funcionalidade central em vez de dispersar esforço em recursos secundários.</p>
+        <figure class="fig media-wide"><img src="assets/borali/jornada.png" alt="Jornada do usuário do BorAli?" loading="lazy" /><figcaption data-en="User journey">Jornada do usuário</figcaption></figure>
+        <div class="media-2">
+          <figure class="fig"><img src="assets/borali/historias.png" alt="Histórias do usuário" loading="lazy" /><figcaption data-en="User stories">Histórias do usuário</figcaption></figure>
+          <figure class="fig"><img src="assets/borali/matriz.png" alt="Matriz de esforço por impacto" loading="lazy" /><figcaption data-en="Effort x impact matrix">Matriz esforço x impacto</figcaption></figure>
+        </div>
+        <p class="muted" data-en="The chosen concept: a map of Brasília's attractions, with recommendations guided by the user's context and a space to organize group outings, centralizing who's confirmed, undecided or out.">O conceito escolhido: um mapa de atrativos de Brasília, com recomendações guiadas pelo contexto do usuário e um espaço para organizar saídas em grupo, centralizando quem está confirmado, em dúvida ou ausente.</p>
+      </div>
+
+      <div class="case-block">
+        <span class="phase-label"><span class="dot"></span><span data-en="Interface in Figma · Design System">Interface no Figma · Design System</span></span>
+        <h3 data-en="Visual foundations">Fundamentos visuais</h3>
+        <p data-en="Before the screens, I defined the interface foundations in Figma: palette, color variables and typography, ensuring consistency and a clean hand-off to engineering. Componentization let me iterate quickly between mid and high fidelity with no rework.">Antes das telas, defini os fundamentos da interface no Figma: paleta, variáveis de cor e tipografia, garantindo consistência e um hand-off limpo para o time de engenharia. A componentização permitiu iterar rápido entre média e alta fidelidade sem retrabalho.</p>
+        <div class="media-2">
+          <figure class="fig no-zoom"><img src="assets/borali/var-cores.png" alt="Variáveis de cor do BorAli?" loading="lazy" /><figcaption data-en="Color variables">Variáveis de cor</figcaption></figure>
+          <figure class="fig no-zoom"><img src="assets/borali/var-tipografia.png" alt="Variáveis de tipografia do BorAli?" loading="lazy" /><figcaption data-en="Typography variables">Variáveis de tipografia</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <span class="phase-label"><span class="dot"></span><span data-en="Validation · from mid to high fidelity">Validação · da média à alta fidelidade</span></span>
+        <h3 data-en="Test early, refine with intent">Testar cedo, refinar com intenção</h3>
+        <p data-en="I started in mid fidelity to validate flow and architecture without the noise of the final visuals. Once navigation was approved, I moved to high fidelity, applying UX Writing to reduce friction in the copy and microinteractions to give clear feedback for every action.">Comecei pela média fidelidade para validar fluxo e arquitetura sem o ruído do visual final. Com a navegação aprovada, evoluí para a alta fidelidade, aplicando UX Writing para reduzir fricção na escrita e microinterações para dar resposta clara a cada ação.</p>
+        <p class="fidelity-note" data-en="Mid fidelity · structure and flow">Média fidelidade · estrutura e fluxo</p>
+        <div class="screens">
+          <div class="screen"><img src="assets/borali/mid-01-inicio.png" alt="Tela inicial em média fidelidade" loading="lazy" /></div>
+          <div class="screen"><img src="assets/borali/mid-02-detalhes.png" alt="Tela de detalhes em média fidelidade" loading="lazy" /></div>
+        </div>
+        <p class="fidelity-note" data-en="High fidelity · final interface">Alta fidelidade · interface final</p>
+        <div class="screens row">
+          <div class="screen"><img src="assets/borali/hi-01-inicio.png" alt="Tela inicial em alta fidelidade" loading="lazy" /></div>
+          <div class="screen"><img src="assets/borali/hi-02-detalhes.png" alt="Tela de detalhes em alta fidelidade" loading="lazy" /></div>
+          <div class="screen"><img src="assets/borali/hi-03-explorar-a.png" alt="Tela explorar em alta fidelidade" loading="lazy" /></div>
+          <div class="screen"><img src="assets/borali/hi-04-explorar-b.png" alt="Tela explorar em alta fidelidade" loading="lazy" /></div>
+        </div>
+      </div>
+
+      <div class="outcome">
+        <span class="eyebrow" data-en="Outcome">Resultado</span>
+        <h3 data-en="A bridge between wanting to go out and living the city">Uma ponte entre o desejo de sair e a ação de viver a cidade</h3>
+        <p data-en="The final product replaces tiring planning with simple signals (emotional state, social context and the intent of the moment), offering clear paths instead of an overload of options. More than recommending places, BorAli? brings the user closer to experiences already happening nearby and supports both individual and group decisions. It is live on the App Store.">A solução final substitui o planejamento cansativo por sinais simples (estado emocional, contexto social e intenção do momento), oferecendo caminhos claros no lugar de excesso de opções. Mais do que recomendar lugares, o BorAli? aproxima o usuário de experiências que já estão acontecendo ao seu redor e dá suporte tanto a decisões individuais quanto em grupo. Está publicado na App Store.</p>
+        <div class="outcome-grid">
+          <div><div class="stat-n" data-en="Live">No ar</div><div class="stat-l" data-en="published on the App Store">publicado na App Store</div></div>
+          <div><div class="stat-n">2</div><div class="stat-l" data-en="personas validated in research">personas validadas na pesquisa</div></div>
+          <div><div class="stat-n">3</div><div class="stat-l" data-en="solution concepts evaluated">conceitos de solução avaliados</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUTO 2: SETE ===================== -->
+  <section id="sete" class="case alt">
+    <div class="container">
+      <div class="case-hero">
+        <div class="ch-text">
+          <span class="eyebrow" data-en="Product 02 · On the App Store">Produto 02 · Na App Store</span>
+          <h2>SETE</h2>
+          <p class="ch-sub" data-en="Performance tracking for court-sport players, bringing to amateurs the data that used to be exclusive to elite athletes.">Acompanhamento de performance para atletas de quadra, levando ao amador os dados que antes eram exclusivos do alto rendimento.</p>
+          <div class="ch-cta">
+            <a href="https://apps.apple.com/br/app/sete-esporte-e-performance/id6751563867?l=en-GB" target="_blank" rel="noopener" class="appstore">
+              <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span data-en="Download on the App Store">Baixar na App Store</span>
+            </a>
+          </div>
+          <dl class="case-meta">
+            <div><dt data-en="Role">Papel</dt><dd data-en="Product Designer (UX/UI)">Product Designer (UX/UI)</dd></div>
+            <div><dt data-en="Platform">Plataforma</dt><dd>iOS + watchOS</dd></div>
+            <div><dt data-en="Context">Contexto</dt><dd>Apple Developer Academy · Challenge 07</dd></div>
+            <div><dt data-en="Tools">Ferramentas</dt><dd>FigJam, Figma, HealthKit</dd></div>
+            <div><dt data-en="Team">Time</dt><dd data-en="5 people (design, code and product)">5 pessoas (design, código e produto)</dd></div>
+          </dl>
+        </div>
+        <div class="case-hero-media">
+          <img src="assets/sete/screenshots.png" alt="Visão geral das telas do app SETE" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="case-block">
+        <span class="phase-label"><span class="dot"></span><span data-en="Strategy · Engage">Estratégia · Engage</span></span>
+        <h3 data-en="The starting point">O ponto de partida</h3>
+        <p data-en="The challenge's Big Idea was exclusivity. The essential question led us to investigate how exclusivity shapes behaviors, access and emotions in social relationships, particularly in sport. The angle that defined the product: encourage players to be part of something exclusive in order to track their own performance.">A Big Idea do desafio foi exclusividade. A pergunta essencial nos levou a investigar como a exclusividade molda comportamentos, acessos e emoções nas relações sociais, em particular no esporte. O recorte que definiu o produto: estimular praticantes a fazerem parte de algo exclusivo para acompanhar o próprio desempenho.</p>
+        <p class="muted" data-en="Refined challenge statement: encourage players to track their personal performance so they can grow in their sport.">Challenge statement refinado: estimular jogadores a acompanharem sua performance pessoal para evoluírem no esporte.</p>
+      </div>
+
+      <div class="case-block">
+        <span class="phase-label"><span class="dot"></span><span data-en="Research in FigJam · Investigate">Pesquisa no FigJam · Investigate</span></span>
+        <h3 data-en="Find the value the native app doesn't deliver">Encontrar o valor que o app nativo não entrega</h3>
+        <p data-en="In immersion, I explored cycles on competition, experience and the exclusive feature that would justify the product. The core insight: the native health app shows generic data but doesn't speak the language of a specific sport. There was room for a tool that collected additional information and gave it back as a useful insight for the user's discipline, connected to HealthKit and the Apple Watch.">Na imersão, explorei ciclos sobre competição, experiência e a funcionalidade exclusiva que justificaria o produto. O insight central: o app nativo de saúde mostra dados genéricos, mas não fala a língua de um esporte específico. Havia espaço para uma ferramenta que coletasse informações adicionais e as devolvesse como insight útil para a modalidade do usuário, conectada ao HealthKit e ao Apple Watch.</p>
+      </div>
+
+      <div class="case-block">
+        <span class="phase-label"><span class="dot"></span><span data-en="Solution concept · Act">Conceito da solução · Act</span></span>
+        <h3 data-en="An app with one strong feature">Um app com uma única funcionalidade forte</h3>
+        <p data-en="I defined a focused product for court-sport players who want to improve and therefore wish to track their training metrics. The goal is to receive clear insights about what to improve and to understand current performance in the discipline. The added value is exactly the specialization: unlike the standard health app, SETE brings to the amateur a layer of data that's usually restricted to high-level athletes.">Defini um produto focado para praticantes de esportes de quadra que querem evoluir e, por isso, desejam acompanhar métricas dos treinos. O objetivo é receber insights claros sobre o que melhorar e entender a performance atual na modalidade. O valor agregado é justamente a especialização: diferente do app de saúde padrão, o SETE democratiza no amador uma camada de dados que costuma ficar restrita ao atleta de alto nível.</p>
+      </div>
+
+      <div class="case-block">
+        <span class="phase-label"><span class="dot"></span><span data-en="Interface in Figma · Design System">Interface no Figma · Design System</span></span>
+        <h3 data-en="Visual foundations">Fundamentos visuais</h3>
+        <p data-en="I built the identity and palette closely following the Apple ecosystem guidelines, prioritizing legibility of data in motion, in the heat of training, on both the iPhone and the smaller Apple Watch screen.">Construí a identidade e a paleta seguindo de perto as diretrizes do ecossistema Apple, priorizando legibilidade de dados em movimento, no calor do treino, tanto no iPhone quanto na tela reduzida do Apple Watch.</p>
+        <figure class="fig media-wide no-zoom"><img src="assets/sete/palette.png" alt="Paleta de cores do app SETE" loading="lazy" /><figcaption data-en="Color palette">Paleta de cores</figcaption></figure>
+      </div>
+
+      <div class="case-block">
+        <span class="phase-label"><span class="dot"></span><span data-en="Validation · from mid to high fidelity">Validação · da média à alta fidelidade</span></span>
+        <h3 data-en="From flow sketch to final interface">Do esboço de fluxo à interface final</h3>
+        <p data-en="I validated the main flow in mid fidelity before investing in the visual finish. Then I refined to high fidelity, designing states for start, progress and sharing, the latter important for the sense-of-belonging trigger that anchored the concept.">Validei o fluxo principal em média fidelidade antes de investir no acabamento visual. Em seguida, refinei para a alta fidelidade, desenhando estados de início, evolução e compartilhamento de progresso, este último importante para o gatilho de pertencimento que sustentava o conceito.</p>
+        <p class="fidelity-note" data-en="Mid fidelity · structure and flow">Média fidelidade · estrutura e fluxo</p>
+        <div class="screens">
+          <div class="screen"><img src="assets/sete/mid-01-inicio.png" alt="Tela inicial em média fidelidade" loading="lazy" /></div>
+          <div class="screen"><img src="assets/sete/mid-02-evolucao.png" alt="Tela de evolução em média fidelidade" loading="lazy" /></div>
+        </div>
+        <p class="fidelity-note" data-en="High fidelity · iPhone">Alta fidelidade · iPhone</p>
+        <div class="screens row">
+          <div class="screen"><img src="assets/sete/hi-01-inicio.png" alt="Tela inicial em alta fidelidade" loading="lazy" /></div>
+          <div class="screen"><img src="assets/sete/hi-02-evolucao.png" alt="Tela de evolução em alta fidelidade" loading="lazy" /></div>
+          <div class="screen"><img src="assets/sete/hi-03-compartilhar-a.png" alt="Tela de compartilhamento em alta fidelidade" loading="lazy" /></div>
+          <div class="screen"><img src="assets/sete/hi-03-compartilhar-b.png" alt="Tela de compartilhamento em alta fidelidade" loading="lazy" /></div>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <span class="phase-label"><span class="dot"></span><span data-en="watchOS · Training in real time">watchOS · O treino em tempo real</span></span>
+        <h3 data-en="Performance on your wrist, without losing focus on the game">Performance na mão, sem tirar o foco do jogo</h3>
+        <p data-en="The Apple Watch is where the data is born. I designed the wrist experience to be glanceable: welcome, stopwatch and the time reading during training, with hierarchy built for a quick look between one play and the next.">O Apple Watch é onde o dado nasce. Desenhei a experiência de pulso para ser glanceável: boas-vindas, cronômetro e a leitura de tempo durante o treino, com hierarquia pensada para um olhar rápido entre uma jogada e outra.</p>
+        <div class="watch-row">
+          <div class="watch"><img src="assets/sete/watch-bemvindo.png" alt="Tela de boas-vindas no Apple Watch" loading="lazy" /></div>
+          <div class="watch"><img src="assets/sete/watch-cronometro.png" alt="Cronômetro no Apple Watch" loading="lazy" /></div>
+          <div class="watch"><img src="assets/sete/watch-tempo-1.png" alt="Tela de tempo no Apple Watch" loading="lazy" /></div>
+          <div class="watch"><img src="assets/sete/watch-tempo-2.png" alt="Tela de tempo no Apple Watch" loading="lazy" /></div>
+          <div class="watch"><img src="assets/sete/watch-tempo-3.png" alt="Tela de tempo no Apple Watch" loading="lazy" /></div>
+        </div>
+      </div>
+
+      <div class="outcome">
+        <span class="eyebrow" data-en="Outcome">Resultado</span>
+        <h3 data-en="Athlete-grade data, accessible to the everyday player">Dado de atleta, acessível ao praticante</h3>
+        <p data-en="SETE delivers an integrated experience between iPhone and Apple Watch that collects metrics during training and gives them back as insight relevant to the user's discipline. Scoping it to one core feature, validated since the research, kept the product focused and true to its purpose: helping the player improve and become competitive. It is live on the App Store.">O SETE entrega uma experiência integrada entre iPhone e Apple Watch que coleta métricas no treino e as devolve como insight relevante para a modalidade do usuário. O recorte de uma funcionalidade central, validado desde a pesquisa, manteve o produto focado e fiel ao propósito: ajudar o praticante a evoluir e se tornar competitivo. Está publicado na App Store.</p>
+        <div class="outcome-grid">
+          <div><div class="stat-n" data-en="Live">No ar</div><div class="stat-l" data-en="published on the App Store">publicado na App Store</div></div>
+          <div><div class="stat-n">2</div><div class="stat-l" data-en="platforms integrated (iOS + watchOS)">plataformas integradas (iOS + watchOS)</div></div>
+          <div><div class="stat-n">HealthKit</div><div class="stat-l" data-en="as the data collection base">como base de coleta de dados</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section id="contato" class="contact">
+    <div class="container">
+      <span class="eyebrow" data-en="Contact">Contato</span>
+      <h2 data-en="Let's build something amazing together?">Vamos construir algo incrível juntos?</h2>
+      <p data-en="I'm open to Product Design opportunities, focused on the Apple ecosystem and teams that value both process and results.">Estou aberta a oportunidades em Product Design, com foco no ecossistema Apple e em times que valorizam processo e resultado.</p>
+      <div class="contact-actions">
+        <a href="mailto:beatriz081medina@gmail.com" class="btn btn-primary" data-en="Send an email">Enviar e-mail</a>
+        <a href="https://www.linkedin.com/in/beatrizmedinaa" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        <a href="https://github.com/BeatrizMedinna" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container footer-inner">
+      <span data-en="© 2026 Beatriz Medina · Product Designer &amp; iOS Specialist">© 2026 Beatriz Medina · Product Designer &amp; iOS Specialist</span>
+      <span><a href="mailto:beatriz081medina@gmail.com">beatriz081medina@gmail.com</a></span>
+    </div>
+  </footer>
+
+  <!-- Tradução completa PT/EN -->
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('.lang button');
+      var nodes = document.querySelectorAll('[data-en]');
+      // guarda o conteúdo original em português
+      nodes.forEach(function (el) { el.setAttribute('data-pt', el.innerHTML); });
+
+      function setLang(lang) {
+        nodes.forEach(function (el) {
+          var val = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-pt');
+          if (val !== null) el.innerHTML = val;
+        });
+        document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+        buttons.forEach(function (b) {
+          var on = b.dataset.lang === lang;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+      }
+
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
+      });
+    })();
+  </script>
+
+</body>
+</html>
