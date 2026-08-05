@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beatriz Medina · Product Designer & iOS Specialist</title>
+  <meta name="description" content="Portfólio de Product Design de Beatriz Medina. Produtos iOS reais que conectam necessidades do usuário aos objetivos de negócio, da imersão à validação." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV BAR ===================== -->
+  <nav class="nav" aria-label="Navegação principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Beatriz Medina</a>
+      <div class="nav-links">
+        <a href="index.html#work" class="nav-section">Work</a>
+        <a href="about.html" class="nav-section">About</a>
+        <a href="lets-talk.html" class="nav-section active">Let's Talk</a>
+        <div class="lang" role="group" aria-label="Seletor de idioma">
+          <button type="button" class="active" data-lang="pt" aria-pressed="true">PT</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section id="contato" class="contact page active">
+    <div class="container">
+      <span class="eyebrow" data-en="Let's Talk">Vamos conversar</span>
+  
+      <h2 data-en="Liked my work? Let's talk.">
+        Gostou do meu trabalho? Vamos conversar.
+      </h2>
+  
+      <p data-en="If you think my background could contribute to your team, I'd be happy to connect and talk about new opportunities to build products that make sense for real people.">
+        Se você acredita que meu perfil pode contribuir com seu time, será um prazer conversar sobre novas oportunidades para construir produtos que façam sentido para pessoas reais.
+      </p>
+  
+      <div class="contact-actions">
+        <a href="mailto:beatriz081medina@gmail.com" class="btn btn-primary" data-en="Email">
+          E-mail
+        </a>
+  
+        <a href="https://www.linkedin.com/in/beatrizmedinaa"
+           target="_blank"
+           rel="noopener"
+           class="btn btn-ghost">
+          LinkedIn
+        </a>
+  
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container footer-inner">
+      <span data-en="© 2026 Beatriz Medina">© 2026 Beatriz Medina</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/beatrizmedinaa" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tradução completa PT/EN -->
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('.lang button');
+      var nodes = document.querySelectorAll('[data-en]');
+      // guarda o conteúdo original em português
+      nodes.forEach(function (el) { el.setAttribute('data-pt', el.innerHTML); });
+
+      function setLang(lang) {
+        nodes.forEach(function (el) {
+          var val = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-pt');
+          if (val !== null) el.innerHTML = val;
+        });
+        document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+        buttons.forEach(function (b) {
+          var on = b.dataset.lang === lang;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+      }
+
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
+      });
+    })();
+  </script>
+
+</body>
+</html>

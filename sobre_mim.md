@@ -22,4 +22,3 @@ Tenho grande facilidade em trabalhar em ambientes dinâmicos e focados em entreg
 
 * **E-mail:** [beatriz081medina@gmail.com](mailto:beatriz081medina@gmail.com)
 * **LinkedIn:** [Conecte-se comigo no LinkedIn](https://www.linkedin.com/in/beatrizmedinaa)
-* **GitHub:** [Acesse meu perfil no GitHub](https://github.com/BeatrizMedinna)

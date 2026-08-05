@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beatriz Medina · Product Designer & iOS Specialist</title>
+  <meta name="description" content="Portfólio de Product Design de Beatriz Medina. Produtos iOS reais que conectam necessidades do usuário aos objetivos de negócio, da imersão à validação." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV BAR ===================== -->
+  <nav class="nav" aria-label="Navegação principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Beatriz Medina</a>
+      <div class="nav-links">
+        <a href="index.html#work" class="nav-section active">Work</a>
+        <a href="about.html" class="nav-section">About</a>
+        <a href="lets-talk.html" class="nav-section">Let's Talk</a>
+        <div class="lang" role="group" aria-label="Seletor de idioma">
+          <button type="button" class="active" data-lang="pt" aria-pressed="true">PT</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <section id="handraw" class="case page active">
+    <div class="container">
+      <a href="index.html#work" class="case-back" data-en="&larr; Back to Work">&larr; Voltar aos trabalhos</a>
+
+      <div class="case-content-wrap">
+        <nav class="case-toc" aria-label="Navegação do estudo de caso">
+          <a href="#handraw-overview" class="active" data-en="Overview">Visão geral</a>
+          <a href="#handraw-estrategia" data-en="I. Strategy">I. Estratégia</a>
+          <a href="#handraw-pesquisa" data-en="II. Research">II. Pesquisa</a>
+          <a href="#handraw-personas" data-en="III. Personas">III. Personas</a>
+          <a href="#handraw-ideacao" data-en="IV. Ideation">IV. Ideação</a>
+          <a href="#handraw-naming" data-en="V. Identity">V. Identidade</a>
+          <a href="#handraw-interface" data-en="VI. Interface">VI. Interface</a>
+          <a href="#handraw-colaboracao" data-en="VII. Collaboration">VII. Colaboração</a>
+          <a href="#handraw-validacao" data-en="VIII. Validation">VIII. Validação</a>
+          <a href="#handraw-resultado" data-en="IX. Outcome">IX. Resultado</a>
+        </nav>
+
+        <div class="case-main">
+          <div class="case-hero" id="handraw-overview">
+            <div class="ch-text">
+              <span class="eyebrow" data-en="Product 01 · On the App Store">Produto 01 · Na App Store</span>
+              <h2>Handraw</h2>
+              <p class="ch-sub" data-en="A gestural canvas for macOS: the camera reads hand movement and turns it into strokes on the screen, with no mouse, trackpad or pen in between.">Um canvas gestual para macOS: a câmera lê o movimento das mãos e transforma em traço na tela, sem mouse, trackpad ou caneta no meio do caminho.</p>
+              <div class="ch-cta">
+                <a href="https://apps.apple.com/br/app/handraw-canvas-por-gestos/id6786850155?mt=12" target="_blank" rel="noopener" class="appstore">
+                  <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                  <span data-en="Download on the Mac App Store">Baixar na Mac App Store</span>
+                </a>
+              </div>
+              <dl class="case-meta">
+                <div><dt data-en="Role">Papel</dt><dd data-en="Lead Designer">Lead Designer</dd></div>
+                <div><dt data-en="Duration">Tempo</dt><dd data-en="7 weeks">7 semanas</dd></div>
+                <div><dt data-en="Platform">Plataforma</dt><dd>macOS</dd></div>
+                <div><dt data-en="Team">Time</dt><dd data-en="5 people (design and code)">5 pessoas (design e código)</dd></div>
+              </dl>
+            </div>
+            <div class="case-hero-media">
+              <img src="assets/handraw/screenshot-3.jpg" alt="Tela de abertura do Handraw, canvas gestual para macOS" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="case-block" id="handraw-estrategia">
+            <span class="phase-label"><span class="dot"></span><span data-en="Strategy">Estratégia</span></span>
+            <h3 data-en="The Starting Point">O ponto de partida</h3>
+            <p data-en="Everything started with a simple question: what if drawing on a computer felt as natural as gesturing an idea? As we observed how people develop visual thinking, we realized that the creative process is often interrupted by the tools themselves. A mouse, trackpad, or stylus introduces a mechanical layer that creates distance between an idea and its visual expression.">Tudo começou com uma pergunta: e se desenhar no computador pudesse ser tão natural quanto gesticular uma ideia? Ao observar a forma como as pessoas desenvolvem pensamentos visuais, percebemos que o processo criativo frequentemente é interrompido pelas ferramentas. Mouse, trackpad e caneta exigem uma interação mecânica que cria distância entre a ideia e sua representação na tela.</p>
+            <p class="muted" data-en="This became the challenge that guided the project: How might we turn natural hand gestures into an intuitive way to create on the Mac?">Esse foi o desafio que guiou o projeto: Como transformar gestos naturais em uma forma intuitiva de criar no Mac?</p>
+          </div>
+
+          <div class="case-block" id="handraw-pesquisa">
+            <span class="phase-label"><span class="dot"></span><span data-en="Research">Pesquisa</span></span>
+            <h3 data-en="Understanding the Process Before the Tool">Entender o processo antes da ferramenta</h3>
+            <p data-en="As the project's Lead Designer, I led the research to understand how people organize ideas, approach creative work, and respond when they lose their creative flow. The research revealed a recurring behavior: people naturally use their hands to explain ideas during conversations, yet that movement disappears once they move to the computer. When organizing visual thoughts, many still turn to pen and paper because digital tools demand precision too early in the creative process.">Como Lead Designer do projeto, conduzi a pesquisa para compreender como as pessoas organizam ideias, lidam com tarefas criativas e reagem quando perdem o fluxo de pensamento. A pesquisa revelou um comportamento recorrente: durante conversas, as pessoas naturalmente usam as mãos para explicar conceitos, mas esse movimento desaparece quando passam para o computador. Quando precisam organizar ideias visuais, muitas ainda recorrem ao papel, já que as ferramentas digitais exigem precisão logo nos primeiros instantes da criação.</p>
+            <figure class="fig media-wide"><img src="assets/handraw/entrevistas.jpg" alt="Síntese das entrevistas com 4 participantes" loading="lazy" /><figcaption data-en="Interview synthesis with 4 participants">Síntese das entrevistas com 4 participantes</figcaption></figure>
+            <p data-en="These insights showed that the challenge wasn't helping people draw better, but allowing creativity to flow without the tool becoming a barrier.">Esses insights mostraram que o problema não era desenhar melhor, mas permitir que o processo criativo continuasse fluindo sem que a ferramenta se tornasse uma barreira.</p>
+          </div>
+
+          <div class="case-block" id="handraw-personas">
+            <span class="phase-label"><span class="dot"></span><span data-en="Personas">Personas</span></span>
+            <h3 data-en="Who We Were Designing For">Para quem estamos desenhando</h3>
+            <p data-en="I translated the research findings into two personas with different ways of thinking visually, but one shared need: turning ideas into something tangible without interrupting their thought process. These personas became a reference point throughout the project, helping us prioritize decisions and align both design and development around real user behaviors.">Transformei os aprendizados da pesquisa em duas personas com perfis diferentes, mas uma necessidade em comum: transformar pensamentos visuais em algo concreto sem interromper o próprio raciocínio. Essas personas serviram como referência para priorizar decisões ao longo do projeto e alinhar o trabalho entre design e desenvolvimento.</p>
+            <div class="media-2">
+              <figure class="fig"><img src="assets/handraw/persona-2.jpg" alt="Persona Catarina, estudante universitária em Design" loading="lazy" /><figcaption data-en="Catarina, Design student">Catarina, estudante de Design</figcaption></figure>
+              <figure class="fig"><img src="assets/handraw/persona-1.jpg" alt="Persona Gabriel, estudante de Ciência da Computação" loading="lazy" /><figcaption data-en="Gabriel, Computer Science student">Gabriel, estudante de Ciência da Computação</figcaption></figure>
+            </div>
+          </div>
+
+          <div class="case-block" id="handraw-ideacao">
+            <span class="phase-label"><span class="dot"></span><span data-en="Ideation &amp; Prioritization">Ideação &amp; Priorização</span></span>
+            <h3 data-en="From Research to Product Priorities">Da pesquisa às prioridades do produto</h3>
+            <p data-en="With the key behaviors identified, we transformed our findings into user stories and prioritized the features for the first version of the product. The analysis showed that gesture recognition and freehand drawing in the air were essential to validate the product concept.">Com os principais comportamentos mapeados, transformamos os aprendizados em histórias de usuário e priorizamos as funcionalidades para a primeira versão. A análise mostrou que reconhecer gestos e desenhar no ar eram essenciais para validar a proposta do produto.</p>
+            <figure class="fig media-wide"><img src="assets/handraw/user-stories.jpg" alt="User stories de Catarina e Gabriel" loading="lazy" /><figcaption data-en="User stories for Catarina and Gabriel">User stories da Catarina e do Gabriel</figcaption></figure>
+            <figure class="fig media-wide"><img src="assets/handraw/matriz-esforco-impacto.jpg" alt="Matriz de impacto por esforço" loading="lazy" /><figcaption data-en="Impact x effort matrix, prioritizing requirements">Matriz impacto x esforço, priorizando os requisitos</figcaption></figure>
+            <p class="muted" data-en="Other features were considered valuable but postponed due to the project's limited timeline. Defining this scope early also made collaboration with development more effective and gave the team greater clarity throughout the design process.">Outras funcionalidades foram identificadas como importantes, mas ficaram para evoluções futuras por conta do prazo curto. Definir esse escopo desde o início também facilitou a colaboração com o desenvolvimento e deu mais clareza às decisões tomadas ao longo do projeto.</p>
+          </div>
+
+          <div class="case-block" id="handraw-naming">
+            <span class="phase-label"><span class="dot"></span><span data-en="Naming &amp; Identity">Naming &amp; Identidade</span></span>
+            <h3 data-en="Building the Product Identity">Construindo uma identidade para o produto</h3>
+            <p data-en="Naming became an important part of shaping the product's identity. Before choosing the final name, I explored how similar products positioned themselves and what characteristics they communicated.">O processo de naming fez parte da construção da identidade do Handraw. Antes de chegar ao nome final, investiguei como produtos semelhantes se posicionavam e quais características transmitiam.</p>
+            <p data-en="The name Handraw was chosen because it clearly reflects the product's core idea: transforming hand movements into drawing. The visual identity was developed collaboratively, ensuring the brand expressed that concept consistently.">O nome Handraw surgiu por representar de forma simples a principal proposta do produto: transformar movimentos das mãos em desenho. A identidade visual foi desenvolvida em parceria, buscando traduzir esse conceito de maneira consistente.</p>
+            <div class="media-2">
+              <figure class="fig"><img src="assets/handraw/naming-1.jpg" alt="Benchmarking de nomes de apps concorrentes" loading="lazy" /><figcaption data-en="Naming benchmarking">Benchmarking de naming</figcaption></figure>
+              <figure class="fig"><img src="assets/handraw/naming-2.jpg" alt="Agrupamento dos nomes por tipo" loading="lazy" /><figcaption data-en="Names grouped by type">Nomes agrupados por tipo</figcaption></figure>
+              <figure class="fig"><img src="assets/handraw/naming-3.jpg" alt="Perguntas de propósito e posicionamento da marca" loading="lazy" /><figcaption data-en="Purpose and positioning questions">Perguntas de propósito e posicionamento</figcaption></figure>
+              <figure class="fig"><img src="assets/handraw/naming-4.jpg" alt="Régua de naming" loading="lazy" /><figcaption data-en="Naming tone ruler">Régua de tom de naming</figcaption></figure>
+              <figure class="fig"><img src="assets/handraw/naming-5.jpg" alt="Brainstorming de nomes com prompt direcionado" loading="lazy" /><figcaption data-en="Directed brainstorming for name candidates">Brainstorming direcionado de candidatos a nome</figcaption></figure>
+              <figure class="fig"><img src="assets/handraw/naming-6.jpg" alt="Nome escolhido: Handraw" loading="lazy" /><figcaption data-en="The name chosen: Handraw">O nome escolhido: Handraw</figcaption></figure>
+            </div>
+          </div>
+
+          <div class="case-block" id="handraw-interface">
+            <span class="phase-label"><span class="dot"></span><span data-en="Interface &amp; System">Interface &amp; Sistema</span></span>
+            <h3 data-en="Building the Visual Foundation">Fundamentos visuais</h3>
+            <p data-en="Alongside creating the Design System, I designed most of the product's medium- and high-fidelity interfaces, establishing visual patterns and guidelines that ensured consistency throughout the project. This foundation also made it easier to divide responsibilities while maintaining a cohesive experience across every part of the product.">Além de estruturar o Design System, desenvolvi a maior parte das interfaces do produto em média e alta fidelidade, estabelecendo padrões visuais e diretrizes que garantiram consistência durante toda a evolução do projeto. Essa base também tornou mais simples distribuir tarefas e manter unidade entre as diferentes partes da interface.</p>
+            <div class="media-2 no-zoom">
+              <figure class="fig"><img src="assets/handraw/logo.jpg" alt="Logo do Handraw" loading="lazy" /><figcaption data-en="App icon">Ícone do app</figcaption></figure>
+              <figure class="fig"><img src="assets/handraw/design-system.jpg" alt="Design system: cores, tipografia, espaçamento e raio de borda" loading="lazy" /><figcaption data-en="Design system tokens">Tokens do design system</figcaption></figure>
+            </div>
+            <figure class="fig media-wide no-zoom"><img src="assets/handraw/style-guide.jpg" alt="Style guide com paleta, tipografia, espaçamento e conjunto de ícones" loading="lazy" /><figcaption data-en="Style guide: color, typography, spacing and icon set">Style guide: cor, tipografia, espaçamento e conjunto de ícones</figcaption></figure>
+            <p class="fidelity-note" data-en="Concept screens">Telas conceito</p>
+            <div class="screens">
+              <div class="screen"><img src="assets/handraw/screenshot-2.jpg" alt="Conceito: a câmera detecta gestos em tempo real" loading="lazy" /></div>
+              <div class="screen"><img src="assets/handraw/screenshot-1.jpg" alt="Conceito: guia de gestos ao lado do canvas" loading="lazy" /></div>
+            </div>
+          </div>
+
+          <div class="case-block" id="handraw-colaboracao">
+            <span class="phase-label"><span class="dot"></span><span data-en="Collaboration">Colaboração</span></span>
+            <h3 data-en="Designing Through Collaboration">Construindo em colaboração</h3>
+            <p data-en="As Lead Designer, I coordinated the UX and UI decisions while supporting a Swift developer transitioning into Product Design throughout the project. While I led the product strategy, research, and design system, we collaborated on the visual identity, and I closely followed the development of the onboarding experience and gesture interactions. This collaboration reinforced how different perspectives strengthen both the process and the final product.">Atuei como Lead Designer coordenando as decisões de UX/UI e acompanhando um desenvolvedor em transição para Design durante o projeto. Enquanto eu conduzia o processo de produto, pesquisa e sistema de design, colaboramos juntos na identidade visual e observei a construção da experiência de onboarding e das interações por gestos do aplicativo. Essa troca mostrou, na prática, como diferentes perspectivas fortalecem o resultado final.</p>
+          </div>
+
+          <div class="case-block" id="handraw-validacao">
+            <span class="phase-label"><span class="dot"></span><span data-en="Validation &amp; Onboarding">Validação &amp; Onboarding</span></span>
+            <h3 data-en="Testing Early, Teaching Naturally">Testar cedo, ensinar naturalmente</h3>
+            <p data-en="The onboarding experience was designed to introduce an interaction pattern that would be unfamiliar to most users. We first validated its structure with mid-fidelity prototypes before moving into the final interface, refining the learning sequence, visual hierarchy, and supporting elements to make gesture interactions intuitive from the very first use.">O onboarding foi pensado para apresentar uma forma de interação que não faz parte do repertório da maioria das pessoas. Começamos validando sua estrutura em média fidelidade antes de evoluir para a versão final, refinando a sequência de aprendizado, a hierarquia visual e os elementos de apoio para tornar os gestos intuitivos desde o primeiro contato com o produto.</p>
+            <p class="fidelity-note" data-en="Mid fidelity · teaching structure">Média fidelidade · estrutura de ensino</p>
+            <div class="screens">
+              <div class="screen"><img src="assets/handraw/mid-01-selecionar-ferramenta.jpg" alt="Onboarding em média fidelidade: selecionar ferramenta" loading="lazy" /></div>
+              <div class="screen"><img src="assets/handraw/mid-02-gestos.jpg" alt="Onboarding em média fidelidade: guia de gestos" loading="lazy" /></div>
+            </div>
+            <p class="fidelity-note" data-en="High fidelity · onboarding">Alta fidelidade · onboarding</p>
+            <div class="screens">
+              <div class="screen"><img src="assets/handraw/hi-01-selecione-o-pincel.jpg" alt="Onboarding em alta fidelidade: selecione o pincel" loading="lazy" /></div>
+              <div class="screen"><img src="assets/handraw/hi-02-desenhe-com-o-pincel.jpg" alt="Onboarding em alta fidelidade: desenhe com o pincel" loading="lazy" /></div>
+            </div>
+          </div>
+
+          <div class="outcome" id="handraw-resultado">
+            <span class="eyebrow" data-en="Outcome">Resultado</span>
+            <h3 data-en="Transforming gestures into a new way to create">Transformando gestos em uma nova forma de criar</h3>
+            <p data-en="The final outcome was a macOS app published on the App Store that utilizes computer vision to transform hand movements into an in-air drawing tool. More than exploring a new technology, this project reinforced the importance of aligning research, interaction, and collaboration to turn an idea into a consistent user experience.">O resultado foi um aplicativo para macOS publicado na App Store que utiliza visão computacional para transformar movimentos das mãos em uma ferramenta de desenho no ar. Mais do que explorar uma nova tecnologia, este projeto reforçou a importância de alinhar pesquisa, interação e colaboração para transformar uma ideia em uma experiência consistente para o usuário.</p>
+            <br>
+                <h3 data-en="What This Project Taught Me">O que esse projeto me ensinou</h3>
+                <p data-en="This project expanded my view of design leadership. Beyond guiding product and UX/UI decisions, I learned that leading also means creating space for collaboration, sharing knowledge, and helping others grow throughout the process.">Este projeto ampliou minha visão sobre liderança em design. Além de conduzir decisões de produto e UX/UI, aprendi que liderar também significa criar espaço para colaboração, compartilhar conhecimento e ajudar outras pessoas a evoluírem durante o processo.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LIGHTBOX (visualização de imagens em tela cheia) ===================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" class="lightbox-close" aria-label="Fechar">&times;</button>
+    <img class="lightbox-img" src="" alt="" />
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container footer-inner">
+      <span data-en="© 2026 Beatriz Medina">© 2026 Beatriz Medina</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/beatrizmedinaa" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tradução completa PT/EN -->
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('.lang button');
+      var nodes = document.querySelectorAll('[data-en]');
+      // guarda o conteúdo original em português
+      nodes.forEach(function (el) { el.setAttribute('data-pt', el.innerHTML); });
+
+      function setLang(lang) {
+        nodes.forEach(function (el) {
+          var val = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-pt');
+          if (val !== null) el.innerHTML = val;
+        });
+        document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+        buttons.forEach(function (b) {
+          var on = b.dataset.lang === lang;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+      }
+
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
+      });
+    })();
+  </script>
+
+  <!-- Menu lateral dos case studies: destaca a seção visível -->
+  <script>
+    (function () {
+      var tocs = document.querySelectorAll('.case-toc');
+      tocs.forEach(function (toc) {
+        var links = toc.querySelectorAll('a');
+        var targets = Array.prototype.map.call(links, function (a) {
+          return document.querySelector(a.getAttribute('href'));
+        });
+
+        function onScroll() {
+          var pos = window.scrollY + 140;
+          var current = 0;
+          targets.forEach(function (t, i) {
+            if (t && t.offsetTop <= pos) current = i;
+          });
+          links.forEach(function (a, i) {
+            a.classList.toggle('active', i === current);
+          });
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      });
+    })();
+  </script>
+
+  <!-- Clique para abrir imagens em tela cheia (pesquisa, protótipos e Apple Watch) -->
+  <script>
+    (function () {
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = lightbox.querySelector('.lightbox-img');
+      var closeBtn = lightbox.querySelector('.lightbox-close');
+
+      function openLightbox(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || '';
+        lightbox.classList.add('active');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      function bindClickable() {
+        var imgs = document.querySelectorAll('.fig:not(.no-zoom) img, .screen img, .watch img');
+        imgs.forEach(function (img) {
+          if (img.dataset.lightboxBound) return;
+          img.dataset.lightboxBound = 'true';
+          img.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openLightbox(img.src, img.alt);
+          });
+        });
+      }
+
+      bindClickable();
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -12,11 +12,11 @@
   <!-- ===================== NAV BAR ===================== -->
   <nav class="nav" aria-label="Navegação principal">
     <div class="nav-inner">
-      <a href="#top" class="nav-brand" data-target="page-work">Beatriz Medina</a>
+      <a href="index.html" class="nav-brand">Beatriz Medina</a>
       <div class="nav-links">
-        <a href="#work" class="nav-section" data-target="page-work">Work</a>
-        <a href="#about" class="nav-section" data-target="about">About</a>
-        <a href="#contato" class="nav-section" data-target="contato">Let's Talk</a>
+        <a href="index.html#work" class="nav-section active">Work</a>
+        <a href="about.html" class="nav-section">About</a>
+        <a href="lets-talk.html" class="nav-section">Let's Talk</a>
         <div class="lang" role="group" aria-label="Seletor de idioma">
           <button type="button" class="active" data-lang="pt" aria-pressed="true">PT</button>
           <button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -24,34 +24,46 @@
       </div>
     </div>
   </nav>
-
   <div id="page-work" class="page active">
 
   <!-- ===================== HERO (INTRO) ===================== -->
   <header id="top" class="hero hero-compact">
     <div class="container">
-      <span class="eyebrow" data-en="Hello! I'm Beatriz Medina">Olá! Eu sou a Beatriz Medina</span>
-      <h1 data-en="Product Designer who connects research, interface and technical feasibility, from immersion to the App Store.">Product Designer que conecta pesquisa, interface e viabilidade técnica, da imersão à App Store.</h1>
-      <p class="role" data-en="iOS &amp; watchOS · Apple Developer Academy">iOS &amp; watchOS · Apple Developer Academy</p>
+      <span class="eyebrow" data-en="Hello! I'm Beatriz Medina">
+        Olá! Eu sou Beatriz Medina.
+      </span>
+  
+      <h1 data-en="Product Designer who transforms research into digital products, balancing user experience and technical feasibility.">
+        Product Designer que transforma pesquisa em produtos digitais, equilibrando experiência do usuário e viabilidade técnica.
+      </h1>
+  
+      <p class="role" data-en="Apple Developer Academy">
+        Apple Developer Academy
+      </p>
+  
       <div class="tag-row">
-        <span class="tag" data-en="Research &amp; Immersion">Pesquisa &amp; Imersão</span>
-        <span class="tag" data-en="UX / UI Design">UX / UI Design</span>
-        <span class="tag">FigJam</span>
-        <span class="tag">Figma</span>
-        <span class="tag" data-en="iOS &amp; watchOS">iOS &amp; watchOS</span>
-        <span class="tag" data-en="Validation &amp; Testing">Validação e Testes</span>
+        <span class="tag" data-en="User Research">User Research</span>
+        <span class="tag" data-en="Product Strategy">Product Strategy</span>
+        <span class="tag" data-en="UX/UI Design">UX/UI Design</span>
+        <span class="tag" data-en="Design Systems">Design Systems</span>
+        <span class="tag" data-en="Prototyping">Prototipação</span>
       </div>
     </div>
-
+  
     <!-- Manifesto -->
     <div class="container">
       <div class="manifesto">
         <span class="quote-mark gradient-text" aria-hidden="true">&ldquo;</span>
+  
         <blockquote>
-          <span data-en="Love the process and">Ame o processo e</span>
-          <span class="accent gradient-text" data-en="the result will be just a consequence.">o resultado será apenas uma consequência.</span>
+          <span data-en="Great interfaces begin long before the first screen.">
+            Boas interfaces começam muito antes da primeira tela.
+          </span>
         </blockquote>
-        <cite data-en="My design essence">A minha essência no design</cite>
+  
+        <cite data-en="How I build products">
+          Como eu construo produtos
+        </cite>
       </div>
     </div>
   </header>
@@ -62,16 +74,35 @@
       <div class="section-head">
         <span class="eyebrow" data-en="Portfolio">Portfólio</span>
         <h2 data-en="Selected Work.">Trabalhos selecionados.</h2>
-        <p data-en="Full process documented, from the first messy insight to what actually shipped on the App Store.">Processo completo documentado, do primeiro insight ainda bagunçado até o que foi publicado na App Store.</p>
+        <p data-en="Each project is an opportunity to explore a problem, test hypotheses, and learn by building a real-world product.">Cada projeto representa uma oportunidade de investigar um problema, testar hipóteses e aprender através da construção de um produto real.</p>
       </div>
 
       <div class="projects-grid">
-        <!-- Produto 1 -->
-        <a href="#borali" class="project-card" data-target="borali">
+        <!-- Produto 1: HANDRAW -->
+        <a href="handraw.html" class="project-card">
+          <div class="pc-body">
+            <span class="pc-cat" data-en="macOS App · Gestural canvas">App macOS · Canvas gestual</span>
+            <h3>Handraw</h3>
+            <p data-en="A canvas that reads hand gestures through the camera and turns them into strokes on the Mac, with no mouse, trackpad or pen in between.">Um canvas que lê gestos das mãos pela câmera e os transforma em traços no Mac, sem mouse, trackpad ou caneta no meio do caminho.</p>
+            <div class="pc-media">
+              <img src="assets/handraw/screenshot-3.jpg" alt="Tela de abertura do Handraw" loading="lazy" />
+            </div>
+            <div class="pc-actions">
+              <span class="pc-link" data-en="See the product <span>&rarr;</span>">Conheça o produto <span>&rarr;</span></span>
+              <span class="appstore" aria-hidden="true">
+                <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                <span data-en="Shipped 2026">Publicado em 2026</span>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Produto 2 -->
+        <a href="borali.html" class="project-card">
           <div class="pc-body">
             <span class="pc-cat" data-en="iOS App · Experience discovery">App iOS · Descoberta de experiências</span>
             <h3>BorAli? Explore Brasília</h3>
-            <p data-en="An app that reduces the friction of going out and turns intention into real social experiences across the city.">Um app que reduz a fricção de sair de casa e transforma intenção em experiências sociais reais na cidade.</p>
+            <p data-en="Turning the desire to leave home into action, reducing the mental load of having to choose a leisure activity.">Como transformar o desejo de sair de casa em ação, reduzindo a carga mental de ter que escolher um lazer.</p>
             <div class="pc-media">
               <img src="assets/borali/screenshots.png" alt="Telas do app BorAli? Explore Brasília" loading="lazy" />
             </div>
@@ -85,8 +116,8 @@
           </div>
         </a>
 
-        <!-- Produto 2 -->
-        <a href="#sete" class="project-card" data-target="sete">
+        <!-- Produto 3 -->
+        <a href="sete.html" class="project-card">
           <div class="pc-body">
             <span class="pc-cat" data-en="iOS + watchOS App · Sport &amp; performance">App iOS + watchOS · Esporte &amp; performance</span>
             <h3>SETE</h3>
@@ -103,617 +134,11 @@
             </div>
           </div>
         </a>
-
-        <!-- Produto 3: HANDRAW -->
-        <a href="#handraw" class="project-card" data-target="handraw">
-          <div class="pc-body">
-            <span class="pc-cat" data-en="macOS App · Gestural canvas">App macOS · Canvas gestual</span>
-            <h3>Handraw</h3>
-            <p data-en="A canvas that reads hand gestures through the camera and turns them into strokes on the Mac, with no mouse, trackpad or pen in between.">Um canvas que lê gestos das mãos pela câmera e os transforma em traços no Mac, sem mouse, trackpad ou caneta no meio do caminho.</p>
-            <div class="pc-media">
-              <img src="assets/handraw/screenshot-3.jpg" alt="Tela de abertura do Handraw" loading="lazy" />
-            </div>
-            <div class="pc-actions">
-              <span class="pc-link" data-en="See the product <span>&rarr;</span>">Conheça o produto <span>&rarr;</span></span>
-              <span class="status-pill" data-en="In progress">Em desenvolvimento</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Produto 4 (placeholder) -->
-        <div class="project-card coming" aria-label="Produto em breve">
-          <div class="pc-body">
-            <span class="badge-soon" data-en="Coming soon">Em breve</span>
-            <h3 data-en="Product 04">Produto 04</h3>
-            <p data-en="Reserved space for the next product. Coming soon.">Espaço reservado para o próximo produto. Coming soon.</p>
-            <div class="placeholder-skeleton" aria-hidden="true"><span></span><span></span><span></span></div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
   </div>
-  <!-- fim page-work -->
-
-  <!-- ===================== PRODUTO 1: BORALI ===================== -->
-  <section id="borali" class="case page">
-    <div class="container">
-      <a href="#work" class="case-back" data-target="page-work" data-en="&larr; Back to Work">&larr; Voltar aos trabalhos</a>
-
-      <div class="case-content-wrap">
-        <!-- Menu lateral do case -->
-        <nav class="case-toc" aria-label="Navegação do estudo de caso">
-          <a href="#borali-overview" class="active" data-en="Overview">Visão geral</a>
-          <a href="#borali-estrategia" data-en="I. Strategy">I. Estratégia</a>
-          <a href="#borali-pesquisa" data-en="II. Research">II. Pesquisa</a>
-          <a href="#borali-personas" data-en="III. Personas">III. Personas</a>
-          <a href="#borali-ideacao" data-en="IV. Ideation">IV. Ideação</a>
-          <a href="#borali-interface" data-en="V. Interface">V. Interface</a>
-          <a href="#borali-validacao" data-en="VI. Validation">VI. Validação</a>
-          <a href="#borali-resultado" data-en="VII. Outcome">VII. Resultado</a>
-        </nav>
-
-        <div class="case-main">
-          <div class="case-hero" id="borali-overview">
-            <div class="ch-text">
-              <span class="eyebrow" data-en="Product 01 · On the App Store">Produto 01 · Na App Store</span>
-              <h2>BorAli? Explore Brasília</h2>
-              <p class="ch-sub" data-en="Turning the desire to go out into action, reducing the emotional and logistical friction of living the city.">Como transformar o desejo de sair de casa em ação, reduzindo a fricção emocional e logística de viver a cidade.</p>
-              <div class="ch-cta">
-                <a href="https://apps.apple.com/br/app/borali-explore-bras%C3%ADlia/id6764412373?l=en-GB" target="_blank" rel="noopener" class="appstore">
-                  <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-                  <span data-en="Download on the App Store">Baixar na App Store</span>
-                </a>
-              </div>
-              <dl class="case-meta">
-                <div><dt data-en="Role">Papel</dt><dd data-en="Product Designer (UX/UI)">Product Designer (UX/UI)</dd></div>
-                <div><dt data-en="Platform">Plataforma</dt><dd>iOS (iPhone)</dd></div>
-                <div><dt data-en="Context">Contexto</dt><dd>Apple Developer Academy · Challenge 13</dd></div>
-                <div><dt data-en="Tools">Ferramentas</dt><dd>FigJam, Figma</dd></div>
-                <div><dt data-en="Team">Time</dt><dd data-en="5 people (design, code and product)">5 pessoas (design, código e produto)</dd></div>
-              </dl>
-            </div>
-            <div class="case-hero-media">
-              <img src="assets/borali/hi-overview.png" alt="Visão geral da interface do BorAli?" loading="lazy" />
-            </div>
-          </div>
-
-          <div class="case-block" id="borali-estrategia">
-            <span class="phase-label"><span class="dot"></span><span data-en="Strategy · Engage">Estratégia · Engage</span></span>
-            <h3 data-en="The starting point">O ponto de partida</h3>
-            <p data-en="The product grew out of a Big Idea about immersion. The essential question that guided the team was direct: how can we broaden people's view of the world through an immersive experience? As we refined it, we realized the real problem wasn't lack of interest, but excess friction. People want to go out, but they don't want the emotional and logistical effort it takes.">O produto nasceu de uma Big Idea sobre imersão. A pergunta essencial que guiou o time foi direta: como podemos ampliar a visão de mundo das pessoas por meio de uma experiência imersiva? Ao refinar essa questão, percebemos que o problema real não era falta de interesse, e sim excesso de fricção. As pessoas querem sair, mas não querem o esforço emocional e logístico que isso exige.</p>
-            <p class="muted" data-en="Refined challenge statement: encourage experiences outside the home, connecting people to the community.">Challenge statement refinado: incentivar experiências fora de casa, conectando pessoas à comunidade.</p>
-          </div>
-
-          <div class="case-block" id="borali-pesquisa">
-            <span class="phase-label"><span class="dot"></span><span data-en="Research in FigJam · Investigate">Pesquisa no FigJam · Investigate</span></span>
-            <h3 data-en="Understand behavior before designing the solution">Entender o comportamento antes de desenhar a solução</h3>
-            <p data-en="I ran the discovery phase in FigJam, organizing benchmarking, interviews and synthesis in a single collaborative space. The goal was to separate what people say from what actually holds them back. The recurring reading was clear: staying home makes you want to stay home, social media sparks the desire (FOMO) but doesn't ease the action, and almost no one goes out alone. Belonging depends on identification, acceptance and active interaction.">Conduzi a fase de descoberta no FigJam, organizando benchmarking, entrevistas e síntese em um único espaço colaborativo. O objetivo era separar o que as pessoas dizem do que de fato as trava. A leitura recorrente foi clara: ficar em casa gera mais vontade de ficar em casa, redes sociais despertam o desejo (FOMO) mas não facilitam a ação, e quase ninguém sai sozinho. Pertencimento depende de identificação, aceitação e interação ativa.</p>
-            <div class="media-2">
-              <figure class="fig"><img src="assets/borali/benchmarking.png" alt="Benchmarking de aplicativos concorrentes" loading="lazy" /><figcaption data-en="Competitive benchmarking">Benchmarking competitivo</figcaption></figure>
-              <figure class="fig"><img src="assets/borali/entrevistas.png" alt="Síntese das entrevistas com usuários" loading="lazy" /><figcaption data-en="Interviews and insight synthesis">Entrevistas e síntese de insights</figcaption></figure>
-            </div>
-            <p data-en="The most valuable insights came from emotional nuance. Cancelling at the last minute turned out to be a protection mechanism, not disinterest. And the urban environment (light, sound, density) guides decisions without people noticing. The conclusion that drove the design: people like to explore, but they don't like uncertainty. The ideal isn't free discovery, it's guided discovery.">Os insights mais valiosos vieram da nuance emocional. Cancelar de última hora se mostrou um mecanismo de proteção, não desinteresse. E o ambiente urbano (luz, som, densidade) guia decisões sem que a pessoa perceba. A conclusão que orientou o design: as pessoas gostam de explorar, mas não gostam de incerteza. O ideal não é descoberta livre, é descoberta guiada.</p>
-          </div>
-
-          <div class="case-block" id="borali-personas">
-            <span class="phase-label"><span class="dot"></span><span data-en="Personas">Personas</span></span>
-            <h3 data-en="Who we're designing for">Para quem estamos desenhando</h3>
-            <p data-en="I translated the research patterns into two personas that represent distinct motivations and blockers, keeping the team aligned on product decisions throughout the project.">Traduzi os padrões da pesquisa em duas personas que representam motivações e travas distintas, mantendo o time alinhado sobre as decisões de produto ao longo do projeto.</p>
-            <div class="media-2">
-              <figure class="fig"><img src="assets/borali/persona-1.png" alt="Persona 1 do BorAli?" loading="lazy" /><figcaption data-en="Primary persona">Persona primária</figcaption></figure>
-              <figure class="fig"><img src="assets/borali/persona-2.png" alt="Persona 2 do BorAli?" loading="lazy" /><figcaption data-en="Secondary persona">Persona secundária</figcaption></figure>
-            </div>
-          </div>
-
-          <div class="case-block" id="borali-ideacao">
-            <span class="phase-label"><span class="dot"></span><span data-en="Ideation &amp; Prioritization">Ideação &amp; Priorização</span></span>
-            <h3 data-en="From journey to scope decisions">Da jornada às decisões de escopo</h3>
-            <p data-en="I mapped the user journey and the usage stories to see where friction really happened. With the effort versus impact matrix, I prioritized what would make it into the first version, protecting the scope of one core feature instead of spreading effort across secondary ones.">Mapeei a jornada do usuário e as histórias de uso para enxergar onde a fricção realmente acontecia. Com a matriz de esforço por impacto, priorizei o que entraria na primeira versão, protegendo o escopo de uma funcionalidade central em vez de dispersar esforço em recursos secundários.</p>
-            <figure class="fig media-wide"><img src="assets/borali/jornada.png" alt="Jornada do usuário do BorAli?" loading="lazy" /><figcaption data-en="User journey">Jornada do usuário</figcaption></figure>
-            <div class="media-2">
-              <figure class="fig"><img src="assets/borali/historias.png" alt="Histórias do usuário" loading="lazy" /><figcaption data-en="User stories">Histórias do usuário</figcaption></figure>
-              <figure class="fig"><img src="assets/borali/matriz.png" alt="Matriz de esforço por impacto" loading="lazy" /><figcaption data-en="Effort x impact matrix">Matriz esforço x impacto</figcaption></figure>
-            </div>
-            <p class="muted" data-en="The chosen concept: a map of Brasília's attractions, with recommendations guided by the user's context and a space to organize group outings, centralizing who's confirmed, undecided or out.">O conceito escolhido: um mapa de atrativos de Brasília, com recomendações guiadas pelo contexto do usuário e um espaço para organizar saídas em grupo, centralizando quem está confirmado, em dúvida ou ausente.</p>
-          </div>
-
-          <div class="case-block" id="borali-interface">
-            <span class="phase-label"><span class="dot"></span><span data-en="Interface in Figma · Design System">Interface no Figma · Design System</span></span>
-            <h3 data-en="Visual foundations">Fundamentos visuais</h3>
-            <p data-en="Before the screens, I defined the interface foundations in Figma: palette, color variables and typography, ensuring consistency and a clean hand-off to engineering. Componentization let me iterate quickly between mid and high fidelity with no rework.">Antes das telas, defini os fundamentos da interface no Figma: paleta, variáveis de cor e tipografia, garantindo consistência e um hand-off limpo para o time de engenharia. A componentização permitiu iterar rápido entre média e alta fidelidade sem retrabalho.</p>
-            <div class="media-2">
-              <figure class="fig no-zoom"><img src="assets/borali/var-cores.png" alt="Variáveis de cor do BorAli?" loading="lazy" /><figcaption data-en="Color variables">Variáveis de cor</figcaption></figure>
-              <figure class="fig no-zoom"><img src="assets/borali/var-tipografia.png" alt="Variáveis de tipografia do BorAli?" loading="lazy" /><figcaption data-en="Typography variables">Variáveis de tipografia</figcaption></figure>
-            </div>
-          </div>
-
-          <div class="case-block" id="borali-validacao">
-            <span class="phase-label"><span class="dot"></span><span data-en="Validation · from mid to high fidelity">Validação · da média à alta fidelidade</span></span>
-            <h3 data-en="Test early, refine with intent">Testar cedo, refinar com intenção</h3>
-            <p data-en="I started in mid fidelity to validate flow and architecture without the noise of the final visuals. Once navigation was approved, I moved to high fidelity, applying UX Writing to reduce friction in the copy and microinteractions to give clear feedback for every action.">Comecei pela média fidelidade para validar fluxo e arquitetura sem o ruído do visual final. Com a navegação aprovada, evoluí para a alta fidelidade, aplicando UX Writing para reduzir fricção na escrita e microinterações para dar resposta clara a cada ação.</p>
-            <p class="fidelity-note" data-en="Mid fidelity · structure and flow">Média fidelidade · estrutura e fluxo</p>
-            <div class="screens">
-              <div class="screen"><img src="assets/borali/mid-01-inicio.png" alt="Tela inicial em média fidelidade" loading="lazy" /></div>
-              <div class="screen"><img src="assets/borali/mid-02-detalhes.png" alt="Tela de detalhes em média fidelidade" loading="lazy" /></div>
-            </div>
-            <p class="fidelity-note" data-en="High fidelity · final interface">Alta fidelidade · interface final</p>
-            <div class="screens row">
-              <div class="screen"><img src="assets/borali/hi-01-inicio.png" alt="Tela inicial em alta fidelidade" loading="lazy" /></div>
-              <div class="screen"><img src="assets/borali/hi-02-detalhes.png" alt="Tela de detalhes em alta fidelidade" loading="lazy" /></div>
-              <div class="screen"><img src="assets/borali/hi-03-explorar-a.png" alt="Tela explorar em alta fidelidade" loading="lazy" /></div>
-              <div class="screen"><img src="assets/borali/hi-04-explorar-b.png" alt="Tela explorar em alta fidelidade" loading="lazy" /></div>
-            </div>
-          </div>
-
-          <div class="outcome" id="borali-resultado">
-            <span class="eyebrow" data-en="Outcome">Resultado</span>
-            <h3 data-en="A bridge between wanting to go out and living the city">Uma ponte entre o desejo de sair e a ação de viver a cidade</h3>
-            <p data-en="The final product replaces tiring planning with simple signals (emotional state, social context and the intent of the moment), offering clear paths instead of an overload of options. More than recommending places, BorAli? brings the user closer to experiences already happening nearby and supports both individual and group decisions. It is live on the App Store.">A solução final substitui o planejamento cansativo por sinais simples (estado emocional, contexto social e intenção do momento), oferecendo caminhos claros no lugar de excesso de opções. Mais do que recomendar lugares, o BorAli? aproxima o usuário de experiências que já estão acontecendo ao seu redor e dá suporte tanto a decisões individuais quanto em grupo. Está publicado na App Store.</p>
-            <div class="outcome-grid">
-              <div><div class="stat-n" data-en="Live">No ar</div><div class="stat-l" data-en="published on the App Store">publicado na App Store</div></div>
-              <div><div class="stat-n">2</div><div class="stat-l" data-en="personas validated in research">personas validadas na pesquisa</div></div>
-              <div><div class="stat-n">3</div><div class="stat-l" data-en="solution concepts evaluated">conceitos de solução avaliados</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== PRODUTO 2: SETE ===================== -->
-  <section id="sete" class="case alt page">
-    <div class="container">
-      <a href="#work" class="case-back" data-target="page-work" data-en="&larr; Back to Work">&larr; Voltar aos trabalhos</a>
-
-      <div class="case-content-wrap">
-        <nav class="case-toc" aria-label="Navegação do estudo de caso">
-          <a href="#sete-overview" class="active" data-en="Overview">Visão geral</a>
-          <a href="#sete-estrategia" data-en="I. Strategy">I. Estratégia</a>
-          <a href="#sete-pesquisa" data-en="II. Research">II. Pesquisa</a>
-          <a href="#sete-conceito" data-en="III. Concept">III. Conceito</a>
-          <a href="#sete-interface" data-en="IV. Interface">IV. Interface</a>
-          <a href="#sete-validacao" data-en="V. Validation">V. Validação</a>
-          <a href="#sete-watchos" data-en="VI. watchOS">VI. watchOS</a>
-          <a href="#sete-resultado" data-en="VII. Outcome">VII. Resultado</a>
-        </nav>
-
-        <div class="case-main">
-          <div class="case-hero" id="sete-overview">
-            <div class="ch-text">
-              <span class="eyebrow" data-en="Product 02 · On the App Store">Produto 02 · Na App Store</span>
-              <h2>SETE</h2>
-              <p class="ch-sub" data-en="Performance tracking for court-sport players, bringing to amateurs the data that used to be exclusive to elite athletes.">Acompanhamento de performance para atletas de quadra, levando ao amador os dados que antes eram exclusivos do alto rendimento.</p>
-              <div class="ch-cta">
-                <a href="https://apps.apple.com/br/app/sete-esporte-e-performance/id6751563867?l=en-GB" target="_blank" rel="noopener" class="appstore">
-                  <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-                  <span data-en="Download on the App Store">Baixar na App Store</span>
-                </a>
-              </div>
-              <dl class="case-meta">
-                <div><dt data-en="Role">Papel</dt><dd data-en="Product Designer (UX/UI)">Product Designer (UX/UI)</dd></div>
-                <div><dt data-en="Platform">Plataforma</dt><dd>iOS + watchOS</dd></div>
-                <div><dt data-en="Context">Contexto</dt><dd>Apple Developer Academy · Challenge 07</dd></div>
-                <div><dt data-en="Tools">Ferramentas</dt><dd>FigJam, Figma, HealthKit</dd></div>
-                <div><dt data-en="Team">Time</dt><dd data-en="5 people (design, code and product)">5 pessoas (design, código e produto)</dd></div>
-              </dl>
-            </div>
-            <div class="case-hero-media">
-              <img src="assets/sete/screenshots.png" alt="Visão geral das telas do app SETE" loading="lazy" />
-            </div>
-          </div>
-
-          <div class="case-block" id="sete-estrategia">
-            <span class="phase-label"><span class="dot"></span><span data-en="Strategy · Engage">Estratégia · Engage</span></span>
-            <h3 data-en="The starting point">O ponto de partida</h3>
-            <p data-en="The challenge's Big Idea was exclusivity. The essential question led us to investigate how exclusivity shapes behaviors, access and emotions in social relationships, particularly in sport. The angle that defined the product: encourage players to be part of something exclusive in order to track their own performance.">A Big Idea do desafio foi exclusividade. A pergunta essencial nos levou a investigar como a exclusividade molda comportamentos, acessos e emoções nas relações sociais, em particular no esporte. O recorte que definiu o produto: estimular praticantes a fazerem parte de algo exclusivo para acompanhar o próprio desempenho.</p>
-            <p class="muted" data-en="Refined challenge statement: encourage players to track their personal performance so they can grow in their sport.">Challenge statement refinado: estimular jogadores a acompanharem sua performance pessoal para evoluírem no esporte.</p>
-          </div>
-
-          <div class="case-block" id="sete-pesquisa">
-            <span class="phase-label"><span class="dot"></span><span data-en="Research in FigJam · Investigate">Pesquisa no FigJam · Investigate</span></span>
-            <h3 data-en="Find the value the native app doesn't deliver">Encontrar o valor que o app nativo não entrega</h3>
-            <p data-en="In immersion, I explored cycles on competition, experience and the exclusive feature that would justify the product. The core insight: the native health app shows generic data but doesn't speak the language of a specific sport. There was room for a tool that collected additional information and gave it back as a useful insight for the user's discipline, connected to HealthKit and the Apple Watch.">Na imersão, explorei ciclos sobre competição, experiência e a funcionalidade exclusiva que justificaria o produto. O insight central: o app nativo de saúde mostra dados genéricos, mas não fala a língua de um esporte específico. Havia espaço para uma ferramenta que coletasse informações adicionais e as devolvesse como insight útil para a modalidade do usuário, conectada ao HealthKit e ao Apple Watch.</p>
-          </div>
-
-          <div class="case-block" id="sete-conceito">
-            <span class="phase-label"><span class="dot"></span><span data-en="Solution concept · Act">Conceito da solução · Act</span></span>
-            <h3 data-en="An app with one strong feature">Um app com uma única funcionalidade forte</h3>
-            <p data-en="I defined a focused product for court-sport players who want to improve and therefore wish to track their training metrics. The goal is to receive clear insights about what to improve and to understand current performance in the discipline. The added value is exactly the specialization: unlike the standard health app, SETE brings to the amateur a layer of data that's usually restricted to high-level athletes.">Defini um produto focado para praticantes de esportes de quadra que querem evoluir e, por isso, desejam acompanhar métricas dos treinos. O objetivo é receber insights claros sobre o que melhorar e entender a performance atual na modalidade. O valor agregado é justamente a especialização: diferente do app de saúde padrão, o SETE democratiza no amador uma camada de dados que costuma ficar restrita ao atleta de alto nível.</p>
-          </div>
-
-          <div class="case-block" id="sete-interface">
-            <span class="phase-label"><span class="dot"></span><span data-en="Interface in Figma · Design System">Interface no Figma · Design System</span></span>
-            <h3 data-en="Visual foundations">Fundamentos visuais</h3>
-            <p data-en="I built the identity and palette closely following the Apple ecosystem guidelines, prioritizing legibility of data in motion, in the heat of training, on both the iPhone and the smaller Apple Watch screen.">Construí a identidade e a paleta seguindo de perto as diretrizes do ecossistema Apple, priorizando legibilidade de dados em movimento, no calor do treino, tanto no iPhone quanto na tela reduzida do Apple Watch.</p>
-            <figure class="fig media-wide no-zoom"><img src="assets/sete/palette.png" alt="Paleta de cores do app SETE" loading="lazy" /><figcaption data-en="Color palette">Paleta de cores</figcaption></figure>
-          </div>
-
-          <div class="case-block" id="sete-validacao">
-            <span class="phase-label"><span class="dot"></span><span data-en="Validation · from mid to high fidelity">Validação · da média à alta fidelidade</span></span>
-            <h3 data-en="From flow sketch to final interface">Do esboço de fluxo à interface final</h3>
-            <p data-en="I validated the main flow in mid fidelity before investing in the visual finish. Then I refined to high fidelity, designing states for start, progress and sharing, the latter important for the sense-of-belonging trigger that anchored the concept.">Validei o fluxo principal em média fidelidade antes de investir no acabamento visual. Em seguida, refinei para a alta fidelidade, desenhando estados de início, evolução e compartilhamento de progresso, este último importante para o gatilho de pertencimento que sustentava o conceito.</p>
-            <p class="fidelity-note" data-en="Mid fidelity · structure and flow">Média fidelidade · estrutura e fluxo</p>
-            <div class="screens">
-              <div class="screen"><img src="assets/sete/mid-01-inicio.png" alt="Tela inicial em média fidelidade" loading="lazy" /></div>
-              <div class="screen"><img src="assets/sete/mid-02-evolucao.png" alt="Tela de evolução em média fidelidade" loading="lazy" /></div>
-            </div>
-            <p class="fidelity-note" data-en="High fidelity · iPhone">Alta fidelidade · iPhone</p>
-            <div class="screens row">
-              <div class="screen"><img src="assets/sete/hi-01-inicio.png" alt="Tela inicial em alta fidelidade" loading="lazy" /></div>
-              <div class="screen"><img src="assets/sete/hi-02-evolucao.png" alt="Tela de evolução em alta fidelidade" loading="lazy" /></div>
-              <div class="screen"><img src="assets/sete/hi-03-compartilhar-a.png" alt="Tela de compartilhamento em alta fidelidade" loading="lazy" /></div>
-              <div class="screen"><img src="assets/sete/hi-03-compartilhar-b.png" alt="Tela de compartilhamento em alta fidelidade" loading="lazy" /></div>
-            </div>
-          </div>
-
-          <div class="case-block" id="sete-watchos">
-            <span class="phase-label"><span class="dot"></span><span data-en="watchOS · Training in real time">watchOS · O treino em tempo real</span></span>
-            <h3 data-en="Performance on your wrist, without losing focus on the game">Performance na mão, sem tirar o foco do jogo</h3>
-            <p data-en="The Apple Watch is where the data is born. I designed the wrist experience to be glanceable: welcome, stopwatch and the time reading during training, with hierarchy built for a quick look between one play and the next.">O Apple Watch é onde o dado nasce. Desenhei a experiência de pulso para ser glanceável: boas-vindas, cronômetro e a leitura de tempo durante o treino, com hierarquia pensada para um olhar rápido entre uma jogada e outra.</p>
-            <div class="watch-row">
-              <div class="watch"><img src="assets/sete/watch-bemvindo.png" alt="Tela de boas-vindas no Apple Watch" loading="lazy" /></div>
-              <div class="watch"><img src="assets/sete/watch-cronometro.png" alt="Cronômetro no Apple Watch" loading="lazy" /></div>
-              <div class="watch"><img src="assets/sete/watch-tempo-1.png" alt="Tela de tempo no Apple Watch" loading="lazy" /></div>
-              <div class="watch"><img src="assets/sete/watch-tempo-2.png" alt="Tela de tempo no Apple Watch" loading="lazy" /></div>
-              <div class="watch"><img src="assets/sete/watch-tempo-3.png" alt="Tela de tempo no Apple Watch" loading="lazy" /></div>
-            </div>
-          </div>
-
-          <div class="outcome" id="sete-resultado">
-            <span class="eyebrow" data-en="Outcome">Resultado</span>
-            <h3 data-en="Athlete-grade data, accessible to the everyday player">Dado de atleta, acessível ao praticante</h3>
-            <p data-en="SETE delivers an integrated experience between iPhone and Apple Watch that collects metrics during training and gives them back as insight relevant to the user's discipline. Scoping it to one core feature, validated since the research, kept the product focused and true to its purpose: helping the player improve and become competitive. It is live on the App Store.">O SETE entrega uma experiência integrada entre iPhone e Apple Watch que coleta métricas no treino e as devolve como insight relevante para a modalidade do usuário. O recorte de uma funcionalidade central, validado desde a pesquisa, manteve o produto focado e fiel ao propósito: ajudar o praticante a evoluir e se tornar competitivo. Está publicado na App Store.</p>
-            <div class="outcome-grid">
-              <div><div class="stat-n" data-en="Live">No ar</div><div class="stat-l" data-en="published on the App Store">publicado na App Store</div></div>
-              <div><div class="stat-n">2</div><div class="stat-l" data-en="platforms integrated (iOS + watchOS)">plataformas integradas (iOS + watchOS)</div></div>
-              <div><div class="stat-n">HealthKit</div><div class="stat-l" data-en="as the data collection base">como base de coleta de dados</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== PRODUTO 3: HANDRAW ===================== -->
-  <section id="handraw" class="case page">
-    <div class="container">
-      <a href="#work" class="case-back" data-target="page-work" data-en="&larr; Back to Work">&larr; Voltar aos trabalhos</a>
-
-      <div class="case-content-wrap">
-        <nav class="case-toc" aria-label="Navegação do estudo de caso">
-          <a href="#handraw-overview" class="active" data-en="Overview">Visão geral</a>
-          <a href="#handraw-estrategia" data-en="I. Strategy">I. Estratégia</a>
-          <a href="#handraw-pesquisa" data-en="II. Research">II. Pesquisa</a>
-          <a href="#handraw-personas" data-en="III. Personas">III. Personas</a>
-          <a href="#handraw-ideacao" data-en="IV. Ideation">IV. Ideação</a>
-          <a href="#handraw-naming" data-en="V. Naming">V. Naming</a>
-          <a href="#handraw-interface" data-en="VI. Interface">VI. Interface</a>
-          <a href="#handraw-validacao" data-en="VII. Validation">VII. Validação</a>
-        </nav>
-
-        <div class="case-main">
-          <div class="case-hero" id="handraw-overview">
-            <div class="ch-text">
-              <span class="eyebrow" data-en="Product 03 · In progress">Produto 03 · Em desenvolvimento</span>
-              <h2>Handraw</h2>
-              <p class="ch-sub" data-en="A gestural canvas for macOS: the camera reads hand movement and turns it into strokes on the screen, with no mouse, trackpad or pen in between.">Um canvas gestual para macOS: a câmera lê o movimento das mãos e transforma em traço na tela, sem mouse, trackpad ou caneta no meio do caminho.</p>
-              <div class="ch-cta">
-                <span class="status-pill" data-en="Prototype in progress">Protótipo em andamento</span>
-              </div>
-              <dl class="case-meta">
-                <div><dt data-en="Role">Papel</dt><dd data-en="Product Designer (research, naming and UX)">Product Designer (pesquisa, naming e UX)</dd></div>
-                <div><dt data-en="Platform">Plataforma</dt><dd>macOS</dd></div>
-                <div><dt data-en="Context">Contexto</dt><dd data-en="Independent product, currently in prototyping">Produto autoral, atualmente em prototipagem</dd></div>
-                <div><dt data-en="Tools">Ferramentas</dt><dd>FigJam, Figma</dd></div>
-              </dl>
-            </div>
-            <div class="case-hero-media">
-              <img src="assets/handraw/screenshot-3.jpg" alt="Tela de abertura do Handraw, canvas gestual para macOS" loading="lazy" />
-            </div>
-          </div>
-
-          <div class="case-block" id="handraw-estrategia">
-            <span class="phase-label"><span class="dot"></span><span data-en="Strategy · Purpose">Estratégia · Propósito</span></span>
-            <h3 data-en="Why this product exists">Por que esse produto existe</h3>
-            <p data-en="The Handraw brief started from a simple observation: creating should be as natural as gesturing an idea. Today, mouse, trackpad and pen work as intermediaries that break the flow between thought, body and screen. The purpose I set for the product was direct: turn gestures into creation, taking ideas from the mind straight to the screen, solving the friction that intermediary devices create in the creative process.">O briefing do Handraw partiu de uma observação simples: criar deveria ser tão natural quanto gesticular uma ideia. Hoje, mouse, trackpad e caneta funcionam como intermediários que quebram o fluxo entre pensamento, corpo e tela. O propósito que defini para o produto foi direto: transformar gestos em criação, levando ideias da mente direto para a tela, resolvendo a fricção que dispositivos intermediários causam no processo criativo.</p>
-            <p class="muted" data-en="Target segment: creative tools, productivity for creators and human-computer interaction (HCI), for the Apple ecosystem.">Segmento de posicionamento: creative tools, productivity for creators e interação humano-computador (HCI), para o ecossistema Apple.</p>
-          </div>
-
-          <div class="case-block" id="handraw-pesquisa">
-            <span class="phase-label"><span class="dot"></span><span data-en="Research · Interviews">Pesquisa · Entrevistas</span></span>
-            <h3 data-en="Listening before designing a single gesture">Ouvir antes de desenhar um gesto sequer</h3>
-            <p data-en="I wrote a script to understand daily Mac usage, how people organize a heavy or creative task, and what they do the moment their focus breaks. The goal was to find, before designing anything, where the friction between thinking and creating on the computer actually lives.">Escrevi um roteiro para entender o uso diário do Mac, como as pessoas organizam uma tarefa pesada ou criativa e o que fazem no momento em que a atenção quebra. O objetivo era encontrar, antes de desenhar qualquer coisa, onde de fato mora a fricção entre pensar e criar no computador.</p>
-            <figure class="fig media-wide"><img src="assets/handraw/entrevistas.jpg" alt="Síntese das entrevistas com 4 participantes" loading="lazy" /><figcaption data-en="Interview synthesis with 4 participants">Síntese das entrevistas com 4 participantes</figcaption></figure>
-            <p data-en="A pattern repeated across almost every interview: people already think in gestures, moving their hands while explaining an idea, but nothing captures that movement. When the mind gets tired mid task, the fastest way to decompress is to look away from the screen, not to open another tool. And the moment an idea is visual or abstract, people reach for paper, not software, because software asks for too much precision too early.">Um padrão se repetiu em quase todas as entrevistas: as pessoas já pensam em gestos, mexendo as mãos enquanto explicam uma ideia, mas nada captura esse movimento. Quando a cabeça cansa no meio de uma tarefa, a forma mais rápida de descomprimir é desviar o olhar da tela, não abrir outra ferramenta. E no momento em que uma ideia é visual ou abstrata, as pessoas recorrem ao papel, não ao software, porque o software pede precisão demais, cedo demais.</p>
-          </div>
-
-          <div class="case-block" id="handraw-personas">
-            <span class="phase-label"><span class="dot"></span><span data-en="Personas">Personas</span></span>
-            <h3 data-en="Two ways of thinking with the hands">Dois jeitos de pensar com as mãos</h3>
-            <p data-en="The interviews converged into two personas with different relationships to visual thinking, but the same frustration: existing tools force a mechanical, precise interaction onto a process that, in their heads, is fluid and physical.">As entrevistas convergiram em duas personas com relações diferentes com o pensamento visual, mas a mesma frustração: as ferramentas atuais impõem uma interação mecânica e precisa a um processo que, na cabeça delas, é fluido e físico.</p>
-            <div class="media-2">
-              <figure class="fig"><img src="assets/handraw/persona-2.jpg" alt="Persona Catarina, estudante universitária em Design" loading="lazy" /><figcaption data-en="Catarina, Design student">Catarina, estudante de Design</figcaption></figure>
-              <figure class="fig"><img src="assets/handraw/persona-1.jpg" alt="Persona Gabriel, estudante de Ciência da Computação" loading="lazy" /><figcaption data-en="Gabriel, Computer Science student">Gabriel, estudante de Ciência da Computação</figcaption></figure>
-            </div>
-          </div>
-
-          <div class="case-block" id="handraw-ideacao">
-            <span class="phase-label"><span class="dot"></span><span data-en="Ideation &amp; Prioritization">Ideação &amp; Priorização</span></span>
-            <h3 data-en="From user stories to a prioritized scope">Das histórias de usuário a um escopo priorizado</h3>
-            <p data-en="From Catarina and Gabriel, I wrote user stories covering the two ways people think visually: freehand creation floating in the air, and structured diagramming for system flows. Then I ran every resulting requirement through an impact versus effort matrix, separating what's vital for a first version from what's polish for later.">A partir da Catarina e do Gabriel, escrevi histórias de usuário cobrindo os dois jeitos de pensar visualmente: criação livre no ar e diagramação estruturada para fluxos de sistema. Depois, passei cada requisito resultante por uma matriz de impacto por esforço, separando o que é vital para uma primeira versão do que é polimento para depois.</p>
-            <figure class="fig media-wide"><img src="assets/handraw/user-stories.jpg" alt="User stories de Catarina e Gabriel" loading="lazy" /><figcaption data-en="User stories for Catarina and Gabriel">User stories da Catarina e do Gabriel</figcaption></figure>
-            <figure class="fig media-wide"><img src="assets/handraw/matriz-esforco-impacto.jpg" alt="Matriz de impacto por esforço" loading="lazy" /><figcaption data-en="Impact x effort matrix, prioritizing requirements">Matriz impacto x esforço, priorizando os requisitos</figcaption></figure>
-            <p class="muted" data-en="Hand detection and drawing with the hand came out as vital. Erasing the whole canvas, a left/right-hand switch and a gesture guide came out as important but effortful, exactly the trade-offs the matrix exists to expose.">Detecção de mãos e desenhar com a mão saíram como vitais. Apagar o quadro inteiro, alternância entre mão canhota e destra e um guia de gestos saíram como importantes, mas com esforço alto, exatamente o tipo de trade-off que a matriz existe para expor.</p>
-          </div>
-
-          <div class="case-block" id="handraw-naming">
-            <span class="phase-label"><span class="dot"></span><span data-en="Naming · From purpose to name">Naming · Do propósito ao nome</span></span>
-            <h3 data-en="Naming as a design process, not a guess">Naming como processo de design, não como palpite</h3>
-            <p data-en="I treated naming as its own design exercise. First, I answered a set of questions about purpose, positioning and audience to get the brand's intent on paper. Then I benchmarked names in the same space (Figma, Freeform, Procreate, Miro, Concepts, FigJam, among others) and grouped them by the kind of name they use, descriptive, suggestive, combined, geographic, to understand the naming territory available. I positioned the brand on a set of tone sliders (clear to mysterious, traditional to innovative, functional to emotional) and used that as a brief to generate name candidates. Handraw won for combining the two ideas driving the product, hand and draw, in a name that's clear, short and easy to say in English.">Tratei o naming como um exercício de design à parte. Primeiro, respondi um conjunto de perguntas sobre propósito, posicionamento e público para colocar a intenção da marca no papel. Depois, fiz um benchmarking de nomes do mesmo universo (Figma, Freeform, Procreate, Miro, Concepts, FigJam, entre outros) e os agrupei pelo tipo de nome que usam, descritivo, sugestivo, combinado, geográfico, para entender o território de naming disponível. Posicionei a marca em uma régua de tom (de claro a misterioso, de tradicional a inovador, de funcional a emocional) e usei isso como briefing para gerar candidatos a nome. Handraw venceu por combinar as duas ideias que sustentam o produto, mão e desenho, num nome claro, curto e fácil de falar em inglês.</p>
-            <div class="media-2">
-              <figure class="fig"><img src="assets/handraw/naming-1.jpg" alt="Benchmarking de nomes de apps concorrentes" loading="lazy" /><figcaption data-en="Naming benchmarking">Benchmarking de naming</figcaption></figure>
-              <figure class="fig"><img src="assets/handraw/naming-2.jpg" alt="Agrupamento dos nomes por tipo" loading="lazy" /><figcaption data-en="Names grouped by type">Nomes agrupados por tipo</figcaption></figure>
-              <figure class="fig"><img src="assets/handraw/naming-3.jpg" alt="Perguntas de propósito e posicionamento da marca" loading="lazy" /><figcaption data-en="Purpose and positioning questions">Perguntas de propósito e posicionamento</figcaption></figure>
-              <figure class="fig"><img src="assets/handraw/naming-4.jpg" alt="Régua de naming" loading="lazy" /><figcaption data-en="Naming tone ruler">Régua de tom de naming</figcaption></figure>
-              <figure class="fig"><img src="assets/handraw/naming-5.jpg" alt="Brainstorming de nomes com prompt direcionado" loading="lazy" /><figcaption data-en="Directed brainstorming for name candidates">Brainstorming direcionado de candidatos a nome</figcaption></figure>
-              <figure class="fig"><img src="assets/handraw/naming-6.jpg" alt="Nome escolhido: Handraw" loading="lazy" /><figcaption data-en="The name chosen: Handraw">O nome escolhido: Handraw</figcaption></figure>
-            </div>
-          </div>
-
-          <div class="case-block" id="handraw-interface">
-            <span class="phase-label"><span class="dot"></span><span data-en="Interface · Visual foundation">Interface · Fundamentos visuais</span></span>
-            <h3 data-en="Building the visual language">Construindo a linguagem visual</h3>
-            <p data-en="With the name defined, I built the logo and the design system: color, typography, spacing and border radius tokens, followed by a style guide with the icon set (including gesture icons) that the interface will use. Early concept screens already explore the core idea: a camera that reads gestures in real time and a guide that stays a tap away without breaking the person's flow.">Com o nome definido, construí a logo e o design system: tokens de cor, tipografia, espaçamento e raio de borda, seguidos de um style guide com o conjunto de ícones (incluindo os ícones de gestos) que a interface vai usar. As primeiras telas conceito já exploram a ideia central: uma câmera que lê gestos em tempo real e um guia que fica a um toque de distância sem quebrar o fluxo da pessoa.</p>
-            <div class="media-2 no-zoom">
-              <figure class="fig"><img src="assets/handraw/logo.jpg" alt="Logo do Handraw" loading="lazy" /><figcaption data-en="App icon">Ícone do app</figcaption></figure>
-              <figure class="fig"><img src="assets/handraw/design-system.jpg" alt="Design system: cores, tipografia, espaçamento e raio de borda" loading="lazy" /><figcaption data-en="Design system tokens">Tokens do design system</figcaption></figure>
-            </div>
-            <figure class="fig media-wide no-zoom"><img src="assets/handraw/style-guide.jpg" alt="Style guide com paleta, tipografia, espaçamento e conjunto de ícones" loading="lazy" /><figcaption data-en="Style guide: color, typography, spacing and icon set">Style guide: cor, tipografia, espaçamento e conjunto de ícones</figcaption></figure>
-            <p class="fidelity-note" data-en="Concept screens">Telas conceito</p>
-            <div class="screens">
-              <div class="screen"><img src="assets/handraw/screenshot-2.jpg" alt="Conceito: a câmera detecta gestos em tempo real" loading="lazy" /></div>
-              <div class="screen"><img src="assets/handraw/screenshot-1.jpg" alt="Conceito: guia de gestos ao lado do canvas" loading="lazy" /></div>
-            </div>
-          </div>
-
-          <div class="case-block" id="handraw-validacao">
-            <span class="phase-label"><span class="dot"></span><span data-en="Validation · from mid to high fidelity">Validação · da média à alta fidelidade</span></span>
-            <h3 data-en="Teaching the gesture before asking for it">Ensinando o gesto antes de pedir por ele</h3>
-            <p data-en="I started the onboarding in mid fidelity to validate the teaching sequence: select the tool, then draw, using grayscale hand icons so feedback stayed focused on structure and order, not on visual polish. Once the flow was approved, I moved to high fidelity, adding color, a numbered step indicator and a live hand illustration that mirrors the pinch gesture the person needs to make.">Comecei o onboarding em média fidelidade para validar a sequência de ensino: selecionar a ferramenta, depois desenhar, usando ícones de mão em escala de cinza para manter o feedback focado na estrutura e na ordem, não no acabamento visual. Com o fluxo aprovado, evoluí para a alta fidelidade, adicionando cor, um indicador numerado de etapas e uma ilustração de mão que espelha o gesto de pinça que a pessoa precisa fazer.</p>
-            <p class="fidelity-note" data-en="Mid fidelity · teaching structure">Média fidelidade · estrutura de ensino</p>
-            <div class="screens">
-              <div class="screen"><img src="assets/handraw/mid-01-selecionar-ferramenta.jpg" alt="Onboarding em média fidelidade: selecionar ferramenta" loading="lazy" /></div>
-              <div class="screen"><img src="assets/handraw/mid-02-gestos.jpg" alt="Onboarding em média fidelidade: guia de gestos" loading="lazy" /></div>
-            </div>
-            <p class="fidelity-note" data-en="High fidelity · onboarding">Alta fidelidade · onboarding</p>
-            <div class="screens">
-              <div class="screen"><img src="assets/handraw/hi-01-selecione-o-pincel.jpg" alt="Onboarding em alta fidelidade: selecione o pincel" loading="lazy" /></div>
-              <div class="screen"><img src="assets/handraw/hi-02-desenhe-com-o-pincel.jpg" alt="Onboarding em alta fidelidade: desenhe com o pincel" loading="lazy" /></div>
-            </div>
-            <p class="muted" data-en="Next steps: usability testing of the full onboarding and the first working version of the gesture engine.">Próximos passos: testes de usabilidade do onboarding completo e a primeira versão funcional do motor de reconhecimento de gestos.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== ABOUT ===================== -->
-  <section id="about" class="about-sec page">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow" data-en="About">Sobre</span>
-        <h2 data-en="Product design. iOS focus.">Product design. Foco em iOS.</h2>
-      </div>
-
-      <div class="hero-grid about-grid">
-        <div class="hero-photo">
-          <img src="assets/profile.jpg" alt="Retrato de Beatriz Medina, Product Designer" />
-        </div>
-        <div class="hero-text">
-          <p data-en="My journey in technology began in high school in Recife, where I studied Systems Analysis and Development at Porto Digital. It was during that time that I saw firsthand how technology can solve real problems and discovered what truly interested me: turning that potential into experiences that genuinely make sense for the people using them.">
-            Minha trajetória começou ainda no ensino médio, em Recife, quando cursei Análise e Desenvolvimento de Sistemas no Porto Digital. Foi nesse período que vi de perto a tecnologia resolvendo problemas reais e encontrei o que mais me interessava: transformar essa capacidade em experiências que fizessem sentido para as pessoas.
-          </p>
-        <br>
-          <p data-en="While pursuing my Computer Science degree at the Catholic University of Brasília, I realized that Product Design was the perfect way to combine my technical background with user experience. Since then, my academic foundation has become one of the strengths I bring to the way I approach design.">
-            Na graduação em Ciência da Computação na Universidade Católica de Brasília, ao longo das disciplinas, descobri que o Product Design era uma forma de unir meu conhecimento técnico à experiência do usuário. A partir disso, minha formação acadêmica passou a ser um diferencial na maneira como projeto.
-          </p>
-        
-          <p data-en="Through award-winning hackathons, collaborative projects, and an internship at a startup, stepping into the role of a designer happened naturally. Those experiences taught me how to balance user needs, product goals, and technical feasibility while working closely with cross-functional teams.">
-            Entre premiações em hackathons, projetos em grupo e estágio em uma startup, assumir o papel de designer aconteceu de forma natural. Nessas experiências, aprendi a equilibrar as necessidades do usuário, os objetivos do produto e a viabilidade técnica, sempre em colaboração com o time.
-          </p>
-        <br>
-          <p data-en="Today, as a Product Designer at the Apple Developer Academy, I continue to deepen my experience designing products for the iOS ecosystem. I enjoy being involved throughout the entire process, from understanding the problem to shaping the final interface, always aiming to create experiences that are intuitive, technically feasible, and meaningful for the people who use them.">
-            Hoje, como Product Designer na Apple Developer Academy, aprofundo minha atuação no desenvolvimento de produtos para o ecossistema iOS. Gosto de participar de todo o processo, da compreensão do problema à interface final, buscando criar experiências simples de usar, tecnicamente viáveis e relevantes para quem está do outro lado da tela.
-          </p>
-        </div>
-      </div>
-
-      <!-- WHAT I WORK WITH · Tools -->
-      <div class="about-block">
-        <span class="eyebrow" data-en="What I work with">No que eu trabalho</span>
-        <h3 data-en="Tools.">Ferramentas.</h3>
-        <div class="tools-grid tools-grid-2">
-          <div class="tools-col">
-            <h4 data-en="Design">Design</h4>
-            <ul>
-              <li>Figma</li>
-              <li data-en="High-fidelity prototyping">Prototipagem alta fidelidade</li>
-              <li data-en="UX Writing">UX Writing</li>
-              <li data-en="Persona">Persona</li>
-              <li data-en="Design Thinking">Design Thinking</li>
-              <li data-en="Interviews">Entrevistas</li>
-              <li data-en="Benchmarking">Benchmarking</li>
-              <li data-en="User journey">Jornada do usuário</li>
-              <li data-en="User stories">User Stories</li>
-            </ul>
-          </div>
-          <div class="tools-col">
-            <h4 data-en="Development">Desenvolvimento</h4>
-            <ul>
-              <li>Xcode</li>
-              <li>SwiftUI</li>
-              <li data-en="React and React Native">React e React Native</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- HOW I WORK · Soft skills -->
-      <div class="about-block">
-        <span class="eyebrow" data-en="How I work">Como eu trabalho</span>
-        <h3 data-en="How I approach building products.">Como eu construo produtos.</h3>
-      
-        <div class="softskills-grid">
-          
-          <div class="softskill-card">
-            <span class="softskill-n">01</span>
-            <h4 data-en="I Turn Constraints into Direction">Transformo restrições em direção</h4>
-            <p data-en="Hackathons taught me that time, scope, and resources are rarely ideal. Instead of seeing those limitations as obstacles, I learned to use them to make better decisions, prioritize what creates the most value, and keep products moving forward.">
-              Os hackathons me ensinaram que tempo, escopo e recursos quase nunca são ideais. Em vez de enxergar essas limitações como barreiras, aprendi a usá-las para tomar decisões mais objetivas, priorizar o que realmente gera valor e manter o produto evoluindo.
-            </p>
-          </div>
-      
-          <div class="softskill-card">
-            <span class="softskill-n">02</span>
-            <h4 data-en="I Believe Great Products Are Built Together">Gosto de construir junto</h4>
-            <p data-en="Most of the projects I've worked on have been highly collaborative. Over time, I've realized that the best solutions rarely come from a single idea, but from open discussions, different perspectives, and close collaboration across design, engineering, and product.">
-              Grande parte dos projetos em que participei aconteceu em equipes multidisciplinares. Percebi que as melhores soluções dificilmente surgem de uma ideia individual, mas das conversas, dos questionamentos e da troca constante entre design, desenvolvimento e produto.
-            </p>
-          </div>
-      
-          <div class="softskill-card">
-            <span class="softskill-n">03</span>
-            <h4 data-en="I Ask Questions Before Designing">Faço perguntas antes de desenhar</h4>
-            <p data-en="At the Apple Developer Academy, I learned that a polished interface alone doesn't solve a problem. Before opening Figma, I take the time to understand the context, the product goals, and the people behind the experience, so every design decision has a clear purpose.">
-              Ao longo da Apple Developer Academy, entendi que uma interface, por si só, raramente resolve um problema. Antes de abrir o Figma, procuro compreender o contexto, os objetivos do produto e o comportamento das pessoas para que cada decisão tenha um motivo claro.
-            </p>
-          </div>
-      
-          <div class="softskill-card">
-            <span class="softskill-n">04</span>
-            <h4 data-en="Feedback Is Part of My Process">Feedback faz parte do processo</h4>
-            <p data-en="Some of the projects that helped me grow the most were the ones where my ideas were challenged. I see feedback as an opportunity to refine solutions, explore new perspectives, and build better products together with the team.">
-              Os projetos que mais me fizeram evoluir foram justamente aqueles em que minhas ideias foram questionadas. Aprendi a enxergar o feedback como uma ferramenta de construção, refinando soluções junto ao time em vez de me apegar à primeira proposta.
-            </p>
-          </div>
-      
-          <div class="softskill-card">
-            <span class="softskill-n">05</span>
-            <h4 data-en="I'm Always Looking for a Better Way">Sempre existe uma forma melhor</h4>
-            <p data-en="One habit I've developed throughout my projects is not settling for the first solution. I enjoy exploring alternatives, testing ideas, and revisiting decisions whenever there's an opportunity to make the experience simpler, clearer, or more valuable for users.">
-              Uma característica que desenvolvi ao longo dos projetos é não me contentar com a primeira resposta. Gosto de explorar alternativas, testar possibilidades e revisar decisões sempre que encontro uma oportunidade de melhorar a experiência ou simplificar uma solução.
-            </p>
-          </div>
-      
-        </div>
-      </div>
-
-      <!-- TIMELINE -->
-      <div class="about-block">
-        <span class="eyebrow" data-en="Timeline">Timeline</span>
-        <h3 data-en="The journey so far.">A trajetória até aqui.</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-year">2025</span>
-            <p data-en="Product Designer at Apple Developer Academy">Product Designer na Apple Developer Academy</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2024</span>
-            <p data-en="Internship in UX/UI Design and Front End Development">Estágio em Design UX/UI e Desenvolvedora Front End</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2024</span>
-            <p data-en="Web Designer and Developer at Porto Digital">Web Designer e Desenvolvedor no Porto Digital</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2024</span>
-            <p data-en="Bachelor's in Computer Science">Bacharelado em Ciência da Computação</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2020</span>
-            <p data-en="Technical program in Systems Analysis and Development">Curso técnico em Análise e Desenvolvimento de Sistemas</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- RECOGNITION -->
-      <div class="about-block">
-        <span class="eyebrow" data-en="Recognition">Reconhecimento</span>
-        <h3 data-en="Memorable moments.">Momentos marcantes.</h3>
-        <div class="recognition-grid">
-          <figure class="recognition-item">
-            <img src="assets/recognition/m_m_1.jpg" alt="Instituto Memaker" loading="lazy" />
-            <figcaption data-en="Memaker Institute: studying creative expression and robotics.">Instituto Memaker: estudando sobre expressão criativa e robótica.</figcaption>
-          </figure>
-          <figure class="recognition-item">
-            <img src="assets/recognition/m_m_2.jpg" alt="3º lugar Hackathon InovaTI" loading="lazy" />
-            <figcaption data-en="3rd place, InovaTI Hackathon: a solution to automate EV charging in residential buildings.">3º lugar Hackathon InovaTI: solução para automatizar o carregamento de carros elétricos em condomínios.</figcaption>
-          </figure>
-
-          <!-- Par: 1º lugar Hackathon InovaTI (2 fotos, 1 legenda) -->
-          <figure class="recognition-item recognition-pair">
-            <img src="assets/recognition/m_m_3.jpg" alt="1º lugar Hackathon InovaTI" loading="lazy" />
-            <img src="assets/recognition/m_m_3_1.jpg" alt="1º lugar Hackathon InovaTI" loading="lazy" />
-            <figcaption data-en="1st place, InovaTI Hackathon: a solution for smart, optimized property rental.">1º lugar Hackathon InovaTI: solução para aluguel inteligente e otimizado de imóveis.</figcaption>
-          </figure>
-
-          <figure class="recognition-item">
-            <img src="assets/recognition/m_m_4.jpg" alt="1º lugar Hackathon HackaCity Guará" loading="lazy" />
-            <figcaption data-en="1st place, HackaCity Guará Hackathon: a solution to branch out recycling and engage the community.">1º lugar Hackathon HackaCity Guará: solução para ramificar a reciclagem e engajar a população.</figcaption>
-          </figure>
-          <figure class="recognition-item">
-            <img src="assets/recognition/m_m_5.jpg" alt="3º lugar Hackathon Hackideias Elas" loading="lazy" />
-            <figcaption data-en="3rd place, Hackideias Elas Hackathon: a solution to prevent domestic violence against women.">3º lugar Hackathon Hackideias Elas: solução para a prevenção da violência doméstica contra mulheres.</figcaption>
-          </figure>
-          <figure class="recognition-item recognition-pair">
-            <img src="assets/recognition/m_m_6.jpg" alt="2º e 3º lugares Hackathon Sinfor/DF" loading="lazy" />
-            <img src="assets/recognition/m_m_6_1.jpg" alt="2º e 3º lugares Hackathon Sinfor/DF" loading="lazy" />
-            <figcaption data-en="2nd and 3rd place, Sinfor/DF Hackathon: solutions connecting architects and clients through a dedicated platform, and a mental-health-focused smart chat.">2º e 3º lugares Hackathon Sinfor/DF: soluções para arquitetos e clientes terem contato por meio de uma plataforma própria e um chat inteligente voltado para saúde mental.</figcaption>
-          </figure>
-          <figure class="recognition-item">
-            <img src="assets/recognition/m_m_7.jpg" alt="Prêmio Sindesei Tech Excellence 2024" loading="lazy" />
-            <figcaption data-en="Sindesei Tech Excellence 2024 Award: outstanding student at Universidade Católica de Brasília.">Prêmio Sindesei Tech Excellence 2024: aluna destaque da Universidade Católica de Brasília.</figcaption>
-          </figure>
-
-          <!-- Par: lançamento do app Sete (2 fotos, 1 legenda) -->
-          <figure class="recognition-item recognition-pair">
-            <img src="assets/recognition/m_m_8.jpg" alt="Lançamento do app Sete na App Store" loading="lazy" />
-            <img src="assets/recognition/m_m_8_1.jpg" alt="Lançamento do app Sete na App Store" loading="lazy" />
-            <figcaption data-en="Launch of my first app on the App Store, &quot;Sete&quot;: built for court-sport players to track their performance.">Lançamento do meu primeiro aplicativo na App Store, "Sete": criado para jogadores de esportes de quadra analisarem suas performances.</figcaption>
-          </figure>
-
-          <figure class="recognition-item">
-            <img src="assets/recognition/m_m_9.jpg" alt="2º lugar Hackathon Open Connections + InCoDay" loading="lazy" />
-            <figcaption data-en="2nd place, Open Connections + InCoDay Hackathon: a solution connecting Black talent to the legal market.">2º lugar Hackathon Open Connections + InCoDay: solução para conectar talentos negros ao mercado jurídico.</figcaption>
-          </figure>
-          <figure class="recognition-item">
-            <img src="assets/recognition/m_m_10.jpg" alt="1º lugar Hackathon Cerrado Tech" loading="lazy" />
-            <figcaption data-en="1st place, Cerrado Tech Hackathon: a solution for farmers to intelligently track their crops.">1º lugar Hackathon Cerrado Tech: solução para produtores rurais acompanharem suas plantações de forma inteligente.</figcaption>
-          </figure>
-          <figure class="recognition-item">
-            <img src="assets/recognition/m_m_11.jpg" alt="Lançamento do app BorAli? Explore Brasília na App Store" loading="lazy" />
-            <figcaption data-en="Launch of my second app on the App Store, &quot;BorAli? Explore Brasília&quot;: built to help residents of Brazil's capital find easygoing leisure options.">Lançamento do meu segundo aplicativo na App Store, "BorAli? Explore Brasília": criado para moradores da capital do Brasil encontrarem lazeres de forma descontraída.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== LET'S TALK ===================== -->
-  <section id="contato" class="contact page">
-    <div class="container">
-      <span class="eyebrow" data-en="Let's Talk">Vamos conversar</span>
-      <h2 data-en="Let's build something amazing together?">Vamos construir algo incrível juntos?</h2>
-      <p data-en="I'm open to Product Design opportunities, focused on the Apple ecosystem and teams that value both process and results.">Estou aberta a oportunidades em Product Design, com foco no ecossistema Apple e em times que valorizam processo e resultado.</p>
-      <div class="contact-actions">
-        <a href="mailto:beatriz081medina@gmail.com" class="btn btn-primary" data-en="Send an email">Enviar e-mail</a>
-        <a href="https://www.linkedin.com/in/beatrizmedinaa" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
-        <a href="https://github.com/BeatrizMedinna" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
-      </div>
-    </div>
-  </section>
 
   <!-- ===================== FOOTER ===================== -->
   <footer>
@@ -721,51 +146,9 @@
       <span data-en="© 2026 Beatriz Medina">© 2026 Beatriz Medina</span>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/beatrizmedinaa" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/BeatrizMedinna" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </footer>
-
-  <!-- Navegação por páginas: Work / About / Let's Talk / Cases -->
-  <script>
-    (function () {
-      var pages = document.querySelectorAll('.page');
-      var links = document.querySelectorAll('[data-target]');
-
-      var navLinks = document.querySelectorAll('.nav-links a.nav-section');
-
-      // cada página "conta" para um item do menu (os cases contam como Work)
-      var navFor = { 'page-work': 'page-work', 'borali': 'page-work', 'sete': 'page-work', 'handraw': 'page-work', 'about': 'about', 'contato': 'contato' };
-
-      function showPage(id) {
-        pages.forEach(function (p) { p.classList.remove('active'); });
-        var target = document.getElementById(id);
-        if (target) target.classList.add('active');
-        window.scrollTo(0, 0);
-
-        var navId = navFor[id] || 'page-work';
-        navLinks.forEach(function (a) {
-          a.classList.toggle('active', a.dataset.target === navId);
-        });
-      }
-
-      links.forEach(function (el) {
-        el.addEventListener('click', function (e) {
-          e.preventDefault();
-          showPage(this.dataset.target);
-        });
-      });
-
-      // permite abrir direto em uma página específica via hash na URL
-      var initial = window.location.hash.replace('#', '');
-      var validIds = ['borali', 'sete', 'handraw', 'about', 'contato'];
-      if (validIds.indexOf(initial) !== -1) {
-        showPage(initial);
-      } else {
-        showPage('page-work');
-      }
-    })();
-  </script>
 
   <!-- Tradução completa PT/EN -->
   <script>
@@ -790,33 +173,6 @@
 
       buttons.forEach(function (btn) {
         btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
-      });
-    })();
-  </script>
-
-  <!-- Menu lateral dos case studies: destaca a seção visível -->
-  <script>
-    (function () {
-      var tocs = document.querySelectorAll('.case-toc');
-      tocs.forEach(function (toc) {
-        var links = toc.querySelectorAll('a');
-        var targets = Array.prototype.map.call(links, function (a) {
-          return document.querySelector(a.getAttribute('href'));
-        });
-
-        function onScroll() {
-          var pos = window.scrollY + 140;
-          var current = 0;
-          targets.forEach(function (t, i) {
-            if (t && t.offsetTop <= pos) current = i;
-          });
-          links.forEach(function (a, i) {
-            a.classList.toggle('active', i === current);
-          });
-        }
-
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
       });
     })();
   </script>
