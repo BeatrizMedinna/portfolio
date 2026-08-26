@@ -170,25 +170,36 @@
     (function () {
       var buttons = document.querySelectorAll('.lang button');
       var nodes = document.querySelectorAll('[data-en]');
-      // guarda o conteúdo original em português
+      
+      // Guarda o conteúdo original em português
       nodes.forEach(function (el) { el.setAttribute('data-pt', el.innerHTML); });
-
+  
       function setLang(lang) {
         nodes.forEach(function (el) {
           var val = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-pt');
           if (val !== null) el.innerHTML = val;
         });
         document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+        
         buttons.forEach(function (b) {
           var on = b.dataset.lang === lang;
           b.classList.toggle('active', on);
           b.setAttribute('aria-pressed', on ? 'true' : 'false');
         });
+  
+        // Salva a escolha no navegador para não perder ao trocar de página
+        localStorage.setItem('preferred_lang', lang);
       }
-
+  
       buttons.forEach(function (btn) {
         btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
       });
+  
+      // Puxa a memória de idioma assim que a página de projeto carrega
+      var savedLang = localStorage.getItem('preferred_lang');
+      if (savedLang) {
+        setLang(savedLang);
+      }
     })();
   </script>
 
