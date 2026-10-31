@@ -437,7 +437,15 @@
     .media-2 { grid-template-columns: 1fr; }
     .pc-body { padding: 30px; }
     .outcome { padding: 30px; }
-    .nav-links { gap: 14px; }
+    /* Nav em duas linhas no celular: nome + idioma em cima, links embaixo */
+    :root { --nav-h: 88px; }
+    .nav-inner { flex-wrap: wrap; justify-content: flex-start; align-content: center; gap: 6px 20px; padding: 0 20px; }
+    .nav-inner::after { content: ""; flex-basis: 100%; order: 2; }
+    .nav-links { display: contents; }
+    .nav-brand { order: 0; }
+    .lang { order: 1; margin-left: auto; }
+    .nav-links a.nav-section { order: 3; font-size: 14px; padding: 4px 0; }
+    .case, .about-sec { padding-top: calc(var(--nav-h) + 24px); }
     .manifesto blockquote { max-width: none; }
     .tools-grid { grid-template-columns: 1fr; }
     .softskills-grid { grid-template-columns: 1fr; gap: 30px; }

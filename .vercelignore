@@ -1,0 +1,22 @@
+# Arquivos de trabalho que não devem ir para o site publicado.
+# Eles continuam no repositório e no computador; só deixam de ser servidos pela Vercel.
+
+# Documentos internos
+/diretrizes_site.md
+/sobre_mim.md
+/Ferramentas.pdf
+/Jornada até aqui.pdf
+/Captura de Tela*.png
+
+# Materiais originais dos projetos (as versões usadas no site estão em assets/).
+# A barra inicial prende o padrão à raiz: /SETE/ não pode pegar assets/sete/.
+/SETE/
+/BorAli? Explore Brasília/
+
+# Originais pesados não usados nas páginas
+/foto_perfil.jpg
+/assets/recognition/m_m_6.1.PNG
+
+# Arquivos do sistema
+.DS_Store
+**/.DS_Store
