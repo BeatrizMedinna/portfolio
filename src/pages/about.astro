@@ -1,8 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
-import Todo from '../components/Todo.astro';
-import { awards, journey } from '../data/profile';
+import { journey } from '../data/profile';
 import { img } from '../lib/images';
 
 const process = [
@@ -56,7 +55,7 @@ const recognition: Award[] = [
         <div class="prose">
           <p>Comecei na tecnologia ainda no ensino médio, em Recife, no curso técnico de Análise e Desenvolvimento de Sistemas do Porto Digital. Ali vi a tecnologia resolvendo problemas reais e descobri o que mais me interessava: transformar essa capacidade em experiências que fizessem sentido para as pessoas.</p>
           <p>Na graduação em Ciência da Computação, na Universidade Católica de Brasília, encontrei no Product Design uma forma de unir o conhecimento técnico à experiência do usuário. Entre hackathons, projetos em grupo e o estágio na Cria Incubator, assumir o papel de designer aconteceu de forma natural.</p>
-          <p>Hoje, como Product Designer na Apple Developer Academy, desenho produtos para o ecossistema Apple e gosto de participar do processo inteiro, da compreensão do problema à interface final.</p>
+          <p>Hoje, como Product Designer na Apple Developer Academy, desenho produtos para o ecossistema Apple e gosto de participar do processo inteiro, da compreensão do problema à interface final. Moro em Brasília e estou aberta a oportunidades remotas.</p>
         </div>
       </div>
       <figure class="about-photo">
@@ -116,7 +115,7 @@ const recognition: Award[] = [
         <tbody>
           {journey.map((j) => (
             <tr>
-              <th scope="row">{j.when}{j.todo && <Todo>{j.todo}</Todo>}</th>
+              <th scope="row">{j.when}</th>
               <td><strong>{j.what}</strong></td>
               <td>{j.where}</td>
             </tr>
@@ -130,7 +129,7 @@ const recognition: Award[] = [
     <div class="wrap">
       <header class="section-head">
         <h2 class="label">Reconhecimento</h2>
-        <p class="section-title">{awards.podiums} pódios em {awards.editions} edições de hackathons, {awards.wins} em 1º lugar.</p>
+        <p class="section-title">Hackathons, prêmios e lançamentos.</p>
       </header>
       <ul class="recognition">
         {recognition.map((r) => (

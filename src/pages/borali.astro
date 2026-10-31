@@ -48,9 +48,9 @@ import Todo from '../components/Todo.astro';
 
   <section id="borali-estrategia" class="block">
     <p class="label">Contexto</p>
-    <h2>O que realmente impede as pessoas de sair de casa?</h2>
+    <h2>De “experiência imersiva” a um problema concreto: sair de casa.</h2>
     <div class="prose">
-      <p>Existia uma vontade genuína de explorar a cidade, mas não sabíamos o que impedia esse desejo de virar ação. Antes de pensar em solução, fomos entender o comportamento. A pergunta que guiou o projeto: como reduzir o atrito entre querer sair e sair?</p>
+      <p>O desafio da Apple Developer Academy começou amplo: como ampliar a visão de mundo por meio de uma experiência imersiva? Estudando espaços urbanos e a forma como a cidade influencia o comportamento, o time refinou o desafio para incentivar experiências fora de casa que conectem as pessoas à comunidade.</p>
     </div>
   </section>
 
@@ -59,10 +59,16 @@ import Todo from '../components/Todo.astro';
     <h2>Não faltavam opções. Sobrava o medo de escolher errado.</h2>
     <div class="block-grid">
       <div class="prose">
-        <p>Conduzi a descoberta reunindo benchmarking, entrevistas e síntese num espaço colaborativo. Ficar em casa reforçava a vontade de continuar em casa, e as redes sociais despertavam o desejo, mas raramente ajudavam a decidir.</p>
-        <p>Quanto maior a oferta, maior a insegurança de fazer a escolha “errada”. Contexto e estado emocional pesavam mais na decisão do que qualquer lista de lugares.</p>
+        <p>Conduzi a descoberta com benchmarking, entrevistas e síntese num espaço colaborativo. O roteiro tinha sete perguntas, de “Já aconteceu de você querer sair, mas acabar não indo? Por quê?” a “Imagina que você está com vontade de sair agora, mas sem plano. O que faria primeiro?”. <Todo>quantas pessoas foram entrevistadas</Todo></p>
+        <p>A síntese mostrou que o bloqueio era interno, não externo:</p>
+        <ul class="findings">
+          <li>As pessoas não saem por causa do lugar. Saem para sentir algo: pertencimento, novidade.</li>
+          <li>Ficar em casa gera mais vontade de ficar em casa. É um ciclo, não uma decisão isolada.</li>
+          <li>Redes sociais despertam a vontade, mas não ajudam a agir.</li>
+          <li>Querem explorar, mas sem incerteza. Descoberta guiada funciona melhor que descoberta livre.</li>
+        </ul>
       </div>
-      <Note label="O que mudou">O problema deixou de ser “mostrar opções” e passou a ser “ajudar a decidir”.</Note>
+      <Note label="O que mudou">O problema não era falta de interesse nem de opções. Era excesso de atrito na hora de decidir.</Note>
     </div>
     <div class="compare">
       <Figure src="borali/benchmarking.png" alt="Benchmarking de aplicativos concorrentes" caption="Benchmarking competitivo." n={1} crop />
@@ -76,9 +82,9 @@ import Todo from '../components/Todo.astro';
     <Decision n="01" title="O que o app recomenda e como" id="d1">
       <Row label="Contexto">Pessoas cansadas de uma rotina cheia de decisões, diante de opções demais.</Row>
       <Row label="Base">Jornada do usuário mapeando frustrações e oportunidades, histórias de usuário e matriz de esforço e impacto.</Row>
-      <Row label="Opções"><Todo>alternativas consideradas pelo time</Todo></Row>
-      <Row label="Escolha" choice>Recomendar experiências de acordo com o contexto e o humor do usuário.</Row>
-      <Row label="Por quê">Tira de quem já está cansado o trabalho de pesquisar e comparar lugares.</Row>
+      <Row label="Opções">Três conceitos: um mapa do movimento dos lugares em tempo real, com avaliações de quem está lá; um catálogo de aulas e atividades experimentais na cidade; e um mapa de atrativos de Brasília para combinar rolês em grupo.</Row>
+      <Row label="Escolha" choice>Uma experiência guiada pelo momento da pessoa: como ela quer se sentir, com quem está e o que pretende fazer.</Row>
+      <Row label="Por quê">Os três conceitos ainda pediam que a pessoa comparasse opções. A pesquisa mostrou que o atrito estava justamente aí.</Row>
       <Figure slot="figure" src="borali/jornada.png" alt="Jornada do usuário do BorAli?" caption="Jornada do usuário." n={3} crop />
     </Decision>
   </section>

@@ -2,9 +2,8 @@
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import Chips from '../components/Chips.astro';
-import Todo from '../components/Todo.astro';
 import { projects } from '../data/projects';
-import { awards, journey } from '../data/profile';
+import { journey, location } from '../data/profile';
 import { img } from '../lib/images';
 
 const photo = img('profile.jpg');
@@ -21,8 +20,9 @@ const photo = img('profile.jpg');
         <p class="kicker"><span class="status-dot" aria-hidden="true"></span>Product Designer · Apple Developer Academy</p>
         <h1>Desenho produtos da pesquisa à <em>App&nbsp;Store</em>.</h1>
         <p class="lede">
-          Três apps publicados, para macOS, iOS e watchOS. Venho da Ciência da Computação: pesquiso, desenho no Figma
-          e construo protótipos funcionais em SwiftUI com apoio do Claude, para validar no simulador antes do handoff.
+          Três apps publicados na App Store, para macOS, iOS e watchOS. Conduzo pesquisa, transformo achados em decisões
+          de produto e desenho a interface. A formação em Ciência da Computação complementa o trabalho: facilita a conversa
+          com engenharia e me permite prototipar em SwiftUI quando o projeto pede.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#work">Ver projetos</a>
@@ -36,9 +36,9 @@ const photo = img('profile.jpg');
     <div class="wrap">
       <dl class="hero-spec">
         <div><dt>Foco</dt><dd>Product Design · UX/UI</dd></div>
-        <div><dt>Diferencial</dt><dd>SwiftUI e front-end</dd></div>
+        <div><dt>Complemento</dt><dd>SwiftUI e front-end</dd></div>
         <div><dt>Na App Store</dt><dd>3 apps desde 2025</dd></div>
-        <div><dt>Hackathons</dt><dd>{awards.podiums} pódios, {awards.wins} vitórias</dd></div>
+        <div><dt>Base</dt><dd>{location} · remoto</dd></div>
       </dl>
     </div>
   </section>
@@ -89,14 +89,14 @@ const photo = img('profile.jpg');
           <a href="/handraw.html#handraw-ideacao">Ver a decisão no Handraw <span aria-hidden="true">→</span></a>
         </li>
         <li>
-          <h3>Protótipos que funcionam</h3>
-          <p>Do Figma para interfaces funcionais em SwiftUI, com o Claude como apoio no código. Valido no simulador e entrego componentes prontos para o handoff.</p>
-          <a href="/about.html#como-trabalho">Como trabalho hoje <span aria-hidden="true">→</span></a>
-        </li>
-        <li>
           <h3>Design que conversa com engenharia</h3>
           <p>Formação em Ciência da Computação e experiência como desenvolvedora front-end. Desenho considerando o que o SwiftUI, o HealthKit e a câmera conseguem entregar.</p>
           <a href="/sete.html#sete-watchos">Ver o Apple Watch no SETE <span aria-hidden="true">→</span></a>
+        </li>
+        <li>
+          <h3>Protótipos que funcionam</h3>
+          <p>Hoje, quando o projeto pede, levo telas do Figma para interfaces funcionais em SwiftUI, com o Claude como apoio no código, e valido no simulador antes do handoff.</p>
+          <a href="/about.html#como-trabalho">Como trabalho hoje <span aria-hidden="true">→</span></a>
         </li>
       </ol>
     </div>
@@ -113,14 +113,14 @@ const photo = img('profile.jpg');
         <tbody>
           {journey.map((j) => (
             <tr>
-              <th scope="row">{j.when}{j.todo && <Todo>{j.todo}</Todo>}</th>
+              <th scope="row">{j.when}</th>
               <td><strong>{j.what}</strong></td>
               <td>{j.where}</td>
             </tr>
           ))}
           <tr>
             <th scope="row">Prêmios</th>
-            <td><strong>{awards.podiums} pódios em {awards.editions} edições de hackathons, {awards.wins} em 1º lugar</strong></td>
+            <td><strong>Pódios em hackathons como product designer</strong></td>
             <td>Prêmio Sindesei Tech Excellence 2024, aluna destaque da UCB</td>
           </tr>
         </tbody>
