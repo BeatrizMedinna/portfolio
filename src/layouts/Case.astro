@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import Base from './Base.astro';
+import Chips from '../components/Chips.astro';
+import Spec from '../components/Spec.astro';
+import { img } from '../lib/images';
+
+interface Props {
+  slug: string;
+  title: string;
+  description: string;
+  kicker: string;
+  lede: string;
+  chips: string[];
+  spec: [string, string][];
+  store: { href: string; label: string };
+  cover: { src: string; alt: string };
+  toc: { id: string; label: string }[];
+  next: { href: string; title: string; sub: string };
+}
+const p = Astro.props;
+const cover = img(p.cover.src);
+---
+<Base title={p.title} description={p.description} page="work" bodyClass="page-case">
+  <div class="case" id={p.slug}>
+    <div class="wrap">
+      <a class="back" href="/#work"><span aria-hidden="true">←</span> Trabalho</a>
+      <header class="case-head" id={`${p.slug}-overview`}>
+        <p class="kicker" set:html={p.kicker} />
+        <h1>{p.title.split(' · ')[0]}</h1>
+        <p class="case-lede">{p.lede}</p>
+        <Chips items={p.chips} />
+        <Spec items={p.spec} store={p.store} />
+      </header>
+      <figure class="case-cover">
+        <Image src={cover} alt={p.cover.alt} widths={[800, 1200, 1600, cover.width]} sizes="(max-width: 1200px) 100vw, 1120px" loading="eager" fetchpriority="high" />
+      </figure>
+    </div>
+
+    <div class="wrap case-layout">
+      <nav class="toc" aria-label="Neste case">
+        <p class="toc-title">Neste case</p>
+        <div class="read-progress" aria-hidden="true"><span></span></div>
+        {p.toc.map((t) => <a href={`#${t.id}`}>{t.label}</a>)}
+      </nav>
+      <article class="case-body">
+        <slot />
+        <a class="next" href={p.next.href}>
+          <span class="next-label">Próximo case</span>
+          <span class="next-title">{p.next.title} <span aria-hidden="true">→</span></span>
+          <span class="next-sub">{p.next.sub}</span>
+        </a>
+      </article>
+    </div>
+  </div>
+</Base>

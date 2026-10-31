@@ -1,0 +1,5 @@
+---
+interface Props { plain?: boolean }
+const { plain = false } = Astro.props;
+---
+<dl class:list={['summary', { 'summary--plain': plain }]}><slot /></dl>

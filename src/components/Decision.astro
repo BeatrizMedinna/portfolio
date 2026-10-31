@@ -1,0 +1,12 @@
+---
+interface Props { n: string; title: string; id: string }
+const { n, title, id } = Astro.props;
+---
+<article class="decision" aria-labelledby={id}>
+  <header class="decision-head">
+    <h3 id={id}>{title}</h3>
+    <span class="decision-tag">Decisão {n}</span>
+  </header>
+  <dl class="decision-table"><slot /></dl>
+  <slot name="figure" />
+</article>

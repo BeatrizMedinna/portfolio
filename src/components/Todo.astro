@@ -1,0 +1,7 @@
+---
+// Marca informação pendente. O build de produção (Vercel production ou PUBLISH=1) falha se sobrar algum.
+if (import.meta.env.PROD && (process.env.VERCEL_ENV === 'production' || process.env.PUBLISH === '1')) {
+  throw new Error('Há conteúdo [a confirmar] pendente. Resolva antes de publicar.');
+}
+---
+<span class="todo">[a confirmar: <slot />]</span>

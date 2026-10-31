@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://portfolio-kohl-tau-gvls4trd33.vercel.app/sitemap-index.xml

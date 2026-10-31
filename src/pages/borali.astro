@@ -1,0 +1,148 @@
+---
+import Case from '../layouts/Case.astro';
+import Summary from '../components/Summary.astro';
+import Row from '../components/Row.astro';
+import Decision from '../components/Decision.astro';
+import Figure from '../components/Figure.astro';
+import Gallery from '../components/Gallery.astro';
+import Note from '../components/Note.astro';
+import Todo from '../components/Todo.astro';
+---
+<Case
+  slug="borali"
+  title="BorAli? Explore Brasília · Case de Product Design · Beatriz Medina"
+  description="Design do BorAli?, app que recomenda passeios em Brasília pelo contexto e pelo humor de quem quer sair: pesquisa comportamental, priorização e validação."
+  kicker='<span class="idx">Case 03</span>iOS · 2026'
+  lede="Como transformar a vontade de sair de casa em ação, reduzindo o esforço de escolher um programa."
+  chips={['Pesquisa comportamental', 'Problema reenquadrado', 'Jornada e priorização', 'Fluxos validados']}
+  spec={[
+    ['Papel', 'Product Designer (UX/UI)'],
+    ['Time', '5 pessoas, design, código e produto'],
+    ['Duração', '7 semanas'],
+    ['Plataforma', 'iOS (iPhone)'],
+    ['Lançamento', 'Maio de 2026'],
+  ]}
+  store={{ href: 'https://apps.apple.com/br/app/borali-explore-bras%C3%ADlia/id6764412373', label: 'App Store' }}
+  cover={{ src: 'borali/screenshots.png', alt: 'Telas do BorAli? com roteiros, mapa e recomendações de lugares em Brasília' }}
+  toc={[
+    { id: 'resumo', label: 'Resumo' },
+    { id: 'borali-estrategia', label: 'Contexto' },
+    { id: 'borali-pesquisa', label: 'Pesquisa' },
+    { id: 'borali-ideacao', label: 'Decisão' },
+    { id: 'borali-interface', label: 'Design system' },
+    { id: 'borali-validacao', label: 'Validação' },
+    { id: 'borali-resultado', label: 'Resultado' },
+    { id: 'artefatos', label: 'Artefatos' },
+  ]}
+  next={{ href: '/handraw.html', title: 'Handraw', sub: 'macOS · 2026' }}
+>
+  <section id="resumo" aria-labelledby="t-resumo">
+    <h2 id="t-resumo" class="label">Em 30 segundos</h2>
+    <Summary>
+      <Row label="Problema">Muita gente quer sair para conhecer a cidade, mas adia ou desiste na hora de escolher o programa.</Row>
+      <Row label="Meu papel">Conduzi a descoberta, transformei a pesquisa em personas e jornada, priorizei o escopo e desenhei a base visual e as telas. <Todo>o que foi seu e o que foi do time</Todo></Row>
+      <Row label="Decisão-chave">Recomendar experiências pelo contexto e pelo humor do usuário, em vez de listar lugares.</Row>
+      <Row label="Resultado">Publicado na App Store em maio de 2026.</Row>
+    </Summary>
+  </section>
+
+  <section id="borali-estrategia" class="block">
+    <p class="label">Contexto</p>
+    <h2>O que realmente impede as pessoas de sair de casa?</h2>
+    <div class="prose">
+      <p>Existia uma vontade genuína de explorar a cidade, mas não sabíamos o que impedia esse desejo de virar ação. Antes de pensar em solução, fomos entender o comportamento. A pergunta que guiou o projeto: como reduzir o atrito entre querer sair e sair?</p>
+    </div>
+  </section>
+
+  <section id="borali-pesquisa" class="block">
+    <p class="label">Pesquisa</p>
+    <h2>Não faltavam opções. Sobrava o medo de escolher errado.</h2>
+    <div class="block-grid">
+      <div class="prose">
+        <p>Conduzi a descoberta reunindo benchmarking, entrevistas e síntese num espaço colaborativo. Ficar em casa reforçava a vontade de continuar em casa, e as redes sociais despertavam o desejo, mas raramente ajudavam a decidir.</p>
+        <p>Quanto maior a oferta, maior a insegurança de fazer a escolha “errada”. Contexto e estado emocional pesavam mais na decisão do que qualquer lista de lugares.</p>
+      </div>
+      <Note label="O que mudou">O problema deixou de ser “mostrar opções” e passou a ser “ajudar a decidir”.</Note>
+    </div>
+    <div class="compare">
+      <Figure src="borali/benchmarking.png" alt="Benchmarking de aplicativos concorrentes" caption="Benchmarking competitivo." n={1} crop />
+      <Figure src="borali/entrevistas.png" alt="Síntese das entrevistas com usuários" caption="Entrevistas e síntese de insights." n={2} crop />
+    </div>
+  </section>
+
+  <section id="borali-ideacao" class="block">
+    <p class="label">Decisão</p>
+    <h2>Resolver bem um problema central antes de ampliar o escopo.</h2>
+    <Decision n="01" title="O que o app recomenda e como" id="d1">
+      <Row label="Contexto">Pessoas cansadas de uma rotina cheia de decisões, diante de opções demais.</Row>
+      <Row label="Base">Jornada do usuário mapeando frustrações e oportunidades, histórias de usuário e matriz de esforço e impacto.</Row>
+      <Row label="Opções"><Todo>alternativas consideradas pelo time</Todo></Row>
+      <Row label="Escolha" choice>Recomendar experiências de acordo com o contexto e o humor do usuário.</Row>
+      <Row label="Por quê">Tira de quem já está cansado o trabalho de pesquisar e comparar lugares.</Row>
+      <Figure slot="figure" src="borali/jornada.png" alt="Jornada do usuário do BorAli?" caption="Jornada do usuário." n={3} crop />
+    </Decision>
+  </section>
+
+  <section id="borali-interface" class="block">
+    <p class="label">Design system</p>
+    <h2>Componentes e estilos definidos antes das telas.</h2>
+    <div class="prose">
+      <p>Estruturei a base visual no Figma, com componentes, estilos e padrões que deixaram as interfaces mais rápidas de evoluir e facilitaram a colaboração com o desenvolvimento.</p>
+    </div>
+    <div class="compare">
+      <Figure src="borali/var-cores.png" alt="Variáveis de cor do BorAli?" caption="Variáveis de cor." zoom={false} />
+      <Figure src="borali/var-tipografia.png" alt="Variáveis de tipografia do BorAli?" caption="Variáveis de tipografia." zoom={false} />
+    </div>
+  </section>
+
+  <section id="borali-validacao" class="block">
+    <p class="label">Validação</p>
+    <h2>Fluxos validados em média fidelidade, detalhes refinados na alta.</h2>
+    <div class="prose">
+      <p>Comecei validando os fluxos em média fidelidade e deixei a maioria das decisões visuais para depois. Com os caminhos principais definidos, refinei conteúdo, microinterações e detalhes na alta fidelidade. <Todo>como foi a validação: com quem e o que mudou</Todo></p>
+    </div>
+    <div class="compare compare-phone">
+      <Figure src="borali/mid-02-detalhes.png" alt="Tela de detalhes em média fidelidade" tag="Antes · média fidelidade" />
+      <Figure src="borali/hi-02-detalhes.png" alt="Tela de detalhes em alta fidelidade" tag="Depois · alta fidelidade" after />
+    </div>
+    <Gallery cols={4} phone items={[
+      { src: 'borali/mid-01-inicio.png', alt: 'Tela inicial em média fidelidade', caption: 'Início, média fidelidade' },
+      { src: 'borali/hi-01-inicio.png', alt: 'Tela inicial em alta fidelidade', caption: 'Início' },
+      { src: 'borali/hi-03-explorar-a.png', alt: 'Tela explorar em alta fidelidade', caption: 'Explorar' },
+      { src: 'borali/hi-04-explorar-b.png', alt: 'Tela explorar em alta fidelidade, segunda parte', caption: 'Explorar, parte 2' },
+    ]} />
+  </section>
+
+  <section id="borali-resultado" class="block">
+    <p class="label">Resultado</p>
+    <h2>Publicado na App Store em maio de 2026.</h2>
+    <Summary plain>
+      <Row label="Entregue">App que recomenda experiências em Brasília a partir do contexto e do humor de quem vai sair.</Row>
+      <Row label="O que aprendi">Eu buscava na pesquisa respostas que confirmassem minhas ideias. Hoje uso a descoberta para questionar minhas suposições e deixar os achados guiarem as decisões.</Row>
+    </Summary>
+  </section>
+
+  <section id="artefatos" class="block">
+    <p class="label">Artefatos do processo</p>
+    <h2>Para quem quer ver os bastidores.</h2>
+    <details class="artifacts" id="borali-personas">
+      <summary>Personas</summary>
+      <p>Duas personas com motivações e comportamentos diferentes, usadas para discutir prioridades e manter as decisões ligadas ao que a pesquisa mostrou.</p>
+      <Gallery items={[
+        { src: 'borali/persona-1.png', alt: 'Persona primária do BorAli?', caption: 'Persona primária' },
+        { src: 'borali/persona-2.png', alt: 'Persona secundária do BorAli?', caption: 'Persona secundária' },
+      ]} />
+    </details>
+    <details class="artifacts" id="borali-priorizacao">
+      <summary>Histórias de usuário e priorização</summary>
+      <Gallery items={[
+        { src: 'borali/historias.png', alt: 'Histórias do usuário do BorAli?', caption: 'Histórias de usuário' },
+        { src: 'borali/matriz.png', alt: 'Matriz de esforço por impacto do BorAli?', caption: 'Matriz esforço x impacto' },
+      ]} />
+    </details>
+    <details class="artifacts" id="borali-telas">
+      <summary>Visão geral da interface</summary>
+      <Figure src="borali/hi-overview.png" alt="Visão geral da interface do BorAli? em alta fidelidade" caption="Protótipo em alta fidelidade, visão geral." />
+    </details>
+  </section>
+</Case>

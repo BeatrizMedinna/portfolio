@@ -1,0 +1,18 @@
+---
+interface Props { page: 'work' | 'about' | 'none' }
+const { page } = Astro.props;
+const cur = (p: string) => (p === page ? 'page' : undefined);
+---
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">Beatriz Medina</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+      <span>Menu</span><span class="menu-icon" aria-hidden="true"></span>
+    </button>
+    <nav id="menu" class="menu" aria-label="Principal">
+      <a href="/#work" aria-current={cur('work')}>Trabalho</a>
+      <a href="/about.html" aria-current={cur('about')}>Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>

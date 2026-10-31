@@ -1,0 +1,133 @@
+---
+import Case from '../layouts/Case.astro';
+import Summary from '../components/Summary.astro';
+import Row from '../components/Row.astro';
+import Decision from '../components/Decision.astro';
+import Figure from '../components/Figure.astro';
+import Gallery from '../components/Gallery.astro';
+import Note from '../components/Note.astro';
+import Todo from '../components/Todo.astro';
+---
+<Case
+  slug="sete"
+  title="SETE · Case de Product Design · Beatriz Medina"
+  description="Design do SETE, app para iPhone e Apple Watch que transforma dados de treino em métricas para quem joga esportes de quadra."
+  kicker='<span class="idx">Case 02</span>iOS + watchOS · 2025'
+  lede="Métricas de treino para quem joga esportes de quadra, levando ao amador dados que antes eram do alto rendimento."
+  chips={['iPhone + Apple Watch', 'Dados do HealthKit', 'Proposta de valor única', 'Design para leitura rápida']}
+  spec={[
+    ['Papel', 'Product Designer (UX/UI)'],
+    ['Time', '5 pessoas, design, código e produto'],
+    ['Duração', '7 semanas'],
+    ['Plataforma', 'iOS + watchOS'],
+    ['Lançamento', 'Agosto de 2025'],
+  ]}
+  store={{ href: 'https://apps.apple.com/br/app/sete-esporte-e-performance/id6751563867', label: 'App Store' }}
+  cover={{ src: 'sete/screenshots.png', alt: 'Telas do SETE no iPhone e no Apple Watch com jogos, evolução e conquistas' }}
+  toc={[
+    { id: 'resumo', label: 'Resumo' },
+    { id: 'sete-estrategia', label: 'Contexto' },
+    { id: 'sete-pesquisa', label: 'Pesquisa' },
+    { id: 'sete-conceito', label: 'Proposta' },
+    { id: 'sete-interface', label: 'Design system' },
+    { id: 'sete-validacao', label: 'Validação' },
+    { id: 'sete-watchos', label: 'Apple Watch' },
+    { id: 'sete-resultado', label: 'Resultado' },
+  ]}
+  next={{ href: '/borali.html', title: 'BorAli? Explore Brasília', sub: 'iOS · 2026' }}
+>
+  <section id="resumo" aria-labelledby="t-resumo">
+    <h2 id="t-resumo" class="label">Em 30 segundos</h2>
+    <Summary>
+      <Row label="Problema">Apps de saúde registram muitos dados, mas apresentam tudo de forma genérica, sem falar a língua de cada esporte.</Row>
+      <Row label="Meu papel">Conduzi a descoberta, defini a proposta de valor e desenhei a base visual e as telas de iPhone e Apple Watch. <Todo>o que foi seu e o que foi do time</Todo></Row>
+      <Row label="Decisão-chave">Uma única proposta de valor: métricas específicas para esportes de quadra, em vez de mais um app de saúde.</Row>
+      <Row label="Resultado">Publicado na App Store em agosto de 2025 e atualizado até a versão 1.6.</Row>
+    </Summary>
+  </section>
+
+  <section id="sete-estrategia" class="block">
+    <p class="label">Contexto</p>
+    <h2>No esporte, exclusividade não é restringir acesso. É dar a cada pessoa dados que façam sentido para ela.</h2>
+    <div class="prose">
+      <p>O projeto partiu de uma pergunta: o que faz uma experiência parecer exclusiva para quem a usa? <Todo>de onde veio esse tema</Todo> Entre os caminhos explorados, o esporte se destacou. O desafio passou a ser incentivar praticantes a acompanhar a própria evolução de forma significativa.</p>
+    </div>
+  </section>
+
+  <section id="sete-pesquisa" class="block">
+    <p class="label">Pesquisa</p>
+    <h2>Os números já existiam. Faltava traduzi-los para cada modalidade.</h2>
+    <div class="block-grid">
+      <div class="prose">
+        <p>Conduzi a descoberta com benchmarking, pesquisa e análise do ecossistema Apple para entender o que já existia e onde havia espaço para gerar valor.</p>
+        <p>Os apps de saúde coletam muito, mas mostram de forma genérica. Para quem joga um esporte específico, os dados raramente viram algo útil para evoluir naquela modalidade.</p>
+      </div>
+      <Note label="O que mudou">O produto passou a aproveitar o que o Apple Watch e o HealthKit já coletam, em vez de pedir mais dados ao usuário.</Note>
+    </div>
+  </section>
+
+  <section id="sete-conceito" class="block">
+    <p class="label">Decisão</p>
+    <h2>Resolver muito bem um problema.</h2>
+    <Decision n="01" title="Proposta de valor" id="d1">
+      <Row label="Contexto">Apps de saúde genéricos de um lado; dados de alto rendimento inacessíveis ao amador do outro.</Row>
+      <Row label="Opções"><Todo>alternativas consideradas pelo time</Todo></Row>
+      <Row label="Escolha" choice>Uma experiência focada em métricas específicas de esportes de quadra, sem reunir funcionalidades paralelas.</Row>
+      <Row label="Por quê">Um produto cria mais valor quando resolve muito bem um problema do que quando tenta resolver muitos ao mesmo tempo.</Row>
+    </Decision>
+  </section>
+
+  <section id="sete-interface" class="block">
+    <p class="label">Design system</p>
+    <h2>Hierarquia pensada para ler no meio do treino.</h2>
+    <div class="prose">
+      <p>Estruturei a base visual no Figma seguindo as diretrizes da Apple. Componentes, tipografia e hierarquia foram pensados para facilitar a leitura durante o treino, no iPhone e no Apple Watch.</p>
+    </div>
+    <Figure src="sete/palette.png" alt="Paleta de cores do app SETE" caption="Paleta de cores." n={1} zoom={false} />
+  </section>
+
+  <section id="sete-validacao" class="block">
+    <p class="label">Validação</p>
+    <h2>Validar a navegação antes de investir na interface final.</h2>
+    <div class="prose">
+      <p>Comecei pelos fluxos principais em média fidelidade. Com a navegação definida, refinei na alta fidelidade a organização das métricas, os estados da interface e a forma de mostrar o progresso. <Todo>houve teste com usuários? com quantas pessoas e o que mudou</Todo></p>
+    </div>
+    <div class="compare compare-phone">
+      <Figure src="sete/mid-02-evolucao.png" alt="Tela de evolução em média fidelidade" tag="Antes · média fidelidade" />
+      <Figure src="sete/hi-02-evolucao.png" alt="Tela de evolução em alta fidelidade" tag="Depois · alta fidelidade" after />
+    </div>
+    <Gallery cols={4} phone items={[
+      { src: 'sete/mid-01-inicio.png', alt: 'Tela inicial em média fidelidade', caption: 'Início, média fidelidade' },
+      { src: 'sete/hi-01-inicio.png', alt: 'Tela inicial em alta fidelidade', caption: 'Início' },
+      { src: 'sete/hi-03-compartilhar-a.png', alt: 'Tela de compartilhamento em alta fidelidade', caption: 'Compartilhar' },
+      { src: 'sete/hi-03-compartilhar-b.png', alt: 'Tela de compartilhamento em alta fidelidade, segunda etapa', caption: 'Compartilhar, etapa 2' },
+    ]} />
+  </section>
+
+  <section id="sete-watchos" class="block">
+    <p class="label">Apple Watch</p>
+    <h2>A informação certa em poucos segundos, sem tirar a atenção do jogo.</h2>
+    <div class="prose">
+      <p>O relógio é onde os dados são capturados, então não foi tratado como complemento. Desenhei telas rápidas de consultar, em que as informações principais são entendidas num relance.</p>
+    </div>
+    <ul class="watch-row">
+      {[
+        ['sete/watch-bemvindo.png', 'Tela de boas-vindas no Apple Watch'],
+        ['sete/watch-cronometro.png', 'Cronômetro no Apple Watch'],
+        ['sete/watch-tempo-1.png', 'Tempo de jogo no Apple Watch'],
+        ['sete/watch-tempo-2.png', 'Tempo de jogo no Apple Watch, segunda tela'],
+        ['sete/watch-tempo-3.png', 'Tempo de jogo no Apple Watch, terceira tela'],
+      ].map(([src, alt]) => <li><Figure src={src} alt={alt} /></li>)}
+    </ul>
+  </section>
+
+  <section id="sete-resultado" class="block">
+    <p class="label">Resultado</p>
+    <h2>Publicado em agosto de 2025, meu primeiro app na App Store.</h2>
+    <Summary plain>
+      <Row label="Entregue">App para iPhone e Apple Watch que transforma dados de treino em métricas para esportes de quadra.</Row>
+      <Row label="Depois do lançamento">Seis semanas depois, o app estava na versão 1.6. <Todo>o que mudou nessas versões</Todo></Row>
+      <Row label="O que aprendi">Inovar nem sempre é criar algo novo. Às vezes o valor está em reorganizar tecnologias que já existem para um contexto específico.</Row>
+    </Summary>
+  </section>
+</Case>

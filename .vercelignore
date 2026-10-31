@@ -15,8 +15,11 @@
 
 # Originais pesados não usados nas páginas
 /foto_perfil.jpg
-/assets/recognition/m_m_6.1.PNG
+/src/assets/recognition/m_m_6.1.PNG
 
 # Arquivos do sistema
 .DS_Store
 **/.DS_Store
+
+# Código antigo mantido só como referência de paridade durante a migração
+/legacy/
