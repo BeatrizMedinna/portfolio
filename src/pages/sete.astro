@@ -38,9 +38,9 @@ import Todo from '../components/Todo.astro';
     <h2 id="t-resumo" class="label">Em 30 segundos</h2>
     <Summary>
       <Row label="Desafio">Transformar um tema amplo, exclusividade, em um produto útil em sete semanas.</Row>
-      <Row label="Meu papel">Product Designer num time de 5 pessoas. Participei da pesquisa, da definição da proposta de valor e desenhei a base visual e as telas de iPhone e Apple Watch. <Todo>se você era a única designer e o que ficou só com você</Todo></Row>
+      <Row label="Meu papel">Product Designer num time de 5 pessoas. <Todo>suas contribuições específicas: pesquisa, base visual, telas de iPhone, telas do Apple Watch</Todo></Row>
       <Row label="Decisão-chave">Exclusividade como acesso a dados de alto rendimento, e não como restrição. Quem joga por diversão passa a ver o próprio jogo como um atleta vê.</Row>
-      <Row label="Resultado">Publicado em agosto de 2025, meu primeiro app na App Store. Seis semanas depois, estava na versão 1.6.</Row>
+      <Row label="Resultado">Publicado em agosto de 2025, meu primeiro app na App Store. A versão atual, 1.6.0, é de outubro de 2025.</Row>
     </Summary>
   </section>
 
@@ -73,6 +73,7 @@ import Todo from '../components/Todo.astro';
       <Row label="Base">Nas minhas notas: exclusividade em apps não precisa ser uma funcionalidade para poucos; pode vir de níveis ou de ser um dos primeiros a conseguir algo. A síntese do time listou comunidade, níveis de conquista e personalização como formas de manter a sensação de exclusivo.</Row>
       <Row label="Escolha" choice>Sequência de semanas jogando, emblemas por total de jogos e um cartão de desempenho pronto para compartilhar.</Row>
       <Row label="Por quê">Assim o “exclusivo” vira algo que o jogador conquista e mostra, sem fechar o app para quem está começando.</Row>
+      <Row label="Na loja">Os três aparecem nas capturas atuais da App Store.</Row>
     </Decision>
   </section>
 
@@ -80,8 +81,8 @@ import Todo from '../components/Todo.astro';
     <p class="label">Dois momentos de uso</p>
     <h2>No pulso durante o jogo. No iPhone depois dele.</h2>
     <div class="prose">
-      <p>Os dados nascem no Apple Watch, no meio da partida, quando ninguém quer ler texto. O relógio faz pouco e faz rápido: inicia o registro, conta 3, 2, 1, mostra tempo, batimento, calorias e distância em números grandes e oferece três ações, encerrar, pausar ou começar o próximo jogo.</p>
-      <p>A leitura acontece depois, no iPhone: o mapa de calor mostra onde a pessoa jogou na quadra, e as métricas e a evolução ficam lado a lado.</p>
+      <p>Os dados nascem no Apple Watch, no meio da partida, quando ninguém quer ler texto. No protótipo, o relógio faz pouco e faz rápido: inicia o registro, conta 3, 2, 1, mostra tempo, batimento, calorias e distância em números grandes e oferece três ações, encerrar, pausar ou começar o próximo jogo.</p>
+      <p>A leitura acontece depois, no iPhone: métricas da partida, evolução por período e sugestões de treino. Os protótipos também exploraram um mapa de calor mostrando onde a pessoa jogou na quadra.</p>
     </div>
     <Figure src="sete/watch-fluxo.png" alt="Fluxo do Apple Watch: boas-vindas, início do registro, contagem regressiva 3, 2, 1, métricas ao vivo e controles de encerrar, pausar e próximo jogo" caption="Fluxo no Apple Watch, do início ao próximo jogo." n={3} />
   </section>
@@ -90,7 +91,7 @@ import Todo from '../components/Todo.astro';
     <p class="label">Interface</p>
     <h2>Da estrutura em tons de cinza ao jogo em cores.</h2>
     <div class="prose">
-      <p>A média fidelidade fixou o que cada tela precisava mostrar. Na alta fidelidade, com a base visual que estruturei no Figma seguindo as diretrizes da Apple, o mapa de calor ganhou cor, a contagem de jogos virou progressão de emblemas e a navegação foi organizada em abas. <Todo>houve teste com usuários? se sim, com quantas pessoas e o que mudou</Todo></p>
+      <p>A média fidelidade fixou o que cada tela precisava mostrar. Na alta fidelidade, com uma base visual construída no Figma seguindo as diretrizes da Apple, o mapa de calor ganhou cor, a contagem de jogos virou progressão de emblemas e a navegação foi organizada em abas.</p>
     </div>
     <div class="compare compare-phone">
       <Figure src="sete/mid-01-inicio.png" alt="Tela inicial em média fidelidade, em tons de cinza, com mapa de calor, métricas e total de jogos" tag="Média fidelidade" />
@@ -120,10 +121,19 @@ import Todo from '../components/Todo.astro';
     <p class="label">Resultado</p>
     <h2>Meu primeiro app na App Store, publicado em agosto de 2025.</h2>
     <Summary plain>
-      <Row label="Na loja">Métricas de batimento, velocidade, distância e desempenho, sequências e desafios, histórico completo, integração com o Apple Watch e compartilhamento de resultados.</Row>
-      <Row label="Depois do lançamento">Seis semanas depois, o app estava na versão 1.6. Nota 5,0 na App Store brasileira, com 6 avaliações (outubro de 2026).</Row>
+      <Row label="Publicado">Segundo a descrição da loja: frequência cardíaca, velocidade, distância e desempenho, sequências e desafios, histórico completo, integração com o Apple Watch e compartilhamento de resultados.</Row>
+      <Row label="Só nos protótipos">O mapa de calor aparece nos protótipos e nas primeiras telas de divulgação, mas não nas capturas nem na descrição atuais da loja.</Row>
+      <Row label="Depois do lançamento">Seis versões no histórico da loja, da 1.2.1, em 29 de agosto, à 1.6.0, em 11 de outubro de 2025.</Row>
       <Row label="O que aprendi">Inovar nem sempre é criar algo novo. Às vezes o valor está em reorganizar tecnologias que já existem para um contexto específico.</Row>
       <Row label="Time">Beatriz Medina, Cauê Carneiro, Filipi Romão, Gustavo Souto e João Pedro Leonel, com orientação de Felipe Carvalho e Júlio Cézar Alves do Santos.</Row>
     </Summary>
+    <div class="sub-block">
+      <h3>Como está na loja hoje</h3>
+      <Gallery cols={3} phone items={[
+        { src: 'sete/loja-conquistas.jpg', alt: 'Captura da App Store: tela Seus jogos com sequência de 20 semanas, métricas e emblemas por total de jogos', caption: 'Constância e emblemas' },
+        { src: 'sete/loja-compartilhar.jpg', alt: 'Captura da App Store: cartões de desempenho para compartilhar nos stories', caption: 'Compartilhamento' },
+        { src: 'sete/loja-evolucao.jpg', alt: 'Captura da App Store: evolução mensal de calorias, sugestões de treino e Apple Watch', caption: 'Evolução e sugestões' },
+      ]} />
+    </div>
   </section>
 </Case>
