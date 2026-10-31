@@ -11,13 +11,13 @@ import Todo from '../components/Todo.astro';
 <Case
   slug="sete"
   title="SETE · Case de Product Design · Beatriz Medina"
-  description="Design do SETE, app para iPhone e Apple Watch que transforma dados de treino em métricas para quem joga esportes de quadra."
+  description="Como um desafio sobre exclusividade virou o SETE, app para iPhone e Apple Watch que leva métricas de alto rendimento a quem joga esportes de quadra."
   kicker='<span class="idx">Case 02</span>iOS + watchOS · 2025'
-  lede="Métricas de treino para quem joga esportes de quadra, levando ao amador dados que antes eram do alto rendimento."
-  chips={['iPhone + Apple Watch', 'Dados do HealthKit', 'Proposta de valor única', 'Design para leitura rápida']}
+  lede="Métricas de treino para quem joga esportes de quadra: o Apple Watch registra a partida e o iPhone mostra onde o jogo aconteceu e como você está evoluindo."
+  chips={['Tema abstrato → produto', 'iPhone + Apple Watch', 'Dados do HealthKit', 'Gamificação']}
   spec={[
     ['Papel', 'Product Designer (UX/UI)'],
-    ['Time', '5 pessoas, design, código e produto'],
+    ['Time', '5 pessoas na Apple Developer Academy'],
     ['Duração', '7 semanas'],
     ['Plataforma', 'iOS + watchOS'],
     ['Lançamento', 'Agosto de 2025'],
@@ -26,12 +26,10 @@ import Todo from '../components/Todo.astro';
   cover={{ src: 'sete/screenshots.png', alt: 'Telas do SETE no iPhone e no Apple Watch com jogos, evolução e conquistas' }}
   toc={[
     { id: 'resumo', label: 'Resumo' },
-    { id: 'sete-estrategia', label: 'Contexto' },
-    { id: 'sete-pesquisa', label: 'Pesquisa' },
-    { id: 'sete-conceito', label: 'Proposta' },
-    { id: 'sete-interface', label: 'Design system' },
-    { id: 'sete-validacao', label: 'Validação' },
-    { id: 'sete-watchos', label: 'Apple Watch' },
+    { id: 'sete-estrategia', label: 'O desafio' },
+    { id: 'sete-conceito', label: 'Decisões' },
+    { id: 'sete-watchos', label: 'Dois momentos' },
+    { id: 'sete-validacao', label: 'Interface' },
     { id: 'sete-resultado', label: 'Resultado' },
   ]}
   next={{ href: '/borali.html', title: 'BorAli? Explore Brasília', sub: 'iOS · 2026' }}
@@ -39,99 +37,93 @@ import Todo from '../components/Todo.astro';
   <section id="resumo" aria-labelledby="t-resumo">
     <h2 id="t-resumo" class="label">Em 30 segundos</h2>
     <Summary>
-      <Row label="Problema">Apps de saúde registram muitos dados, mas apresentam tudo de forma genérica, sem falar a língua de cada esporte.</Row>
-      <Row label="Meu papel">Conduzi a descoberta, defini a proposta de valor e desenhei a base visual e as telas de iPhone e Apple Watch. <Todo>o que foi seu e o que foi do time</Todo></Row>
-      <Row label="Decisão-chave">Uma única proposta de valor: métricas específicas para esportes de quadra, em vez de mais um app de saúde.</Row>
-      <Row label="Resultado">Publicado na App Store em agosto de 2025 e atualizado até a versão 1.6.</Row>
+      <Row label="Desafio">Transformar um tema amplo, exclusividade, em um produto útil em sete semanas.</Row>
+      <Row label="Meu papel">Product Designer num time de 5 pessoas. Participei da pesquisa, da definição da proposta de valor e desenhei a base visual e as telas de iPhone e Apple Watch. <Todo>se você era a única designer e o que ficou só com você</Todo></Row>
+      <Row label="Decisão-chave">Exclusividade como acesso a dados de alto rendimento, e não como restrição. Quem joga por diversão passa a ver o próprio jogo como um atleta vê.</Row>
+      <Row label="Resultado">Publicado em agosto de 2025, meu primeiro app na App Store. Seis semanas depois, estava na versão 1.6.</Row>
     </Summary>
   </section>
 
   <section id="sete-estrategia" class="block">
-    <p class="label">Contexto</p>
-    <h2>Um desafio sobre exclusividade que virou um app de esporte.</h2>
+    <p class="label">O desafio</p>
+    <h2>Começamos com uma palavra no quadro: exclusividade.</h2>
     <div class="block-grid">
       <div class="prose">
-        <p>O projeto nasceu de um desafio da Apple Developer Academy, com uma pergunta aberta: como a exclusividade molda comportamentos, acessos e emoções nas relações sociais?</p>
-        <p>Exploramos competição, experiências e funcionalidades exclusivas antes de chegar ao esporte. O desafio refinado ficou assim: estimular jogadores a acompanhar o próprio desempenho com o tipo de dado que antes só atletas de alto nível tinham.</p>
+        <p>O desafio da Apple Developer Academy partia de uma pergunta aberta: como a exclusividade molda comportamentos, acessos e emoções nas relações sociais? No primeiro dia, o time mapeou no quadro tudo o que a palavra evocava: festa, viagem, status, comunidade, competição, esporte.</p>
+        <p>A pesquisa exploratória seguiu por competição, experiências e funcionalidades exclusivas, e depois por HealthKit e pelo público de esportes. Foi aí que o tema ganhou forma: no esporte amador, os dados existem, mas a leitura de alto rendimento fica com os atletas profissionais.</p>
       </div>
-      <Note label="Da minha pesquisa">É possível oferecer exclusividade sem escassez. Ela não precisa ser um recurso para poucos.</Note>
+      <Note label="Anotações minhas na pesquisa">“É possível oferecer exclusividade sem escassez”</Note>
     </div>
-  </section>
-
-  <section id="sete-pesquisa" class="block">
-    <p class="label">Pesquisa</p>
-    <h2>Os números já existiam. Faltava traduzi-los para cada modalidade.</h2>
-    <div class="block-grid">
-      <div class="prose">
-        <p>Conduzi a descoberta com benchmarking, pesquisa e análise do ecossistema Apple para entender o que já existia e onde havia espaço para gerar valor.</p>
-        <p>Os apps de saúde coletam muito, mas mostram de forma genérica. Para quem joga um esporte específico, os dados raramente viram algo útil para evoluir naquela modalidade.</p>
-      </div>
-      <Note label="O que mudou">O produto passou a aproveitar o que o Apple Watch e o HealthKit já coletam, em vez de pedir mais dados ao usuário.</Note>
+    <div class="compare" id="sete-pesquisa">
+      <Figure src="sete/engage-quadro.jpg" alt="Quadro branco do primeiro dia do desafio com a palavra exclusividade e temas associados, como festa, esportes, comunidade e status" caption="Primeiro dia: o que exclusividade evocava para o time." n={1} crop focus="center" />
+      <Figure src="sete/pesquisa-exclusividade.png" alt="Board de pesquisa com notas sobre exclusividade, personalização, competição e esportes mais praticados no Brasil" caption="Pesquisa exploratória do time sobre exclusividade." n={2} crop />
     </div>
   </section>
 
   <section id="sete-conceito" class="block">
-    <p class="label">Decisão</p>
-    <h2>Resolver muito bem um problema.</h2>
-    <Decision n="01" title="Proposta de valor" id="d1">
-      <Row label="Contexto">Apps de saúde genéricos de um lado; dados de alto rendimento inacessíveis ao amador do outro.</Row>
+    <p class="label">Decisões</p>
+    <h2>Duas escolhas definiram o produto.</h2>
+    <Decision n="01" title="O que “exclusivo” quer dizer aqui" id="d1">
       <Row label="Opções">Antes do esporte, o time levantou caminhos como networking digital, experiências de viagem, acesso pago a eventos e treinos personalizados.</Row>
-      <Row label="Escolha" choice>Uma experiência focada em métricas específicas de esportes de quadra, sem reunir funcionalidades paralelas.</Row>
-      <Row label="Por quê">Um produto cria mais valor quando resolve muito bem um problema do que quando tenta resolver muitos ao mesmo tempo.</Row>
+      <Row label="Escolha" choice>Levar ao praticante amador de esportes de quadra o tipo de métrica que antes era de atletas de alto nível.</Row>
+      <Row label="Por quê">O app de Saúde nativo já coleta os dados, mas mostra tudo de forma genérica. A proposta era traduzi-los para a modalidade e coletar o que faltava, com uma única funcionalidade principal.</Row>
+    </Decision>
+    <div class="decision-gap"></div>
+    <Decision n="02" title="Exclusividade como conquista, não como bloqueio" id="d2">
+      <Row label="Base">Nas minhas notas: exclusividade em apps não precisa ser uma funcionalidade para poucos; pode vir de níveis ou de ser um dos primeiros a conseguir algo. A síntese do time listou comunidade, níveis de conquista e personalização como formas de manter a sensação de exclusivo.</Row>
+      <Row label="Escolha" choice>Sequência de semanas jogando, emblemas por total de jogos e um cartão de desempenho pronto para compartilhar.</Row>
+      <Row label="Por quê">Assim o “exclusivo” vira algo que o jogador conquista e mostra, sem fechar o app para quem está começando.</Row>
     </Decision>
   </section>
 
-  <section id="sete-interface" class="block">
-    <p class="label">Design system</p>
-    <h2>Hierarquia pensada para ler no meio do treino.</h2>
+  <section id="sete-watchos" class="block">
+    <p class="label">Dois momentos de uso</p>
+    <h2>No pulso durante o jogo. No iPhone depois dele.</h2>
     <div class="prose">
-      <p>Estruturei a base visual no Figma seguindo as diretrizes da Apple. Componentes, tipografia e hierarquia foram pensados para facilitar a leitura durante o treino, no iPhone e no Apple Watch.</p>
+      <p>Os dados nascem no Apple Watch, no meio da partida, quando ninguém quer ler texto. O relógio faz pouco e faz rápido: inicia o registro, conta 3, 2, 1, mostra tempo, batimento, calorias e distância em números grandes e oferece três ações, encerrar, pausar ou começar o próximo jogo.</p>
+      <p>A leitura acontece depois, no iPhone: o mapa de calor mostra onde a pessoa jogou na quadra, e as métricas e a evolução ficam lado a lado.</p>
     </div>
-    <Figure src="sete/palette.png" alt="Paleta de cores do app SETE" caption="Paleta de cores." n={1} zoom={false} />
+    <Figure src="sete/watch-fluxo.png" alt="Fluxo do Apple Watch: boas-vindas, início do registro, contagem regressiva 3, 2, 1, métricas ao vivo e controles de encerrar, pausar e próximo jogo" caption="Fluxo no Apple Watch, do início ao próximo jogo." n={3} />
   </section>
 
   <section id="sete-validacao" class="block">
-    <p class="label">Validação</p>
-    <h2>Validar a navegação antes de investir na interface final.</h2>
+    <p class="label">Interface</p>
+    <h2>Da estrutura em tons de cinza ao jogo em cores.</h2>
     <div class="prose">
-      <p>Comecei pelos fluxos principais em média fidelidade. Com a navegação definida, refinei na alta fidelidade a organização das métricas, os estados da interface e a forma de mostrar o progresso. <Todo>houve teste com usuários? com quantas pessoas e o que mudou</Todo></p>
+      <p>A média fidelidade fixou o que cada tela precisava mostrar. Na alta fidelidade, com a base visual que estruturei no Figma seguindo as diretrizes da Apple, o mapa de calor ganhou cor, a contagem de jogos virou progressão de emblemas e a navegação foi organizada em abas. <Todo>houve teste com usuários? se sim, com quantas pessoas e o que mudou</Todo></p>
     </div>
     <div class="compare compare-phone">
-      <Figure src="sete/mid-02-evolucao.png" alt="Tela de evolução em média fidelidade" tag="Antes · média fidelidade" />
-      <Figure src="sete/hi-02-evolucao.png" alt="Tela de evolução em alta fidelidade" tag="Depois · alta fidelidade" after />
+      <Figure src="sete/mid-01-inicio.png" alt="Tela inicial em média fidelidade, em tons de cinza, com mapa de calor, métricas e total de jogos" tag="Média fidelidade" />
+      <Figure src="sete/hi-01-inicio.png" alt="Tela inicial em alta fidelidade com mapa de calor colorido, métricas, emblemas e barra de abas" tag="Alta fidelidade" after />
+    </div>
+    <dl class="changes">
+      <Row label="Mapa de calor">De mancha em cinza para escala de cor, mais fácil de ler.</Row>
+      <Row label="Progresso">O total de jogos passou a ter emblemas entre as metas.</Row>
+      <Row label="Constância">Contagem de semanas seguidas jogando, no topo.</Row>
+      <Row label="Navegação">Abas para exercícios, métricas e jogos.</Row>
+    </dl>
+    <div class="sub-block">
+      <h3>Estados que quase ninguém desenha</h3>
+      <p class="sub-lede">A exploração incluiu o primeiro acesso, sem nenhum treino registrado, e o dia sem jogo, com uma mensagem de incentivo em vez de uma tela vazia. O cartão de compartilhamento ganhou versões com e sem fundo.</p>
+      <Figure src="sete/exploracao-telas.png" alt="Exploração de telas do SETE: início, evolução, compartilhamento com e sem fundo, primeira vez e dia sem jogo" caption="Exploração de telas e estados." n={4} />
     </div>
     <Gallery cols={4} phone items={[
-      { src: 'sete/mid-01-inicio.png', alt: 'Tela inicial em média fidelidade', caption: 'Início, média fidelidade' },
-      { src: 'sete/hi-01-inicio.png', alt: 'Tela inicial em alta fidelidade', caption: 'Início' },
-      { src: 'sete/hi-03-compartilhar-a.png', alt: 'Tela de compartilhamento em alta fidelidade', caption: 'Compartilhar' },
-      { src: 'sete/hi-03-compartilhar-b.png', alt: 'Tela de compartilhamento em alta fidelidade, segunda etapa', caption: 'Compartilhar, etapa 2' },
+      { src: 'sete/hi-02-evolucao.png', alt: 'Tela de evolução com gráfico de calorias por dia e sugestões de treino', caption: 'Evolução' },
+      { src: 'sete/hi-03-compartilhar-a.png', alt: 'Tela de compartilhamento com mapa de calor e métricas do jogo', caption: 'Compartilhar' },
+      { src: 'sete/hi-03-compartilhar-b.png', alt: 'Opções de compartilhamento do cartão de desempenho', caption: 'Compartilhar, opções' },
+      { src: 'sete/mid-02-evolucao.png', alt: 'Tela de evolução em média fidelidade', caption: 'Evolução, média fidelidade' },
     ]} />
-  </section>
-
-  <section id="sete-watchos" class="block">
-    <p class="label">Apple Watch</p>
-    <h2>A informação certa em poucos segundos, sem tirar a atenção do jogo.</h2>
-    <div class="prose">
-      <p>O relógio é onde os dados são capturados, então não foi tratado como complemento. Desenhei telas rápidas de consultar, em que as informações principais são entendidas num relance.</p>
-    </div>
-    <ul class="watch-row">
-      {[
-        ['sete/watch-bemvindo.png', 'Tela de boas-vindas no Apple Watch'],
-        ['sete/watch-cronometro.png', 'Cronômetro no Apple Watch'],
-        ['sete/watch-tempo-1.png', 'Tempo de jogo no Apple Watch'],
-        ['sete/watch-tempo-2.png', 'Tempo de jogo no Apple Watch, segunda tela'],
-        ['sete/watch-tempo-3.png', 'Tempo de jogo no Apple Watch, terceira tela'],
-      ].map(([src, alt]) => <li><Figure src={src} alt={alt} /></li>)}
-    </ul>
+    <div id="sete-interface"><Figure src="sete/palette.png" alt="Paleta de cores do SETE" caption="Paleta: fundo escuro e verde-limão como cor de destaque." n={5} zoom={false} /></div>
   </section>
 
   <section id="sete-resultado" class="block">
     <p class="label">Resultado</p>
-    <h2>Publicado em agosto de 2025, meu primeiro app na App Store.</h2>
+    <h2>Meu primeiro app na App Store, publicado em agosto de 2025.</h2>
     <Summary plain>
-      <Row label="Entregue">App para iPhone e Apple Watch que transforma dados de treino em métricas para esportes de quadra.</Row>
-      <Row label="Depois do lançamento">Seis semanas depois, o app estava na versão 1.6. <Todo>o que mudou nessas versões</Todo></Row>
+      <Row label="Na loja">Métricas de batimento, velocidade, distância e desempenho, sequências e desafios, histórico completo, integração com o Apple Watch e compartilhamento de resultados.</Row>
+      <Row label="Depois do lançamento">Seis semanas depois, o app estava na versão 1.6. Nota 5,0 na App Store brasileira, com 6 avaliações (outubro de 2026).</Row>
       <Row label="O que aprendi">Inovar nem sempre é criar algo novo. Às vezes o valor está em reorganizar tecnologias que já existem para um contexto específico.</Row>
+      <Row label="Time">Beatriz Medina, Cauê Carneiro, Filipi Romão, Gustavo Souto e João Pedro Leonel, com orientação de Felipe Carvalho e Júlio Cézar Alves do Santos.</Row>
     </Summary>
   </section>
 </Case>

@@ -16,9 +16,9 @@ import Note from '../components/Note.astro';
   chips={['Liderança de design', 'Pesquisa com usuários', 'Escopo de MVP', 'Design system']}
   spec={[
     ['Papel', 'Lead Designer'],
+    ['Time', '5 pessoas na Apple Developer Academy'],
     ['Design', 'Em dupla, com um desenvolvedor em transição para design'],
-    ['Duração', '7 semanas'],
-    ['Plataforma', 'macOS'],
+    ['Duração', '7 semanas · macOS'],
     ['Lançamento', 'Julho de 2026'],
   ]}
   store={{ href: 'https://apps.apple.com/br/app/handraw-canvas-por-gestos/id6786850155?mt=12', label: 'Mac App Store' }}
@@ -39,8 +39,8 @@ import Note from '../components/Note.astro';
     <h2 id="t-resumo" class="label">Em 30 segundos</h2>
     <Summary>
       <Row label="Problema">Para pensar visualmente, as pessoas ainda recorrem ao papel. No computador, mouse e trackpad pedem precisão cedo demais e interrompem o raciocínio.</Row>
-      <Row label="Meu papel">Lead Designer. Conduzi a pesquisa, o UX/UI e o design system e desenhei a maior parte das telas, em dupla com um desenvolvedor em transição para design.</Row>
-      <Row label="Decisão-chave">Lançar só o núcleo: 6 requisitos vitais entre 29 mapeados.</Row>
+      <Row label="Meu papel">Lead Designer num time de 5 pessoas. Conduzi a pesquisa, o UX/UI e o design system e desenhei a maior parte das telas, em dupla de design com um desenvolvedor em transição para a área.</Row>
+      <Row label="Decisão-chave">Priorizar o núcleo da primeira versão: 6 requisitos vitais entre 29 mapeados.</Row>
       <Row label="Resultado">Publicado na Mac App Store em julho de 2026, na minha conta de desenvolvedora.</Row>
     </Summary>
     <div class="prose lead-in" id="handraw-estrategia">
@@ -59,9 +59,9 @@ import Note from '../components/Note.astro';
       <Note label="O que mudou">O objetivo deixou de ser ajudar a desenhar melhor. Passou a ser não interromper o pensamento.</Note>
     </div>
     <ul class="quotes">
-      <li><blockquote>“Não consigo expressar o que é aquilo que eu tenho em mente.”</blockquote><span>Entrevista 1</span></li>
-      <li><blockquote>“No caderno é rapidinho: eu desenho, copio e jogo pro Mac.”</blockquote><span>Entrevista 1</span></li>
-      <li><blockquote>“Seria um atalho rápido, uma telinha onde eu posso rabiscar livremente.”</blockquote><span>Entrevista 4</span></li>
+      <li><blockquote>“Sinto, bastante, não consigo me expressar o que é aquilo que eu tenho em mente”</blockquote><span>Entrevista 1</span></li>
+      <li><blockquote>“Fazer gráfico é horrível, peço pro chat gerar pra mim, no caderno é rapidinho, eu desenho, copio e jogo pro mac”</blockquote><span>Entrevista 1</span></li>
+      <li><blockquote>“Seria um atalho rápido, ele abre uma telinha rápida que eu posso rabiscar bem rápido, onde eu posso rabiscar livremente.”</blockquote><span>Entrevista 4</span></li>
     </ul>
     <Figure src="handraw/entrevistas.jpg" alt="Síntese das entrevistas com 4 participantes, organizada em colunas por entrevistado" caption="Síntese das quatro entrevistas." n={1} crop />
 
@@ -78,12 +78,12 @@ import Note from '../components/Note.astro';
 
   <section id="handraw-ideacao" class="block">
     <p class="label">Decisão</p>
-    <h2>Lançar só o que prova a ideia.</h2>
+    <h2>Priorizar o que prova a ideia.</h2>
     <Decision n="01" title="Escopo da primeira versão" id="d1">
       <Row label="Contexto">7 semanas e uma forma de interação que a maioria das pessoas nunca usou.</Row>
       <Row label="Opções">29 requisitos, vindos das histórias de usuário do time, classificados numa matriz de impacto e esforço em vital, importante, polimento e sacrifício.</Row>
       <Row label="Escolha" choice>Os 6 vitais: detectar as mãos, desenhar com a mão, zona de captura da câmera, guia de gestos, feedback visual do gesto e desfazer/refazer.</Row>
-      <Row label="Ficou de fora">Exportar, camadas, importar imagens, post-its e recorte.</Row>
+      <Row label="Ficou de fora">Classificados como sacrifício: exportar, camadas, importar imagens, post-its e recorte.</Row>
       <Row label="Por quê">Se o gesto não virasse traço de forma confiável, nenhum recurso de editor salvaria o produto. Fechar o escopo cedo também deu ao desenvolvimento um alvo claro.</Row>
       <Figure slot="figure" src="handraw/matriz-esforco-impacto.jpg" alt="Matriz de impacto por esforço com 29 requisitos classificados em vital, importante, polimento e sacrifício" caption="Vermelho: vital. Amarelo: importante. Verde: polimento. Preto: sacrifício." n={2} />
     </Decision>
@@ -112,7 +112,7 @@ import Note from '../components/Note.astro';
     <p class="label">Onboarding</p>
     <h2>Ensinar um gesto que quase ninguém conhece.</h2>
     <div class="prose">
-      <p>O onboarding ficou principalmente com meu colega de dupla; acompanhei as decisões e a aplicação do sistema visual. Validamos a estrutura de ensino em média fidelidade antes de partir para a versão final.</p>
+      <p>O onboarding ficou principalmente com meu colega de dupla; acompanhei as decisões e a aplicação do sistema visual. A estrutura de ensino foi definida e revisada em média fidelidade antes de partir para a versão final.</p>
       <p>O guia da média fidelidade reunia seis gestos numa só tela. A versão final ensina um passo de cada vez, com a mão aberta e a pinça no centro.</p>
     </div>
     <div class="compare">
@@ -144,8 +144,10 @@ import Note from '../components/Note.astro';
     <p class="label">Resultado</p>
     <h2>Publicado na Mac App Store em julho de 2026.</h2>
     <Summary plain>
-      <Row label="Entregue">Versão 1.0 com os 6 requisitos vitais, publicada na minha conta de desenvolvedora.</Row>
+      <Row label="Entregue">Versão 1.0, publicada na minha conta de desenvolvedora. Segundo a descrição na loja, o app permite desenhar com as mãos, desfazer e navegar por gestos no ar, adicionar texto por comando de voz e seguir um guia visual dos gestos.</Row>
+      <Row label="Além do núcleo">A entrada de texto por voz estava entre os requisitos importantes, não entre os vitais, e chegou à primeira versão.</Row>
       <Row label="O que aprendi">Liderar também é abrir espaço: compartilhar o que sei e ajudar outra pessoa a crescer durante o projeto.</Row>
+      <Row label="Time">Beatriz Medina, João Schwaab, Linda Marie, Manoel Pedro e Marcos Albuquerque, com mentoria de Filipe Ribeiro Silva Lopes e Nadja Caldeira Guedes.</Row>
     </Summary>
   </section>
 

@@ -12,13 +12,14 @@ interface Props {
   after?: boolean;
   id?: string;
   eager?: boolean;
+  focus?: 'top' | 'center';  // ponto do recorte quando crop
 }
-const { src, alt, caption, n, crop = false, zoom = true, tag, after = false, id, eager = false } = Astro.props;
+const { src, alt, caption, n, crop = false, zoom = true, tag, after = false, id, eager = false, focus = 'top' } = Astro.props;
 const meta = img(src);
 const full = zoom ? await getImage({ src: meta, width: Math.min(meta.width, 2000), format: 'webp' }) : null;
 const widths = [480, 800, 1200, 1600].filter((w) => w < meta.width).concat(meta.width);
 ---
-<figure class:list={['fig', { 'fig-crop': crop }]} id={id}>
+<figure class:list={['fig', { 'fig-crop': crop, 'crop-center': crop && focus === 'center' }]} id={id}>
   {tag && <span class:list={['compare-tag', { 'is-after': after }]}>{tag}</span>}
   {zoom ? (
     <button class="zoom" type="button" data-full={full!.src} aria-label={`Ampliar: ${alt}`}>
