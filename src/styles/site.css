@@ -368,3 +368,26 @@ figcaption { display: flex; gap: 12px; align-items: baseline; margin-top: 10px; 
 .findings { margin-top: 12px; display: grid; gap: 8px; }
 .findings li { position: relative; padding-left: 20px; font-size: 17px; }
 .findings li::before { content: ""; position: absolute; left: 0; top: .8em; width: 10px; height: 1.5px; background: var(--accent); }
+
+/* ---------- Case: citações, subseções, divisão de papéis ---------- */
+.lead-in { margin-top: 32px; }
+.lead-in p { font-family: var(--serif); font-size: clamp(20px, 2vw, 24px); line-height: 1.4; color: var(--ink); max-width: 40ch; }
+.quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 36px; }
+.quotes li { display: flex; flex-direction: column; justify-content: space-between; gap: 16px; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.quotes blockquote { font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.35; }
+.quotes span { font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); }
+.sub-block { margin-top: clamp(56px, 7vw, 80px); padding-top: 24px; border-top: 1px solid var(--line); }
+.sub-block h3 { font-size: clamp(24px, 2.4vw, 30px); margin-bottom: 12px; }
+.sub-lede { color: var(--ink-2); max-width: 62ch; }
+.aside-line { margin-top: 32px; font-size: 15px; color: var(--ink-2); max-width: 62ch; padding-left: 14px; border-left: 2px solid var(--line); }
+.split { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); margin-bottom: 28px; }
+.split div { padding: 16px 20px 18px 0; }
+.split div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+.split dt { color: var(--accent); font-size: 11px; margin-bottom: 6px; }
+.split dd { font-size: 16px; }
+@media (max-width: 760px) {
+  .quotes, .split { grid-template-columns: 1fr; }
+  .split div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+}
+.decision .fig .zoom { max-width: 680px; margin: 0 auto; }
+.decision .fig figcaption { max-width: 680px; margin-left: auto; margin-right: auto; }

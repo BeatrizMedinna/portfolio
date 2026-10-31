@@ -24,7 +24,7 @@ export const projects: Project[] = [
     line: 'Um canvas para Mac que transforma o movimento das mãos, lido pela câmera, em traço na tela.',
     shows: ['Liderança de design', 'Interação por gestos', 'Design system'],
     role: 'Lead Designer',
-    team: '5 pessoas · 7 semanas',
+    team: 'Design em dupla · 7 semanas',
     launch: 'Jul 2026',
     store: { href: 'https://apps.apple.com/br/app/handraw-canvas-por-gestos/id6786850155?mt=12', label: 'Mac App Store' },
   },
