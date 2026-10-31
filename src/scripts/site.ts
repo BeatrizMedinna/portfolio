@@ -89,3 +89,12 @@
   openFromHash();
   window.addEventListener('hashchange', openFromHash);
 })();
+
+// Seletor PT/EN: leva junto a seção atual (#âncora), já que os ids são iguais nos dois idiomas
+(function () {
+  document.querySelectorAll('[data-lang-switch]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (location.hash) a.setAttribute('href', a.getAttribute('href').split('#')[0] + location.hash);
+    });
+  });
+})();

@@ -1,4 +1,8 @@
-<div class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Imagem ampliada">
-  <button class="lightbox-close" type="button" aria-label="Fechar imagem">×</button>
+---
+import { t } from '../lib/i18n';
+const s = t(Astro.url);
+---
+<div class="lightbox" hidden role="dialog" aria-modal="true" aria-label={s.imageDialog}>
+  <button class="lightbox-close" type="button" aria-label={s.closeImage}>×</button>
   <img src="" alt="" />
 </div>

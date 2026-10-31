@@ -1,18 +1,23 @@
 ---
+import { getLang, altPath, base, ui } from '../lib/i18n';
 interface Props { page: 'work' | 'about' | 'none' }
 const { page } = Astro.props;
+const lang = getLang(Astro.url);
+const s = ui[lang];
+const b = base(lang);
 const cur = (p: string) => (p === page ? 'page' : undefined);
 ---
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="/">Beatriz Medina</a>
+    <a class="brand" href={`${b}/`}>Beatriz Medina</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
-      <span>Menu</span><span class="menu-icon" aria-hidden="true"></span>
+      <span>{s.menu}</span><span class="menu-icon" aria-hidden="true"></span>
     </button>
-    <nav id="menu" class="menu" aria-label="Principal">
-      <a href="/#work" aria-current={cur('work')}>Trabalho</a>
-      <a href="/about.html" aria-current={cur('about')}>Sobre</a>
-      <a href="#contato">Contato</a>
+    <nav id="menu" class="menu" aria-label={s.navLabel}>
+      <a href={`${b}/#work`} aria-current={cur('work')}>{s.work}</a>
+      <a href={`${b}/about.html`} aria-current={cur('about')}>{s.about}</a>
+      <a href="#contato">{s.contact}</a>
+      <a class="lang" href={altPath(Astro.url)} hreflang={lang === 'pt' ? 'en' : 'pt-BR'} lang={lang === 'pt' ? 'en' : 'pt-BR'} aria-label={s.switchLabel} data-lang-switch>{s.switchText}</a>
     </nav>
   </div>
 </header>

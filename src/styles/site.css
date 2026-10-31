@@ -394,3 +394,5 @@ figcaption { display: flex; gap: 12px; align-items: baseline; margin-top: 10px; 
 .decision-gap { height: 24px; }
 .crop-center .zoom img { object-position: center 65%; }
 .decision-intro { margin: -8px 0 24px; }
+/* Tradução das falas de entrevista (versão em inglês) */
+.quote-tr { display: block; margin-top: 10px; font-family: var(--sans); font-style: normal; font-size: 14px; line-height: 1.5; color: var(--ink-2); }

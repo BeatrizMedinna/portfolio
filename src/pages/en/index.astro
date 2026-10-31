@@ -1,0 +1,131 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import Chips from '../../components/Chips.astro';
+import { projectsEn as projects } from '../../data/projects';
+import { journeyEn as journey } from '../../data/profile';
+import { img } from '../../lib/images';
+
+const photo = img('profile.jpg');
+---
+<Base
+  title="Beatriz Medina · Product Designer"
+  description="Product Designer with three apps on the App Store, for iOS, watchOS and macOS. User research, Figma and working prototypes in SwiftUI."
+  page="work"
+  bodyClass="page-home"
+>
+  <section class="hero has-photo" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-main">
+        <p class="kicker"><span class="status-dot" aria-hidden="true"></span>Product Designer · Apple Developer Academy</p>
+        <h1>I design products from research to the <em>App&nbsp;Store</em>.</h1>
+        <p class="lede">
+          Three apps live on the App Store, for macOS, iOS and watchOS. I run research, turn findings into product decisions
+          and design the interface. My Computer Science background complements the work: it makes conversations with
+          engineering easier and lets me prototype in SwiftUI when a project calls for it.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">See projects</a>
+          <a class="btn btn-quiet" href="/en/about.html">About me</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <Image src={photo} alt="Portrait of Beatriz Medina" widths={[160, 400, 700]} sizes="(max-width: 860px) 72px, 360px" loading="eager" fetchpriority="high" />
+      </figure>
+    </div>
+    <div class="wrap">
+      <dl class="hero-spec">
+        <div><dt>Focus</dt><dd>Product Design · UX/UI</dd></div>
+        <div><dt>Plus</dt><dd>SwiftUI and front-end</dd></div>
+        <div><dt>On the App Store</dt><dd>3 apps since 2025</dd></div>
+        <div><dt>Based in</dt><dd>Brasília, Brazil · remote</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="work" class="work">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 class="label">Selected work</h2>
+        <p class="section-title">Three shipped products, and the decisions that got each one to the store.</p>
+      </header>
+      <ol class="projects">
+        {projects.map((p) => (
+          <li class="project">
+            <div class="project-media">
+              <Image src={img(p.image.src)} alt={p.image.alt} widths={[600, 900, 1300]} sizes="(max-width: 860px) 100vw, 680px" />
+            </div>
+            <div class="project-text">
+              <p class="project-meta"><span class="idx">{p.year}</span>{p.platform}</p>
+              <h3><a class="stretch" href={`/en/${p.slug}.html`}>{p.name}</a></h3>
+              <p class="project-line">{p.line}</p>
+              <Chips items={p.shows} />
+              <dl class="spec-rows">
+                <div><dt>Role</dt><dd>{p.role}</dd></div>
+                <div><dt>Team</dt><dd>{p.team}</dd></div>
+                <div><dt>Launch</dt><dd>{p.launch}</dd></div>
+              </dl>
+              <div class="project-actions">
+                <span class="cta">Read the case study <span class="arrow" aria-hidden="true">→</span></span>
+                <a class="store above" href={p.store.href} target="_blank" rel="noopener">{p.store.label} <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="value">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 class="label">What I bring to a team</h2>
+        <p class="section-title">Product design with technical fluency.</p>
+      </header>
+      <ol class="value-list">
+        <li>
+          <h3>From problem to interface</h3>
+          <p>Interviews, synthesis, prioritization and a design system before the final screens. On Handraw, the team and I narrowed 29 mapped requirements down to 6 essentials.</p>
+          <a href="/en/handraw.html#handraw-ideacao">See the decision in Handraw <span aria-hidden="true">→</span></a>
+        </li>
+        <li>
+          <h3>Design that speaks engineering</h3>
+          <p>A Computer Science background and experience as a front-end developer. I design with a clear sense of what SwiftUI, HealthKit and the camera can actually deliver.</p>
+          <a href="/en/sete.html#sete-watchos">See the Apple Watch work in SETE <span aria-hidden="true">→</span></a>
+        </li>
+        <li>
+          <h3>Prototypes that work</h3>
+          <p>Today, when a project calls for it, I take Figma screens into working SwiftUI interfaces, with Claude as a coding aid, and test them in the simulator before handoff.</p>
+          <a href="/en/about.html#como-trabalho">How I work today <span aria-hidden="true">→</span></a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="journey">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 class="label">Background</h2>
+        <p class="section-title">Technical training, hands-on product work.</p>
+      </header>
+      <table class="cv">
+        <caption class="sr-only">Professional experience and education</caption>
+        <tbody>
+          {journey.map((j) => (
+            <tr>
+              <th scope="row">{j.when}</th>
+              <td><strong>{j.what}</strong></td>
+              <td>{j.where}</td>
+            </tr>
+          ))}
+          <tr>
+            <th scope="row">Awards</th>
+            <td><strong>Hackathon podiums as product designer</strong></td>
+            <td>Sindesei Tech Excellence Award 2024, outstanding student at UCB</td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="text-link" href="/en/about.html#reconhecimento">Full background and awards <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</Base>

@@ -1,6 +1,8 @@
 ---
 import { Image, getImage } from 'astro:assets';
 import { img } from '../lib/images';
+import { t } from '../lib/i18n';
+const s = t(Astro.url);
 interface Item { src: string; alt: string; caption: string }
 interface Props { items: Item[]; cols?: 2 | 3 | 4; phone?: boolean }
 const { items, cols = 2, phone = false } = Astro.props;
@@ -13,7 +15,7 @@ const resolved = await Promise.all(items.map(async (i) => {
 <ul class:list={['gallery', `gallery-${cols}`, { 'gallery-phone': phone }]}>
   {resolved.map((i) => (
     <li>
-      <button class="zoom" type="button" data-full={i.full} aria-label={`Ampliar: ${i.alt}`}>
+      <button class="zoom" type="button" data-full={i.full} aria-label={`${s.zoom}: ${i.alt}`}>
         <Image src={i.meta} alt={i.alt} widths={[480, 800]} sizes="(max-width: 760px) 100vw, 420px" loading="lazy" />
       </button>
       <span>{i.caption}</span>

@@ -8,6 +8,7 @@ import '../styles/site.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Lightbox from '../components/Lightbox.astro';
+import { getLang, altPath, ui } from '../lib/i18n';
 
 interface Props {
   title: string;
@@ -17,26 +18,34 @@ interface Props {
 }
 const { title, description, page, bodyClass } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const lang = getLang(Astro.url);
+const s = ui[lang];
+const ptUrl = new URL(lang === 'pt' ? Astro.url.pathname : altPath(Astro.url), Astro.site);
+const enUrl = new URL(lang === 'en' ? Astro.url.pathname : altPath(Astro.url), Astro.site);
 ---
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang={s.htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="pt-BR" href={ptUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={ptUrl} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale" content={s.locale} />
+    <meta property="og:locale:alternate" content={lang === "pt" ? "en_US" : "pt_BR"} />
     <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body class={bodyClass}>
-    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+    <a class="skip" href="#conteudo">{s.skip}</a>
     <Header page={page} />
     <main id="conteudo">
       <slot />

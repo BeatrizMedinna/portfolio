@@ -1,0 +1,148 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import { journeyEn as journey } from '../../data/profile';
+import { img } from '../../lib/images';
+
+const process = [
+  ['Research', 'Interviews and synthesis to understand the problem before designing.'],
+  ['Figma', 'Flows, prototypes and a component-based design system from the start.'],
+  ['SwiftUI + Claude', 'Working interfaces built in SwiftUI, with Claude as a coding aid.'],
+  ['Simulator', 'I check real behavior in the simulator, not just static screens.'],
+  ['Handoff', 'Components and specs ready for the development team.'],
+];
+
+const skills = [
+  { group: 'Design', items: ['Figma', 'High-fidelity prototyping', 'Design systems and components', 'UX Writing', 'Handoff'] },
+  { group: 'Engineering', items: ['SwiftUI', 'Xcode and Simulator', 'React and React Native', 'Claude in the prototyping workflow'] },
+  { group: 'Methods', items: ['User interviews', 'Research synthesis', 'Personas', 'User journeys', 'User stories', 'Competitive analysis', 'Design Thinking'] },
+];
+
+const principles = [
+  ['I turn constraints into direction', 'Hackathons taught me that time, scope and resources are rarely ideal. I use those limits to make clearer decisions and focus on what creates value.'],
+  ['I like building together', 'Almost all my projects have been with cross-functional teams. The best solutions came from conversation between design, engineering and product.'],
+  ['I ask questions before I design', 'Before opening Figma, I try to understand the context, the product goals and how people behave, so every decision has a reason.'],
+  ['Feedback is part of the process', 'The projects where I grew the most were the ones that challenged my ideas. I refine solutions with the team instead of holding on to my first proposal.'],
+  ['There’s always a better way', 'I don’t settle for the first answer. I explore alternatives and revisit decisions when I see a way to simplify the experience.'],
+];
+
+type Award = { imgs: string[]; alt: string; caption: string };
+const recognition: Award[] = [
+  { imgs: ['recognition/m_m_1.jpg'], alt: 'Memaker Institute', caption: 'Memaker Institute: studying creative expression and robotics.' },
+  { imgs: ['recognition/m_m_2.jpg'], alt: 'Team awarded 3rd place at the InovaTI Hackathon', caption: '3rd place, InovaTI Hackathon: automating electric car charging in residential buildings.' },
+  { imgs: ['recognition/m_m_3.jpg', 'recognition/m_m_3_1.jpg'], alt: 'Team awarded 1st place at the InovaTI Hackathon', caption: '1st place, InovaTI Hackathon: smarter, optimized property rentals.' },
+  { imgs: ['recognition/m_m_4.jpg'], alt: 'Team awarded 1st place at HackaCity Guará', caption: '1st place, HackaCity Guará: expanding recycling and engaging the community.' },
+  { imgs: ['recognition/m_m_5.jpg'], alt: 'Team awarded 3rd place at Hackideias Elas', caption: '3rd place, Hackideias Elas: preventing domestic violence against women.' },
+  { imgs: ['recognition/m_m_6.jpg', 'recognition/m_m_6_1.jpg'], alt: 'Award ceremony at the Sinfor/DF Hackathon', caption: '2nd and 3rd place, Sinfor/DF Hackathon: a platform connecting architects and clients, and a mental health chat assistant.' },
+  { imgs: ['recognition/m_m_7.jpg'], alt: 'Sindesei Tech Excellence Award 2024', caption: 'Sindesei Tech Excellence Award 2024: outstanding student at the Catholic University of Brasília.' },
+  { imgs: ['recognition/m_m_8.jpg', 'recognition/m_m_8_1.jpg'], alt: 'Launch of the SETE app on the App Store', caption: 'Launch of my first app on the App Store, SETE.' },
+  { imgs: ['recognition/m_m_9.jpg'], alt: 'Team awarded 2nd place at Open Connections + InCoDay', caption: '2nd place, Open Connections + InCoDay Hackathon: connecting Black talent with the legal market.' },
+  { imgs: ['recognition/m_m_10.jpg'], alt: 'Team awarded 1st place at the Cerrado Tech Hackathon', caption: '1st place, Cerrado Tech Hackathon: helping farmers monitor their crops.' },
+  { imgs: ['recognition/m_m_11.jpg'], alt: 'Launch of the BorAli? Explore Brasília app on the App Store', caption: 'Launch of my second app on the App Store, BorAli? Explore Brasília.' },
+];
+---
+<Base
+  title="About · Beatriz Medina · Product Designer"
+  description="Background, way of working, skills and awards of Beatriz Medina, Product Designer at the Apple Developer Academy."
+  page="about"
+  bodyClass="page-about"
+>
+  <section class="about-hero" id="about">
+    <div class="wrap about-grid">
+      <div>
+        <p class="kicker">About</p>
+        <h1>From research to interface, with a technical foundation along the way.</h1>
+        <div class="prose">
+          <p>I got into tech in high school, in Recife, through the Systems Analysis and Development technical program at Porto Digital. That’s where I saw technology solving real problems and found what interested me most: turning that capability into experiences that make sense for people.</p>
+          <p>During my Computer Science degree at the Catholic University of Brasília, I found in Product Design a way to bring technical knowledge and user experience together. Between hackathons, team projects and my internship at Cria Incubator, stepping into the designer role came naturally.</p>
+          <p>Today, as a Product Designer at the Apple Developer Academy, I design products for the Apple ecosystem and like to be part of the whole process, from understanding the problem to the final interface. I’m based in Brasília and open to remote opportunities.</p>
+        </div>
+      </div>
+      <figure class="about-photo">
+        <Image src={img('profile.jpg')} alt="Portrait of Beatriz Medina" widths={[400, 700]} sizes="(max-width: 860px) 60vw, 360px" loading="eager" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="block-section" id="como-trabalho">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 class="label">How I work today</h2>
+        <p class="section-title">From research insight to a component the team can ship.</p>
+      </header>
+      <ol class="process">
+        {process.map(([t, d], i) => (
+          <li><span class="p-n">{String(i + 1).padStart(2, '0')}</span><h3>{t}</h3><p>{d}</p></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="block-section" id="competencias">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 class="label">Skills</h2>
+        <p class="section-title">Design, engineering and method.</p>
+      </header>
+      <div class="skills">
+        {skills.map((s) => (
+          <div><h3 class="skills-title">{s.group}</h3><ul class="chips">{s.items.map((i) => <li>{i}</li>)}</ul></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="block-section" id="principios">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 class="label">How I think</h2>
+        <p class="section-title">Five habits I bring from project to project.</p>
+      </header>
+      <ol class="principles">
+        {principles.map(([t, d]) => <li><h3>{t}</h3><p>{d}</p></li>)}
+      </ol>
+    </div>
+  </section>
+
+  <section class="block-section" id="trajetoria">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 class="label">Background</h2>
+        <p class="section-title">Technical training, hands-on product work.</p>
+      </header>
+      <table class="cv">
+        <caption class="sr-only">Professional experience and education</caption>
+        <tbody>
+          {journey.map((j) => (
+            <tr>
+              <th scope="row">{j.when}</th>
+              <td><strong>{j.what}</strong></td>
+              <td>{j.where}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block-section" id="reconhecimento">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 class="label">Recognition</h2>
+        <p class="section-title">Hackathons, awards and launches.</p>
+      </header>
+      <ul class="recognition">
+        {recognition.map((r) => (
+          <li>
+            <div class:list={['rec-imgs', { 'rec-pair': r.imgs.length > 1 }]}>
+              {r.imgs.map((src, i) => (
+                <Image src={img(src)} alt={r.imgs.length > 1 ? `${r.alt} (photo ${i + 1})` : r.alt} widths={[400, 700]} sizes="(max-width: 760px) 50vw, 360px" />
+              ))}
+            </div>
+            <p>{r.caption}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Base>

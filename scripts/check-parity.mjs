@@ -47,6 +47,28 @@ for (const f of all) {
   for (const t of imgTags) if (t.includes('src="/_astro') && !/width="\d+"/.test(t)) bad(`${f}: imagem sem width`);
   if ((s.match(/<h1\b/g) || []).length !== 1) bad(`${f}: deve ter exatamente um h1`);
 }
+// 4. Versão em inglês: mesmas páginas e mesmos ids da versão em português
+for (const p of pages) {
+  const en = join('en', p);
+  if (!existsSync(join(dist, en))) { bad(`página EN ausente: ${en}`); continue; }
+  const pt = ids(html(p)), e = ids(html(en));
+  for (const id of pt) if (!e.has(id)) bad(`âncora #${id} falta em ${en}`);
+  if (!html(en).includes('<html lang="en"')) bad(`${en}: lang incorreto`);
+  if (!html(p).includes(`href="/en/${p === 'index.html' ? '' : p}"`)) bad(`${p}: seletor não aponta para /en/`);
+  if (!html(en).includes(`href="/${p === 'index.html' ? '' : p}"`) ) bad(`${en}: seletor não aponta para PT`);
+}
+const enAll = readdirSync(join(dist, 'en')).filter((f) => f.endsWith('.html'));
+for (const f of enAll) {
+  const s = html(join('en', f));
+  for (const [, href] of s.matchAll(/href="(\/[^"#]*)(#[^"]*)?"/g)) {
+    if (href.startsWith('/_astro') || href.includes('favicon') || href.includes('sitemap')) continue;
+    const file = href === '/' ? 'index.html' : href === '/en/' ? 'en/index.html' : href.slice(1);
+    if (!existsSync(join(dist, file))) bad(`en/${f}: link ${href}`);
+  }
+  for (const [, page, hash] of s.matchAll(/href="\/en\/([a-z]+\.html)#([^"]+)"/g)) if (!ids(html(join('en', page))).has(hash)) bad(`en/${f}: âncora ${page}#${hash}`);
+  if ((s.match(/<h1\b/g) || []).length !== 1) bad(`en/${f}: deve ter exatamente um h1`);
+}
+
 const todos = all.reduce((n, f) => n + (html(f).match(/class="todo"/g) || []).length, 0);
 console.log(`páginas: ${all.length} · imagens/srcset: ${imgs} · links internos: ${links} · pendências [a confirmar]: ${todos}`);
 console.log(fail ? `${fail} falha(s)` : 'paridade ok');

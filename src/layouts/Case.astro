@@ -4,6 +4,7 @@ import Base from './Base.astro';
 import Chips from '../components/Chips.astro';
 import Spec from '../components/Spec.astro';
 import { img } from '../lib/images';
+import { getLang, base, ui } from '../lib/i18n';
 
 interface Props {
   slug: string;
@@ -20,11 +21,14 @@ interface Props {
 }
 const p = Astro.props;
 const cover = img(p.cover.src);
+const lang = getLang(Astro.url);
+const s = ui[lang];
+const b = base(lang);
 ---
 <Base title={p.title} description={p.description} page="work" bodyClass="page-case">
   <div class="case" id={p.slug}>
     <div class="wrap">
-      <a class="back" href="/#work"><span aria-hidden="true">←</span> Trabalho</a>
+      <a class="back" href={`${b}/#work`}><span aria-hidden="true">←</span> {s.work}</a>
       <header class="case-head" id={`${p.slug}-overview`}>
         <p class="kicker" set:html={p.kicker} />
         <h1>{p.title.split(' · ')[0]}</h1>
@@ -38,15 +42,15 @@ const cover = img(p.cover.src);
     </div>
 
     <div class="wrap case-layout">
-      <nav class="toc" aria-label="Neste case">
-        <p class="toc-title">Neste case</p>
+      <nav class="toc" aria-label={s.inThisCase}>
+        <p class="toc-title">{s.inThisCase}</p>
         <div class="read-progress" aria-hidden="true"><span></span></div>
         {p.toc.map((t) => <a href={`#${t.id}`}>{t.label}</a>)}
       </nav>
       <article class="case-body">
         <slot />
         <a class="next" href={p.next.href}>
-          <span class="next-label">Próximo case</span>
+          <span class="next-label">{s.nextCase}</span>
           <span class="next-title">{p.next.title} <span aria-hidden="true">→</span></span>
           <span class="next-sub">{p.next.sub}</span>
         </a>

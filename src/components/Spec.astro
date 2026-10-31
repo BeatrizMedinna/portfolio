@@ -1,8 +1,10 @@
 ---
 interface Props { items: [string, string][]; store?: { href: string; label: string } }
 const { items, store } = Astro.props;
+import { t } from '../lib/i18n';
+const s = t(Astro.url);
 ---
 <dl class="spec-grid">
   {items.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
-  {store && <div><dt>Loja</dt><dd><a href={store.href} target="_blank" rel="noopener">{store.label} <span aria-hidden="true">↗</span></a></dd></div>}
+  {store && <div><dt>{s.store}</dt><dd><a href={store.href} target="_blank" rel="noopener">{store.label} <span aria-hidden="true">↗</span></a></dd></div>}
 </dl>

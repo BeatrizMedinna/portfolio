@@ -55,3 +55,31 @@ export const projects: Project[] = [
     store: { href: 'https://apps.apple.com/br/app/borali-explore-bras%C3%ADlia/id6764412373', label: 'App Store' },
   },
 ];
+
+// Versão em inglês (mesma ordem, slugs e imagens)
+const en: Record<string, Partial<Project>> = {
+  handraw: {
+    platform: 'macOS',
+    image: { src: 'handraw/screenshot-2.jpg', alt: 'Handraw on a Mac: canvas, color palette and the camera preview tracking both hands' },
+    line: 'A Mac canvas that turns hand movement, read by the camera, into strokes on screen.',
+    shows: ['Design leadership', 'Gesture interaction', 'Design system'],
+    role: 'Lead Designer',
+    team: '5 people · 7 weeks',
+    launch: 'Jul 2026',
+  },
+  sete: {
+    image: { src: 'sete/screenshots.png', alt: 'SETE screens on iPhone and Apple Watch showing games, progress and achievements' },
+    line: 'Training metrics for people who play court sports, with Apple Watch recording the match.',
+    shows: ['iPhone + Apple Watch', 'HealthKit data', 'Focused scope'],
+    team: '5 people · 7 weeks',
+    launch: 'Aug 2025',
+  },
+  borali: {
+    image: { src: 'borali/screenshots.png', alt: 'BorAli? screens with ready-made plans, a map and place recommendations in Brasília' },
+    line: 'Outing suggestions in Brasília based on context and on how you feel right now.',
+    shows: ['Behavioral research', 'Reframed problem', 'Validated flows'],
+    team: '5 people · 7 weeks',
+    launch: 'May 2026',
+  },
+};
+export const projectsEn: Project[] = projects.map((p) => ({ ...p, ...en[p.slug] }));
