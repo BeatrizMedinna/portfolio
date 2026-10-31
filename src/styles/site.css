@@ -393,3 +393,4 @@ figcaption { display: flex; gap: 12px; align-items: baseline; margin-top: 10px; 
 .decision .fig figcaption { max-width: 680px; margin-left: auto; margin-right: auto; }
 .decision-gap { height: 24px; }
 .crop-center .zoom img { object-position: center 65%; }
+.decision-intro { margin: -8px 0 24px; }
