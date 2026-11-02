@@ -1,29 +1,25 @@
 ---
 import { Image } from 'astro:assets';
+import { projects } from '../data/projects';
+import { journey, location } from '../data/profile';
 import Base from '../layouts/Base.astro';
 import Chips from '../components/Chips.astro';
-import { projects, paceCases } from '../data/projects';
-import { journey, location } from '../data/profile';
 import { img } from '../lib/images';
 
 const photo = img('profile.jpg');
 ---
 <Base
   title="Beatriz Medina · Product Designer"
-  description="Product Designer com três apps publicados na App Store, para iOS, watchOS e macOS. Pesquisa, Figma e protótipos funcionais em SwiftUI."
+  description="Product Designer em Brasília. Pesquisa, decisões de produto e prototipação funcional para apps e sistemas, com três apps publicados na App Store."
   page="work"
   bodyClass="page-home"
 >
   <section class="hero has-photo" id="top">
     <div class="wrap hero-grid">
       <div class="hero-main">
-        <p class="kicker"><span class="status-dot" aria-hidden="true"></span>Product Designer · Apple Developer Academy</p>
-        <h1>Desenho produtos da pesquisa à <em>App&nbsp;Store</em>.</h1>
-        <p class="lede">
-          Três apps publicados na App Store, para macOS, iOS e watchOS. Conduzo pesquisa, transformo achados em decisões
-          de produto e desenho a interface. A formação em Ciência da Computação complementa o trabalho: facilita a conversa
-          com engenharia e me permite prototipar em SwiftUI quando o projeto pede.
-        </p>
+        <p class="kicker"><span class="status-dot" aria-hidden="true"></span>Product Designer</p>
+        <h1>Desenho produtos digitais da pesquisa ao <em>protótipo funcional</em>.</h1>
+        <p class="lede">Investigo o problema, transformo os achados em decisões de produto e desenho interfaces para apps e sistemas. A formação em Ciência da Computação me ajuda a trabalhar junto com engenharia e a testar ideias em protótipos interativos, na tecnologia que cada projeto pede.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#work">Ver projetos</a>
           <a class="btn btn-quiet" href="/about.html">Sobre mim</a>
@@ -36,9 +32,9 @@ const photo = img('profile.jpg');
     <div class="wrap">
       <dl class="hero-spec">
         <div><dt>Foco</dt><dd>Product Design · UX/UI</dd></div>
-        <div><dt>Complemento</dt><dd>SwiftUI e front-end</dd></div>
-        <div><dt>Na App Store</dt><dd>3 apps desde 2025</dd></div>
-        <div><dt>Base</dt><dd>{location} · remoto</dd></div>
+        <div><dt>Diferencial</dt><dd>Prototipação funcional</dd></div>
+        <div><dt>Na App Store</dt><dd>3 apps publicados</dd></div>
+        <div><dt>Base</dt><dd>{location}</dd></div>
       </dl>
     </div>
   </section>
@@ -47,7 +43,7 @@ const photo = img('profile.jpg');
     <div class="wrap">
       <header class="section-head">
         <h2 class="label">Trabalho selecionado</h2>
-        <p class="section-title">Três produtos publicados. Em cada um, as decisões que levaram até a loja.</p>
+        <p class="section-title">Dois cases recentes em desenvolvimento e três produtos publicados na App Store.</p>
       </header>
       <ol class="projects">
         {projects.map((p) => (
@@ -56,48 +52,25 @@ const photo = img('profile.jpg');
               <Image src={img(p.image.src)} alt={p.image.alt} widths={[600, 900, 1300]} sizes="(max-width: 860px) 100vw, 680px" />
             </div>
             <div class="project-text">
-              <p class="project-meta"><span class="idx">{p.year}</span>{p.platform}</p>
+              <p class="project-meta">{p.status && <span class="status-badge">{p.status}</span>}<span class="idx">{p.year}</span>{p.platform}</p>
               <h3><a class="stretch" href={`/${p.slug}.html`}>{p.name}</a></h3>
               <p class="project-line">{p.line}</p>
               <Chips items={p.shows} />
               <dl class="spec-rows">
                 <div><dt>Papel</dt><dd>{p.role}</dd></div>
                 <div><dt>Time</dt><dd>{p.team}</dd></div>
-                <div><dt>Lançamento</dt><dd>{p.launch}</dd></div>
+                {p.launch
+                  ? <div><dt>Lançamento</dt><dd>{p.launch}</dd></div>
+                  : <div><dt>Situação</dt><dd>{p.status}</dd></div>}
               </dl>
               <div class="project-actions">
                 <span class="cta">Ler o case <span class="arrow" aria-hidden="true">→</span></span>
-                <a class="store above" href={p.store.href} target="_blank" rel="noopener">{p.store.label} <span aria-hidden="true">↗</span></a>
+                {p.store && <a class="store above" href={p.store.href} target="_blank" rel="noopener">{p.store.label} <span aria-hidden="true">↗</span></a>}
               </div>
             </div>
           </li>
         ))}
       </ol>
-      <div class="dev" id="em-desenvolvimento">
-        <header class="section-head">
-          <h2 class="label">Em desenvolvimento</h2>
-          <p class="section-title">PACE: um produto, duas experiências conectadas.</p>
-        </header>
-        <p class="dev-intro">Um ecossistema para campeonatos universitários, ainda em construção com o time. Desenhei e prototipei em SwiftUI o app de quem torce e o sistema de quem organiza.</p>
-        <ol class="dev-cases">
-          {paceCases.map((p) => (
-            <li class="dev-case">
-              <div class="project-media">
-                <Image src={img(p.image.src)} alt={p.image.alt} widths={[600, 900, 1300]} sizes="(max-width: 760px) 100vw, 560px" />
-              </div>
-              <p class="project-meta"><span class="status-badge">Em desenvolvimento</span>{p.platform}</p>
-              <h3><a class="stretch" href={`/${p.slug}.html`}>{p.name}</a></h3>
-              <p class="project-line">{p.line}</p>
-              <Chips items={p.shows} />
-              <dl class="spec-rows">
-                <div><dt>Papel</dt><dd>{p.role}</dd></div>
-                <div><dt>Situação</dt><dd>{p.status}</dd></div>
-              </dl>
-              <div class="project-actions"><span class="cta">Ler o case <span class="arrow" aria-hidden="true">→</span></span></div>
-            </li>
-          ))}
-        </ol>
-      </div>
     </div>
   </section>
 
@@ -109,19 +82,19 @@ const photo = img('profile.jpg');
       </header>
       <ol class="value-list">
         <li>
-          <h3>Do problema à interface</h3>
-          <p>Entrevistas, síntese de achados, priorização e design system antes da tela final. No Handraw, priorizei com o time 6 requisitos vitais entre 29 mapeados.</p>
-          <a href="/handraw.html#handraw-ideacao">Ver a decisão no Handraw <span aria-hidden="true">→</span></a>
+          <h3>Pesquisa que vira decisão</h3>
+          <p>Entrevistas, síntese de achados e priorização antes da tela final. No Handraw, priorizei com o time 6 requisitos vitais entre 29 mapeados.</p>
+          <a href="/handraw.html#handraw-ideacao">Ver a priorização no Handraw <span aria-hidden="true">→</span></a>
         </li>
         <li>
-          <h3>Design que conversa com engenharia</h3>
-          <p>Formação em Ciência da Computação e experiência como desenvolvedora front-end. Desenho considerando o que o SwiftUI, o HealthKit e a câmera conseguem entregar.</p>
-          <a href="/sete.html#sete-watchos">Ver o Apple Watch no SETE <span aria-hidden="true">→</span></a>
+          <h3>Clareza em sistemas complexos</h3>
+          <p>No PACE Administrativo, organizei cerca de 20 áreas de gestão pela frequência de uso e desenhei a interface para explicar bloqueios e prevenir erros antes de pedir confirmação.</p>
+          <a href="/pace-administrativo.html#adm-decisoes">Ver as decisões no PACE <span aria-hidden="true">→</span></a>
         </li>
         <li>
-          <h3>Protótipos que funcionam</h3>
-          <p>Hoje, quando o projeto pede, levo telas do Figma para interfaces funcionais em SwiftUI, com o Claude como apoio no código, e valido no simulador antes do handoff.</p>
-          <a href="/pace-torcedor.html#pace-ia">Ver o processo no PACE <span aria-hidden="true">→</span></a>
+          <h3>Prototipação funcional</h3>
+          <p>Transformo decisões de design em interfaces interativas, na tecnologia adequada ao projeto e com IA como apoio quando faz sentido. Assim o time avalia comportamento, não só telas estáticas.</p>
+          <a href="/pace-torcedor.html#pace-ia">Ver o processo no PACE Torcedor <span aria-hidden="true">→</span></a>
         </li>
       </ol>
     </div>

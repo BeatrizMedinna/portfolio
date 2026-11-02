@@ -11,8 +11,8 @@ import Note from '../../components/Note.astro';
   slug="sete"
   title="SETE · Product Design Case Study · Beatriz Medina"
   description="How a challenge about exclusivity became SETE, an iPhone and Apple Watch app that brings pro-level metrics to people who play court sports."
-  kicker='<span class="idx">Case 02</span>iOS + watchOS · 2025'
-  lede="Training metrics for people who play court sports: Apple Watch records the match and iPhone shows performance and progress over time."
+  kicker='<span class="idx">Case 05</span>iOS + watchOS · 2025'
+  lede="Training metrics for people who play court sports. Apple Watch records the match and iPhone shows performance and progress over time."
   chips={['From abstract theme to product', 'iPhone + Apple Watch', 'HealthKit data', 'Gamification']}
   spec={[
     ['Role', 'Product Designer (UX/UI)'],
@@ -30,8 +30,9 @@ import Note from '../../components/Note.astro';
     { id: 'sete-watchos', label: 'Two moments' },
     { id: 'sete-validacao', label: 'Interface' },
     { id: 'sete-resultado', label: 'Outcome' },
+    { id: 'artefatos', label: 'Artifacts' },
   ]}
-  next={{ href: '/en/borali.html', title: 'BorAli? Explore Brasília', sub: 'iOS · 2026' }}
+  next={{ href: '/en/pace-torcedor.html', title: 'PACE Fan App', sub: 'iOS · In development' }}
 >
   <section id="resumo" aria-labelledby="t-resumo">
     <h2 id="t-resumo" class="label">In 30 seconds</h2>
@@ -45,16 +46,16 @@ import Note from '../../components/Note.astro';
 
   <section id="sete-estrategia" class="block">
     <p class="label">The challenge</p>
-    <h2>We started with one word on the whiteboard: exclusivity.</h2>
+    <h2>The starting point was a single word, exclusivity.</h2>
     <div class="block-grid">
       <div class="prose">
-        <p>The Apple Developer Academy challenge began with an open question: how does exclusivity shape behavior, access and emotions in social relationships? On day one, the team mapped everything the word brought to mind: parties, travel, status, community, competition, sports.</p>
-        <p>Exploratory research moved through competition, experiences and exclusive features, then HealthKit and sports audiences. That’s where the theme took shape: in amateur sports, the data exists, but pro-level insight stays with professional athletes.</p>
+        <p>The Apple Developer Academy challenge began with an open question about how exclusivity shapes behavior, access and emotions in social relationships. On day one, the team mapped everything the word brought to mind, from parties and travel to status, community, competition and sports.</p>
+        <p>Exploratory research moved through competition, experiences and exclusive features, then HealthKit and sports audiences. That’s where the theme took shape. In amateur sports, the data exists, but pro-level insight stays with professional athletes.</p>
       </div>
       <Note label="From my research notes">“É possível oferecer exclusividade sem escassez”<span class="quote-tr" lang="en">Exclusivity can be offered without scarcity.</span></Note>
     </div>
     <div class="compare" id="sete-pesquisa">
-      <Figure src="sete/engage-quadro.jpg" alt="Day-one whiteboard with the word exclusivity and related themes such as parties, sports, community and status" caption="Day one: what exclusivity meant to the team." n={1} crop focus="center" />
+      <Figure src="sete/engage-quadro.jpg" alt="Day-one whiteboard with the word exclusivity and related themes such as parties, sports, community and status" caption="What exclusivity meant to the team on day one." n={1} crop focus="center" />
       <Figure src="sete/pesquisa-exclusividade.png" alt="Research board with notes on exclusivity, personalization, competition and the most-played sports in Brazil" caption="The team’s exploratory research on exclusivity (in Portuguese)." n={2} crop />
     </div>
   </section>
@@ -69,7 +70,7 @@ import Note from '../../components/Note.astro';
     </Decision>
     <div class="decision-gap"></div>
     <Decision n="02" title="Exclusivity as achievement, not a lock" id="d2">
-      <Row label="Basis">From my notes: exclusivity in apps doesn’t have to be a feature for the few; it can come from levels or from being among the first to achieve something. The team’s synthesis listed community, achievement levels and personalization as ways to keep that sense of exclusivity.</Row>
+      <Row label="Basis">In my notes, I wrote that exclusivity in apps doesn’t have to be a feature for the few and can come from levels or from being among the first to achieve something. The team’s synthesis listed community, achievement levels and personalization as ways to keep that sense of exclusivity.</Row>
       <Row label="Choice" choice>Weekly play streaks, badges based on total games and a performance card ready to share.</Row>
       <Row label="Why">“Exclusive” becomes something players earn and show off, without closing the app to beginners.</Row>
       <Row label="In the store">All three appear in the current App Store screenshots.</Row>
@@ -80,10 +81,10 @@ import Note from '../../components/Note.astro';
     <p class="label">Two moments of use</p>
     <h2>On the wrist during the game. On the iPhone afterwards.</h2>
     <div class="prose">
-      <p>The data is born on the Apple Watch, mid-match, when nobody wants to read text. In the prototype, the watch does little and does it fast: it starts recording, counts down 3, 2, 1, shows time, heart rate, calories and distance in large numbers, and offers three actions: end, pause or start the next game.</p>
-      <p>Reading happens later, on the iPhone: match metrics, progress over time and training suggestions. The prototypes also explored a heat map showing where the player moved on the court.</p>
+      <p>The data is born on the Apple Watch, mid-match, when nobody wants to read text. In the prototype, the watch does little and does it fast. It starts recording, counts down 3, 2, 1, shows time, heart rate, calories and distance in large numbers, and offers three actions, end, pause or start the next game.</p>
+      <p>Reading happens later, on the iPhone, with match metrics, progress over time and training suggestions. The prototypes also explored a heat map showing where the player moved on the court.</p>
     </div>
-    <Figure src="sete/watch-fluxo.png" alt="Apple Watch flow: welcome, start recording, 3-2-1 countdown, live metrics and end, pause and next-game controls" caption="Apple Watch flow, from start to next game." n={3} />
+    <Figure src="sete/watch-fluxo.png" alt="Apple Watch flow with welcome, start recording, 3-2-1 countdown, live metrics and end, pause and next-game controls" caption="Apple Watch flow, from start to next game." n={3} />
   </section>
 
   <section id="sete-validacao" class="block">
@@ -105,22 +106,15 @@ import Note from '../../components/Note.astro';
     <div class="sub-block">
       <h3>States almost nobody designs</h3>
       <p class="sub-lede">The exploration covered first launch, with no workouts recorded yet, and days without a game, with an encouraging message instead of an empty screen. The share card got versions with and without a background.</p>
-      <Figure src="sete/exploracao-telas.png" alt="SETE screen exploration: home, progress, share card with and without background, first launch and no-game day" caption="Screen and state exploration." n={4} />
+      <Figure src="sete/exploracao-telas.png" alt="SETE screen exploration with home, progress, share card with and without background, first launch and no-game day" caption="Screen and state exploration." n={4} />
     </div>
-    <Gallery cols={4} phone items={[
-      { src: 'sete/hi-02-evolucao.png', alt: 'Progress screen with a daily calories chart and training suggestions', caption: 'Progress' },
-      { src: 'sete/hi-03-compartilhar-a.png', alt: 'Share screen with heat map and match metrics', caption: 'Share' },
-      { src: 'sete/hi-03-compartilhar-b.png', alt: 'Sharing options for the performance card', caption: 'Share options' },
-      { src: 'sete/mid-02-evolucao.png', alt: 'Mid-fidelity progress screen', caption: 'Progress, mid-fidelity' },
-    ]} />
-    <div id="sete-interface"><Figure src="sete/palette.png" alt="SETE color palette" caption="Palette: dark background with lime green as the accent color." n={5} zoom={false} /></div>
   </section>
 
   <section id="sete-resultado" class="block">
     <p class="label">Outcome</p>
     <h2>My first app on the App Store, released in August 2025.</h2>
     <Summary plain>
-      <Row label="Shipped">According to the store listing: heart rate, speed, distance and performance metrics, streaks and challenges, full history, Apple Watch integration and result sharing.</Row>
+      <Row label="Shipped">According to the store listing, the app offers heart rate, speed, distance and performance metrics, streaks and challenges, full history, Apple Watch integration and result sharing.</Row>
       <Row label="Prototype only">The heat map appears in the prototypes and early promotional screens, but not in the current store screenshots or description.</Row>
       <Row label="After launch">Six versions in the store history, from 1.2.1 on August 29 to 1.6.0 on October 11, 2025.</Row>
       <Row label="What I learned">Innovation doesn’t always mean building something new. Sometimes the value is in rearranging existing technology for a specific context.</Row>
@@ -134,5 +128,19 @@ import Note from '../../components/Note.astro';
         { src: 'sete/loja-evolucao.jpg', alt: 'App Store screenshot: monthly calories progress, training suggestions and Apple Watch', caption: 'Progress and suggestions' },
       ]} />
     </div>
+  </section>
+  <section id="artefatos" class="block">
+    <p class="label">Artifacts</p>
+    <h2>High-fidelity screens and palette.</h2>
+    <details class="artifacts" id="sete-interface">
+      <summary>More screens and palette</summary>
+      <Gallery cols={4} phone items={[
+        { src: 'sete/hi-02-evolucao.png', alt: 'Progress screen with a daily calories chart and training suggestions', caption: 'Progress' },
+        { src: 'sete/hi-03-compartilhar-a.png', alt: 'Share screen with heat map and match metrics', caption: 'Share' },
+        { src: 'sete/hi-03-compartilhar-b.png', alt: 'Sharing options for the performance card', caption: 'Share options' },
+        { src: 'sete/mid-02-evolucao.png', alt: 'Mid-fidelity progress screen', caption: 'Progress, mid-fidelity' },
+      ]} />
+      <Figure src="sete/palette.png" alt="SETE color palette" caption="Palette with a dark background and lime green as the accent color." zoom={false} />
+    </details>
   </section>
 </Case>

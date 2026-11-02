@@ -10,16 +10,16 @@ import Note from '../components/Note.astro';
 <Case
   slug="pace-administrativo"
   title="PACE Administrativo · Case de Product Design · Beatriz Medina"
-  description="Design do sistema de gestão do PACE para Mac: arquitetura da informação, prevenção de erros e ajuda contextual para quem organiza campeonatos universitários, com protótipo em SwiftUI construído com o Claude Code."
-  kicker='<span class="idx">Case 05</span>macOS · 2026'
-  lede="O sistema de quem organiza o campeonato: edições, atléticas, chaves, cronograma e partidas num app nativo para Mac, desenhado para evitar erros que custam caro no dia de jogo."
-  chips={['Arquitetura da informação', 'Prevenção de erros', 'Ajuda contextual', 'HIG do macOS']}
+  description="Design do sistema de gestão do PACE para quem organiza campeonatos universitários, com arquitetura da informação, prevenção de erros, ajuda contextual e protótipo funcional."
+  kicker='<span class="idx">Case 02</span>macOS · 2026'
+  lede="O sistema de quem organiza o campeonato, com edições, atléticas, chaves, cronograma e partidas num app para Mac desenhado para evitar erros que custam caro no dia de jogo."
+  chips={['Arquitetura da informação', 'Prevenção de erros', 'Ajuda contextual', 'Sistema de gestão']}
   spec={[
-    ['Papel', 'Product Designer · Design Engineering'],
+    ['Papel', 'Product Designer'],
     ['Time', '5 pessoas na Apple Developer Academy'],
     ['Período', 'Outubro de 2026'],
     ['Plataforma', 'macOS'],
-    ['Protótipo', 'SwiftUI, dados simulados'],
+    ['Protótipo', 'SwiftUI com dados simulados'],
     ['Situação', 'Em desenvolvimento'],
   ]}
   status="As telas são capturas do protótipo em SwiftUI rodando no Mac, com dados simulados. O time já conectou parte do protótipo à API, mas nada aqui mostra dados reais, e ainda não houve testes com usuários."
@@ -31,18 +31,18 @@ import Note from '../components/Note.astro';
     { id: 'adm-arquitetura', label: 'Arquitetura' },
     { id: 'adm-decisoes', label: 'Decisões' },
     { id: 'adm-plataforma', label: 'Linguagem e Mac' },
-    { id: 'adm-ia', label: 'Design Engineering' },
+    { id: 'adm-ia', label: 'Validação com IA' },
     { id: 'adm-resultado', label: 'Estado atual' },
     { id: 'artefatos', label: 'Artefatos' },
   ]}
-  next={{ href: '/pace-torcedor.html', title: 'PACE Torcedor', sub: 'iOS · Em desenvolvimento' }}
+  next={{ href: '/handraw.html', title: 'Handraw', sub: 'macOS · 2026' }}
 >
   <section id="resumo" aria-labelledby="t-resumo">
     <h2 id="t-resumo" class="label">Em 30 segundos</h2>
     <Summary>
       <Row label="Problema">Quem organiza um campeonato universitário monta chaves e cronograma à mão e refaz tudo a cada imprevisto, com os dados espalhados em planilhas e grupos.</Row>
-      <Row label="Meu papel">Product Designer do sistema de gestão num time de 5. Defini escopo, etapas e direção de interação, e conduzi o protótipo em SwiftUI com o Claude Code. Gustavo Souto e Kenay Nobre integraram dados reais sobre esse protótipo.</Row>
-      <Row label="Decisão-chave">Desenhar para quem nunca usou um sistema de competições: o app explica o que está bloqueado, mostra o resultado antes de executar e só pede confirmação quando o risco justifica.</Row>
+      <Row label="Meu papel">Product Designer do sistema de gestão num time de 5. Defini escopo, etapas e direção de interação, e conduzi o protótipo funcional, construído com o Claude Code. Gustavo Souto e Kenay Nobre integraram dados reais sobre esse protótipo.</Row>
+      <Row label="Decisão-chave">Desenhar para quem nunca usou um sistema de competições. O app explica o que está bloqueado, mostra o resultado antes de executar e só pede confirmação quando o risco justifica.</Row>
       <Row label="Estado atual">Cerca de 20 áreas de gestão prototipadas a partir de 7 telas de wireframe, com a alta fidelidade aplicada sobre a versão integrada pelo time. O produto segue em desenvolvimento.</Row>
     </Summary>
   </section>
@@ -63,8 +63,8 @@ import Note from '../components/Note.astro';
     <p class="label">Arquitetura da informação</p>
     <h2>De 5 itens no menu para 20 áreas, ordenadas pelo uso.</h2>
     <div class="prose">
-      <p>Os wireframes do Figma cobriam uma parte pequena do sistema: a barra lateral mostrava 5 das 17 áreas documentadas. O protótipo organiza cerca de 20 áreas numa janela em três partes, típica do Mac: barra lateral, conteúdo e um inspetor à direita para os detalhes da partida.</p>
-      <p>A barra lateral segue a frequência de uso. Operação fica no topo, porque é o que o Carlos abre no dia de jogo; configuração fica embaixo, porque é sazonal. “Equipes” virou “Atléticas”, para não se confundir com a equipe de contas, e o cadastro do evento e a edição atual viraram abas da mesma área, porque têm regras diferentes.</p>
+      <p>Os wireframes do Figma cobriam uma parte pequena do sistema, e a barra lateral mostrava só 5 das 17 áreas documentadas. O protótipo organiza cerca de 20 áreas numa janela em três partes, com barra lateral, conteúdo e um inspetor à direita para os detalhes da partida.</p>
+      <p>A barra lateral segue a frequência de uso. Operação fica no topo, porque é o que o Carlos abre no dia de jogo, e configuração fica embaixo, porque é sazonal. “Equipes” virou “Atléticas”, para não se confundir com a equipe de contas, e o cadastro do evento e a edição atual viraram abas da mesma área, porque têm regras diferentes.</p>
     </div>
     <div class="compare">
       <Figure src="pace-macos/mid-equipes.png" alt="Wireframe da tela Equipes com barra lateral de quatro itens e tabela de equipes repetidas" tag="Wireframe · Figma" />
@@ -77,9 +77,9 @@ import Note from '../components/Note.astro';
     <p class="label">Decisões</p>
     <h2>Prevenir o erro antes de pedir confirmação.</h2>
     <Decision n="01" title="Um painel para decidir, não para impressionar" id="d1">
-      <Row label="Contexto">O wireframe do painel abria com quatro números: jogos em atraso, falta de mesário, W.O.s registrados e torcedores. Nenhum deles tinha base nos dados que o sistema registra.</Row>
-      <Row label="Escolha" choice>Um painel ordenado por urgência: o que precisa de atenção agora, os jogos de hoje, o andamento das chaves, as súmulas abertas e a situação do cronograma. Cada item leva à área certa, já filtrada.</Row>
-      <Row label="Por quê">Foi o critério que escrevi: “Não apresente indicadores falsamente precisos quando os dados disponíveis não sustentarem seu cálculo.” Num painel de operação, um número inventado leva a uma decisão errada.</Row>
+      <Row label="Contexto">O wireframe do painel abria com quatro números, jogos em atraso, falta de mesário, W.O.s registrados e torcedores. Nenhum deles tinha base nos dados que o sistema registra.</Row>
+      <Row label="Escolha" choice>Um painel ordenado por urgência, começando pelo que precisa de atenção agora e seguindo com os jogos de hoje, o andamento das chaves, as súmulas abertas e a situação do cronograma. Cada item leva à área certa, já filtrada.</Row>
+      <Row label="Por quê">O critério que escrevi foi “Não apresente indicadores falsamente precisos quando os dados disponíveis não sustentarem seu cálculo.” Num painel de operação, um número inventado leva a uma decisão errada.</Row>
       <div slot="figure" class="compare">
         <Figure src="pace-macos/mid-painel.png" alt="Wireframe do Painel Geral com quatro indicadores no topo, jogos de hoje, gráfico de partidas e últimas notificações" tag="Wireframe" />
         <Figure src="pace-macos/hi-painel.png" alt="Painel da edição em alta fidelidade com Precisa de atenção, jogos de hoje, andamento das partidas, súmulas abertas e cronograma publicado" tag="Alta fidelidade" after />
@@ -87,23 +87,23 @@ import Note from '../components/Note.astro';
     </Decision>
     <div class="decision-gap"></div>
     <Decision n="02" title="Explicar o bloqueio no próprio botão" id="d2">
-      <Row label="Contexto">Muitas ações dependem do estado do campeonato: não dá para gerar de novo uma chave que já tem súmulas, nem publicar sem rascunho. Nos primeiros blocos, o botão só aparecia desabilitado, sem explicação.</Row>
-      <Row label="Alternativa">Um ícone ⓘ ao lado do controle, usado no terceiro bloco. Pedi para trocar: “Não quero que o usuário precise procurar ou clicar nesse ícone.”</Row>
+      <Row label="Contexto">Muitas ações dependem do estado do campeonato. Não dá para gerar de novo uma chave que já tem súmulas, nem publicar sem rascunho. Nos primeiros blocos, o botão só aparecia desabilitado, sem explicação.</Row>
+      <Row label="Alternativa">Um ícone ⓘ ao lado do controle, usado no terceiro bloco. Pedi para trocar porque “Não quero que o usuário precise procurar ou clicar nesse ícone.”</Row>
       <Row label="Escolha" choice>Com o cursor parado sobre o controle, um balão aparece em menos de meio segundo com o motivo, o que fazer e um atalho para resolver. Também abre com Tab ou clique e é lido pelo VoiceOver.</Row>
-      <Row label="Por quê">O que explica o estado atual fica visível na tela; só o motivo de uma ação específica estar bloqueada vai para o balão. Assim a interface não vira uma coleção de legendas.</Row>
+      <Row label="Por quê">O que explica o estado atual fica visível na tela, e só o motivo de uma ação específica estar bloqueada vai para o balão. Assim a interface não vira uma coleção de legendas.</Row>
       <div slot="figure" class="compare">
-        <Figure src="pace-macos/hi-ajuda-gerar.png" alt="Balão sobre o botão Gerar de novo: a chave já tem súmulas ou escalações; ajustes agora são feitos no cronograma, com botão Ir para Cronograma" caption="Chave com súmulas: o balão explica e leva ao cronograma." />
-        <Figure src="pace-macos/hi-ajuda-publicar.png" alt="Balão sobre o botão Publicar: não há rascunho para publicar; crie um rascunho a partir do publicado, com botão Criar rascunho" caption="Sem rascunho: o próprio balão oferece criar um." />
+        <Figure src="pace-macos/hi-ajuda-gerar.png" alt="Balão sobre o botão Gerar de novo explicando que a chave já tem súmulas ou escalações e que ajustes agora são feitos no cronograma, com o botão Ir para Cronograma" caption="Com súmulas já registradas, o balão explica o bloqueio e leva ao cronograma." />
+        <Figure src="pace-macos/hi-ajuda-publicar.png" alt="Balão sobre o botão Publicar explicando que não há rascunho e sugerindo criar um a partir do publicado, com o botão Criar rascunho" caption="Sem rascunho, o próprio balão oferece criar um." />
       </div>
     </Decision>
     <div class="decision-gap"></div>
     <Decision n="03" title="Ver o resultado antes de gerar" id="d3">
       <Row label="Contexto">Gerar chaves e publicar o cronograma afeta atletas e torcedores. A persona pedia trabalhar num rascunho antes de publicar a versão oficial.</Row>
-      <Row label="Escolha" choice>Cronograma com rascunho e publicado sempre explícitos, mais uma visão de pendências. Antes de gerar chaves, uma folha mostra o plano por divisão: quais vão gerar chave e quais ficam de fora, com o motivo.</Row>
+      <Row label="Escolha" choice>Cronograma com rascunho e publicado sempre explícitos, mais uma visão de pendências. Antes de gerar chaves, uma folha mostra o plano por divisão, com as que vão gerar chave e as que ficam de fora, e o motivo.</Row>
       <Row label="Por quê">Corrigir uma chave já publicada exige desfazer jogos marcados. Ver o plano antes custa um clique e evita esse retrabalho.</Row>
       <div slot="figure" class="compare">
-        <Figure src="pace-macos/hi-cronograma.png" alt="Cronograma publicado em grade por quadra e horário, com aviso de que os torcedores veem esta versão e link Criar rascunho" caption="Publicado: o aviso diz quem vê esta versão e como mudá-la." />
-        <Figure src="pace-macos/hi-chave-plano.png" alt="Folha Gerar chaves com o plano por divisão: Série Ouro e Série Prata geram chave, Série Bronze fica de fora por não ter atléticas elegíveis suficientes" caption="Antes de gerar: o plano por divisão e o motivo de quem fica de fora." />
+        <Figure src="pace-macos/hi-cronograma.png" alt="Cronograma publicado em grade por quadra e horário, com aviso de que os torcedores veem esta versão e link Criar rascunho" caption="Na versão publicada, o aviso diz quem a vê e como mudá-la." />
+        <Figure src="pace-macos/hi-chave-plano.png" alt="Folha Gerar chaves com o plano por divisão, em que Série Ouro e Série Prata geram chave, Série Bronze fica de fora por não ter atléticas elegíveis suficientes" caption="Antes de gerar, o plano por divisão mostra quem fica de fora e por quê." />
       </div>
     </Decision>
     <div class="decision-gap"></div>
@@ -112,8 +112,8 @@ import Note from '../components/Note.astro';
       <Row label="Escolha" choice>“Desfazer” logo depois da ação, inspirado no Gmail, para operações locais e reversíveis. Confirmação antes de publicar, descartar e gerar chaves. E todo formulário com alterações pergunta antes de fechar, seja pelo Cancelar, pelo Esc ou pelo ×.</Row>
       <Row label="Por quê">A fricção aparece só onde o erro custa caro.</Row>
       <div slot="figure" class="compare">
-        <Figure src="pace-macos/hi-descartar.png" alt="Diálogo Descartar as alterações sobre o formulário Nova atlética, com Descartar alterações em vermelho e Continuar editando" caption="Formulário com alterações: Esc pergunta antes de fechar." />
-        <Figure src="pace-macos/hi-crono-rascunho.png" alt="Cronograma em modo rascunho com o aviso Rascunho criado a partir do publicado" caption="Criar um rascunho é reversível: aviso discreto, sem diálogo." />
+        <Figure src="pace-macos/hi-descartar.png" alt="Diálogo Descartar as alterações sobre o formulário Nova atlética, com Descartar alterações em vermelho e Continuar editando" caption="Num formulário com alterações, o Esc pergunta antes de fechar." />
+        <Figure src="pace-macos/hi-crono-rascunho.png" alt="Cronograma em modo rascunho com o aviso Rascunho criado a partir do publicado" caption="Criar um rascunho é reversível, então basta um aviso discreto." />
       </div>
     </Decision>
   </section>
@@ -122,22 +122,22 @@ import Note from '../components/Note.astro';
     <p class="label">Linguagem e plataforma</p>
     <h2>Sem códigos de regra na tela, com o Mac como referência.</h2>
     <div class="prose">
-      <p>Os documentos do produto identificam regras por códigos. Defini que eles ficam no código e no registro do projeto, nunca na interface. Os termos seguem o vocabulário do organizador: “avança direto” no lugar de “bye”, “horário” no lugar de “slot”, “ficou de fora” no lugar de “pulada”. Mensagens de bloqueio dizem o motivo e o que fazer, e o painel não chama a vencedora da final de “campeã”, porque o registro de campeões ainda não existe no sistema.</p>
-      <p>Na alta fidelidade, a composição é barra lateral escura com conteúdo claro, sobre a paleta da marca do ecossistema. Pedi que a HIG fosse consultada de fato: “Não quero uma interpretação estética superficial da Apple. Quero decisões justificadas por seus princípios de interface.” Isso manteve tabelas, listas, folhas e diálogos nativos, o foco do sistema no lugar de um anel próprio e o vidro do macOS só nas barras.</p>
+      <p>Os documentos do produto identificam regras por códigos. Defini que eles ficam no código e no registro do projeto, nunca na interface. Os termos seguem o vocabulário do organizador, como “avança direto” no lugar de “bye”, “horário” no lugar de “slot”, “ficou de fora” no lugar de “pulada”. Mensagens de bloqueio dizem o motivo e o que fazer, e o painel não chama a vencedora da final de “campeã”, porque o registro de campeões ainda não existe no sistema.</p>
+      <p>Na alta fidelidade, a composição é barra lateral escura com conteúdo claro, sobre a paleta da marca do ecossistema. Pedi que as diretrizes da Apple fossem consultadas de fato, com uma frase direta. “Não quero uma interpretação estética superficial da Apple. Quero decisões justificadas por seus princípios de interface.” Isso manteve tabelas, listas, folhas e diálogos nativos, o foco do sistema no lugar de um anel próprio e o vidro do macOS só nas barras.</p>
     </div>
-    <Figure src="pace-macos/hi-partidas.png" alt="Lista de partidas em tabela nativa com filtros de situação, modalidade e dia, e situações com símbolo e texto" caption="Partidas: tabela nativa, filtros no topo e situação sempre com símbolo e texto, nunca só com cor." n={2} />
+    <Figure src="pace-macos/hi-partidas.png" alt="Lista de partidas em tabela nativa com filtros de situação, modalidade e dia, e situações com símbolo e texto" caption="Partidas em tabela nativa, com filtros no topo e situação sempre com símbolo e texto, nunca só com cor." n={2} />
     <div class="sub-block">
       <h3>Contraste medido no que aparece na tela</h3>
-      <p class="sub-lede">Os tokens passavam no contraste, mas a tela não. Medindo os pixels desenhados, apareceram três falhas: a seleção na barra lateral escura ficava em 2,7:1, selos sobre o vidro da barra de ferramentas caíam para 3,96:1 e o texto em linhas selecionadas com o destaque Grafite não passava. Recusei manter a falha como decisão de design. A solução foi texto escuro só na seleção enfatizada, conferido nas oito cores de destaque do macOS.</p>
+      <p class="sub-lede">Os tokens passavam no contraste, mas a tela não. Medindo os pixels desenhados, apareceram três falhas. A seleção na barra lateral escura ficava em 2,7:1, selos sobre o vidro da barra de ferramentas caíam para 3,96:1 e o texto em linhas selecionadas com o destaque Grafite não passava. Recusei manter a falha como decisão de design. A solução foi texto escuro só na seleção enfatizada, conferido nas oito cores de destaque do macOS.</p>
     </div>
   </section>
 
   <section id="adm-ia" class="block">
-    <p class="label">Design Engineering com IA</p>
+    <p class="label">Validação com IA</p>
     <h2>Testar regras que eu não dominava.</h2>
     <div class="block-grid">
       <div class="prose">
-        <p>No sistema de gestão, a dificuldade era outra: as regras de campeonato. A partir do terceiro bloco, cada etapa grande vinha com um manual de validação gerado do código real, que eu executava no Xcode. Num deles, percorri 12 jornadas e trouxe observações próprias, como filtros que mudavam de lugar e estados sem saída ao remover itens de um rascunho.</p>
+        <p>No sistema de gestão, a maior dificuldade eram as regras de campeonato. A partir do terceiro bloco, cada etapa grande vinha com um manual de validação gerado do código real, que eu executava no Xcode. Num deles, percorri 12 jornadas e trouxe observações próprias, como filtros que mudavam de lugar e estados sem saída ao remover itens de um rascunho.</p>
       </div>
       <Note label="O que escrevi ao Claude">“Como Product Designer, não conheço em profundidade todas as regras e dependências operacionais do sistema. Preciso que você me ajude a testar corretamente a experiência que implementou.”</Note>
     </div>
@@ -159,7 +159,7 @@ import Note from '../components/Note.astro';
     <Summary plain>
       <Row label="Implementado">Configuração da edição, equipe e acessos, atléticas, atletas e inscrições, chaves, cronograma, partidas, provas, súmulas e painel, com alta fidelidade aplicada.</Row>
       <Row label="Em aberto">O encerramento da edição e o registro de campeões ainda não começaram. Algumas regras seguem como pendências para decidir com os desenvolvedores.</Row>
-      <Row label="Limitações">Nenhum teste com usuários: as validações foram minhas e automatizadas. VoiceOver e navegação completa por teclado não foram testados.</Row>
+      <Row label="Limitações">Ainda não houve testes com usuários, e as validações foram feitas por mim e por testes automatizados. VoiceOver e navegação completa por teclado não foram testados.</Row>
       <Row label="Time">Beatriz Medina, Enzo Henrique, Filipi Romão, Gustavo Souto e Kenay Nobre, na Apple Developer Academy.</Row>
     </Summary>
   </section>

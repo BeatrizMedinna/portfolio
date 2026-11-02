@@ -10,8 +10,8 @@ import Note from '../components/Note.astro';
 <Case
   slug="handraw"
   title="Handraw · Case de Product Design · Beatriz Medina"
-  description="Como liderei o design do Handraw, canvas para Mac em que a câmera transforma o movimento das mãos em traço: pesquisa, escopo da primeira versão, design system e onboarding."
-  kicker='<span class="idx">Case 01</span>macOS · 2026'
+  description="Como liderei o design do Handraw, canvas para Mac em que a câmera transforma o movimento das mãos em traço. Pesquisa, escopo da primeira versão, design system e onboarding."
+  kicker='<span class="idx">Case 03</span>macOS · 2026'
   lede="Um canvas para Mac em que a câmera lê o movimento das mãos e o transforma em traço, sem mouse, trackpad ou caneta."
   chips={['Liderança de design', 'Pesquisa com usuários', 'Escopo de MVP', 'Design system']}
   spec={[
@@ -22,7 +22,7 @@ import Note from '../components/Note.astro';
     ['Lançamento', 'Julho de 2026'],
   ]}
   store={{ href: 'https://apps.apple.com/br/app/handraw-canvas-por-gestos/id6786850155?mt=12', label: 'Mac App Store' }}
-  cover={{ src: 'handraw/screenshot-2.jpg', alt: 'Handraw no Mac: canvas em branco, paleta de cores aberta e a prévia da câmera reconhecendo as duas mãos' }}
+  cover={{ src: 'handraw/screenshot-2.jpg', alt: 'Handraw no Mac com o canvas em branco, a paleta de cores aberta e a prévia da câmera reconhecendo as duas mãos' }}
   toc={[
     { id: 'resumo', label: 'Resumo' },
     { id: 'handraw-pesquisa', label: 'Pesquisa' },
@@ -33,18 +33,18 @@ import Note from '../components/Note.astro';
     { id: 'handraw-resultado', label: 'Resultado' },
     { id: 'artefatos', label: 'Artefatos' },
   ]}
-  next={{ href: '/sete.html', title: 'SETE', sub: 'iOS + watchOS · 2025' }}
+  next={{ href: '/borali.html', title: 'BorAli? Explore Brasília', sub: 'iOS · 2026' }}
 >
   <section id="resumo" aria-labelledby="t-resumo">
     <h2 id="t-resumo" class="label">Em 30 segundos</h2>
     <Summary>
       <Row label="Problema">Para pensar visualmente, as pessoas ainda recorrem ao papel. No computador, mouse e trackpad pedem precisão cedo demais e interrompem o raciocínio.</Row>
       <Row label="Meu papel">Lead Designer num time de 5 pessoas. Conduzi a pesquisa, o UX/UI e o design system e desenhei a maior parte das telas, em dupla de design com um desenvolvedor em transição para a área.</Row>
-      <Row label="Decisão-chave">Priorizar o núcleo da primeira versão: 6 requisitos vitais entre 29 mapeados.</Row>
+      <Row label="Decisão-chave">Levar para a primeira versão só os 6 requisitos vitais, entre 29 mapeados.</Row>
       <Row label="Resultado">Publicado na Mac App Store em julho de 2026, na minha conta de desenvolvedora.</Row>
     </Summary>
     <div class="prose lead-in" id="handraw-estrategia">
-      <p>O Handraw parte de uma pergunta simples: e se desenhar no Mac fosse tão natural quanto gesticular uma ideia? A câmera reconhece as mãos e transforma o movimento em traço. O desafio de design era fazer isso parecer óbvio para quem nunca usou nada parecido.</p>
+      <p>O desafio de design era fazer uma forma de interação nova parecer óbvia para quem nunca usou nada parecido.</p>
     </div>
   </section>
 
@@ -54,7 +54,7 @@ import Note from '../components/Note.astro';
     <div class="block-grid">
       <div class="prose">
         <p>Entrevistei quatro pessoas que usam o Mac todos os dias para estudar, trabalhar e criar. Perguntei como organizam ideias, o que fazem quando a cabeça cansa e o que acontece quando tentam registrar algo muito visual.</p>
-        <p>A resposta se repetiu: quando a ideia é visual, o computador vira obstáculo, e o caderno volta a ser o primeiro rascunho.</p>
+        <p>A resposta se repetiu. Quando a ideia é visual, o computador vira obstáculo, e o caderno volta a ser o primeiro rascunho.</p>
       </div>
       <Note label="O que mudou">O objetivo deixou de ser ajudar a desenhar melhor. Passou a ser não interromper o pensamento.</Note>
     </div>
@@ -67,7 +67,7 @@ import Note from '../components/Note.astro';
 
     <div class="sub-block" id="handraw-personas">
       <h3>Duas formas de pensar visualmente</h3>
-      <p class="sub-lede">As personas sintetizam as entrevistas. Catarina pensa em movimento e precisa de espaço para criar; Gabriel explica sistemas gesticulando para o time. A necessidade em comum: tirar a ideia da cabeça sem passar por um intermediário mecânico.</p>
+      <p class="sub-lede">As personas sintetizam as entrevistas. Catarina pensa em movimento e precisa de espaço para criar; Gabriel explica sistemas gesticulando para o time. Os dois precisam tirar a ideia da cabeça sem passar por um intermediário mecânico.</p>
       <Gallery items={[
         { src: 'handraw/persona-1.jpg', alt: 'Persona Catarina, 23 anos, estudante universitária de Design', caption: 'Catarina, estudante de Design' },
         { src: 'handraw/persona-2.jpg', alt: 'Persona Gabriel, 21 anos, estudante de Ciência da Computação e desenvolvedor front-end', caption: 'Gabriel, estudante de Ciência da Computação' },
@@ -82,24 +82,24 @@ import Note from '../components/Note.astro';
     <Decision n="01" title="Escopo da primeira versão" id="d1">
       <Row label="Contexto">7 semanas e uma forma de interação que a maioria das pessoas nunca usou.</Row>
       <Row label="Opções">29 requisitos, vindos das histórias de usuário do time, classificados numa matriz de impacto e esforço em vital, importante, polimento e sacrifício.</Row>
-      <Row label="Escolha" choice>Os 6 vitais: detectar as mãos, desenhar com a mão, zona de captura da câmera, guia de gestos, feedback visual do gesto e desfazer/refazer.</Row>
-      <Row label="Ficou de fora">Classificados como sacrifício: exportar, camadas, importar imagens, post-its e recorte.</Row>
+      <Row label="Escolha" choice>Seis requisitos vitais. Detectar as mãos, desenhar com a mão, mostrar a zona de captura da câmera, guiar os gestos, dar feedback visual e permitir desfazer e refazer.</Row>
+      <Row label="Ficou de fora">Exportar, camadas, importar imagens, post-its e recorte, classificados como sacrifício.</Row>
       <Row label="Por quê">Se o gesto não virasse traço de forma confiável, nenhum recurso de editor salvaria o produto. Fechar o escopo cedo também deu ao desenvolvimento um alvo claro.</Row>
-      <Figure slot="figure" src="handraw/matriz-esforco-impacto.jpg" alt="Matriz de impacto por esforço com 29 requisitos classificados em vital, importante, polimento e sacrifício" caption="Vermelho: vital. Amarelo: importante. Verde: polimento. Preto: sacrifício." n={2} />
+      <Figure slot="figure" src="handraw/matriz-esforco-impacto.jpg" alt="Matriz de impacto por esforço com 29 requisitos classificados em vital, importante, polimento e sacrifício" caption="Vital em vermelho, importante em amarelo, polimento em verde e sacrifício em preto." n={2} />
     </Decision>
   </section>
 
   <section id="handraw-interface" class="block">
     <p class="label">Interface</p>
-    <h2>Uma base visual para duas pessoas desenharem como uma.</h2>
+    <h2>Um design system para a dupla desenhar com consistência.</h2>
     <div class="prose">
-      <p>Estruturei o design system antes das telas finais: cor, tipografia, espaçamento e ícones. Com essa base, a dupla dividiu as telas sem perder consistência, e eu desenhei a maior parte das interfaces em média e alta fidelidade.</p>
+      <p>Estruturei o design system antes das telas finais, com cor, tipografia, espaçamento e ícones. Com essa base, a dupla dividiu as telas sem perder consistência, e eu desenhei a maior parte das interfaces em média e alta fidelidade.</p>
     </div>
-    <Figure src="handraw/style-guide.jpg" alt="Style guide do Handraw com paleta, tipografia, espaçamento e conjunto de ícones" caption="Style guide: cor, tipografia, espaçamento e ícones." n={3} crop />
+    <Figure src="handraw/style-guide.jpg" alt="Style guide do Handraw com paleta, tipografia, espaçamento e conjunto de ícones" caption="Style guide com cor, tipografia, espaçamento e ícones." n={3} crop />
 
     <div class="sub-block" id="handraw-naming">
       <h3>Um nome que diz o que o produto faz</h3>
-      <p class="sub-lede">Antes de nomear, definimos propósito, público e concorrentes, e posicionamos a marca numa régua de tom: clara, inovadora, funcional, universal e objetiva. Usamos IA para explorar candidatos a partir dessas diretrizes. Handraw venceu por juntar as duas ideias centrais do produto: mão e desenho.</p>
+      <p class="sub-lede">Antes de nomear, definimos propósito, público e concorrentes, e posicionamos a marca numa régua de tom que pedia um nome claro, inovador, funcional, universal e objetivo. Usamos IA para explorar candidatos a partir dessas diretrizes. Handraw venceu por juntar mão e desenho, as duas ideias centrais do produto.</p>
       <Gallery cols={3} items={[
         { src: 'handraw/naming-3.jpg', alt: 'Perguntas de propósito, posicionamento, público-alvo e concorrência da marca', caption: 'Propósito e posicionamento' },
         { src: 'handraw/naming-4.jpg', alt: 'Régua de tom de naming: claro, inovador, meio-termo entre sofisticado e popular, funcional, universal e objetivo', caption: 'Régua de tom' },
@@ -120,7 +120,7 @@ import Note from '../components/Note.astro';
       <Figure src="handraw/hi-01-selecione-o-pincel.jpg" alt="Onboarding em alta fidelidade: card no canto com passo 1 de 5, ilustração do gesto de pinça e botão de avançar" tag="Alta fidelidade" after />
     </div>
     <dl class="changes">
-      <Row label="Instrução">Mais direta e específica: “Selecione o pincel”.</Row>
+      <Row label="Instrução">“Selecione o pincel”, mais direta e específica.</Row>
       <Row label="Gesto">A pinça aparece ilustrada, com os pontos de contato marcados.</Row>
       <Row label="Progresso">“1 de 5” mostra quanto falta, e um botão leva ao próximo passo.</Row>
       <Row label="Espaço">A instrução saiu do centro e deixou o canvas livre.</Row>
@@ -146,14 +146,14 @@ import Note from '../components/Note.astro';
     <Summary plain>
       <Row label="Entregue">Versão 1.0, publicada na minha conta de desenvolvedora. Segundo a descrição na loja, o app permite desenhar com as mãos, desfazer e navegar por gestos no ar, adicionar texto por comando de voz e seguir um guia visual dos gestos.</Row>
       <Row label="Além do núcleo">A entrada de texto por voz estava entre os requisitos importantes, não entre os vitais, e chegou à primeira versão.</Row>
-      <Row label="O que aprendi">Liderar também é abrir espaço: compartilhar o que sei e ajudar outra pessoa a crescer durante o projeto.</Row>
+      <Row label="O que aprendi">Liderar também é abrir espaço, compartilhando o que sei e ajudando outra pessoa a crescer durante o projeto.</Row>
       <Row label="Time">Beatriz Medina, João Schwaab, Linda Marie, Manoel Pedro e Marcos Albuquerque, com mentoria de Filipe Ribeiro Silva Lopes e Nadja Caldeira Guedes.</Row>
     </Summary>
   </section>
 
   <section id="artefatos" class="block">
     <p class="label">Artefatos do processo</p>
-    <h2>Para quem quer ver os bastidores.</h2>
+    <h2>Histórias de usuário, naming e telas.</h2>
     <details class="artifacts" id="handraw-historias">
       <summary>Histórias de usuário</summary>
       <Figure src="handraw/user-stories.jpg" alt="Histórias de usuário de Catarina e Gabriel" caption="Histórias de usuário que alimentaram a matriz de priorização." />
@@ -171,8 +171,8 @@ import Note from '../components/Note.astro';
       <Gallery cols={3} items={[
         { src: 'handraw/logo.jpg', alt: 'Ícone do Handraw', caption: 'Ícone do app' },
         { src: 'handraw/design-system.jpg', alt: 'Tokens do design system: cores, tipografia, espaçamento e raio de borda', caption: 'Tokens do design system' },
-        { src: 'handraw/mid-02-gestos.jpg', alt: 'Média fidelidade: canvas com o guia de seis gestos aberto', caption: 'Média fidelidade: guia de gestos' },
-        { src: 'handraw/hi-02-desenhe-com-o-pincel.jpg', alt: 'Onboarding em alta fidelidade, passo 2 de 5: desenhe com o pincel', caption: 'Alta fidelidade: passo 2 de 5' },
+        { src: 'handraw/mid-02-gestos.jpg', alt: 'Média fidelidade: canvas com o guia de seis gestos aberto', caption: 'Guia de gestos em média fidelidade' },
+        { src: 'handraw/hi-02-desenhe-com-o-pincel.jpg', alt: 'Onboarding em alta fidelidade, passo 2 de 5: desenhe com o pincel', caption: 'Passo 2 de 5 em alta fidelidade' },
         { src: 'handraw/screenshot-1.jpg', alt: 'Tela de apresentação do Handraw, canvas gestual para macOS', caption: 'Apresentação na App Store' },
         { src: 'handraw/screenshot-3.jpg', alt: 'Tela de apresentação do guia de gestos ao lado do canvas', caption: 'Guia de gestos' },
       ]} />

@@ -1,7 +1,6 @@
 // Fatos do perfil confirmados pela Beatriz (31/10/2026).
 // Números de prêmios ficam fora do site até currículo e legendas baterem.
 export const location = 'Brasília, Brasil';
-export const availability = 'Aberta a oportunidades remotas';
 
 export const journey = [
   { when: '2025 – hoje', what: 'Product Designer', where: 'Apple Developer Academy, Brasília' },

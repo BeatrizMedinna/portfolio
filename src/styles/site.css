@@ -398,29 +398,15 @@ figcaption { display: flex; gap: 12px; align-items: baseline; margin-top: 10px; 
 .quote-tr { display: block; margin-top: 10px; font-family: var(--sans); font-style: normal; font-size: 14px; line-height: 1.5; color: var(--ink-2); }
 
 /* ---------- Projetos em desenvolvimento (PACE) ---------- */
+.project-meta .status-badge { margin-right: 4px; }
 .case-status { display: flex; gap: 12px; align-items: baseline; margin-top: 20px; font-size: 15px; color: var(--ink-2); max-width: 78ch; }
 .status-badge { flex: none; font: 500 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); padding: 5px 9px; border-radius: 999px; }
 .case-related { margin-top: 10px; font-size: 15px; color: var(--ink-2); }
 .case-related a { font-weight: 500; }
-.dev { margin-top: clamp(80px, 11vw, 136px); }
-.dev-intro { max-width: 62ch; color: var(--ink-2); font-size: 17px; margin: -24px 0 36px; }
-.dev-cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4vw, 48px); }
-.dev-case { position: relative; display: flex; flex-direction: column; }
-.dev-case .project-media { aspect-ratio: 16 / 10; }
-.dev-case h3 { font-size: clamp(28px, 2.8vw, 36px); margin: 12px 0 8px; }
-.dev-case h3 a { text-decoration: none; }
-.dev-case .project-line { font-size: 17px; }
-.dev-case .project-meta { margin-top: 20px; align-items: center; flex-wrap: wrap; }
-.dev-case:hover .project-media img { transform: scale(1.02); }
-.dev-case:hover .cta { background-size: 100% 1px; }
-.dev-case:hover .cta .arrow { transform: translateX(4px); }
-.dev-case .status-badge { padding: 4px 8px; }
 .decision .compare { margin-top: 0; padding: 20px; gap: 16px; }
 .decision .compare .fig { padding: 0; margin: 0; }
 .decision .gallery { margin: 0; padding: 20px; }
 @media (max-width: 760px) {
-  .dev-cases { grid-template-columns: 1fr; }
-  .dev-intro { margin-top: -12px; }
   .case-status { flex-direction: column; gap: 8px; }
   .decision .compare, .decision .gallery { padding: 12px; }
   #pace-administrativo .case-head h1 { font-size: clamp(40px, 13.5vw, 64px); }

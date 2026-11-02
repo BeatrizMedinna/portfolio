@@ -10,21 +10,21 @@ import Note from '../components/Note.astro';
 <Case
   slug="pace-torcedor"
   title="PACE Torcedor · Case de Product Design · Beatriz Medina"
-  description="Design do app iOS do PACE para quem acompanha campeonatos universitários: jogos ao vivo, cronograma, chaves e rankings, com protótipo em SwiftUI construído com o Claude Code."
-  kicker='<span class="idx">Case 04</span>iOS · 2026'
-  lede="Um app para acompanhar o campeonato universitário da arquibancada: o que está acontecendo agora, o que vem a seguir e como está a sua atlética, sem cadastro."
-  chips={['Atlética como fio condutor', 'Eliminatória e classificatória', 'Acessibilidade no layout', 'SwiftUI com Claude Code']}
+  description="Design do app do PACE para quem acompanha campeonatos universitários, com jogos ao vivo, cronograma, chaves e rankings, e protótipo funcional construído com apoio de IA."
+  kicker='<span class="idx">Case 01</span>iOS · 2026'
+  lede="Um app para acompanhar o campeonato universitário da arquibancada, com o que está acontecendo agora, o que vem a seguir e como está a sua atlética, sem cadastro."
+  chips={['Navegação e filtros', 'Eliminatória e classificatória', 'Acessibilidade', 'Prototipação funcional']}
   spec={[
-    ['Papel', 'Product Designer · Design Engineering'],
+    ['Papel', 'Product Designer'],
     ['Time', '5 pessoas na Apple Developer Academy'],
     ['Período', 'Outubro de 2026'],
     ['Plataforma', 'iOS (iPhone)'],
-    ['Protótipo', 'SwiftUI, dados simulados'],
+    ['Protótipo', 'SwiftUI com dados simulados'],
     ['Situação', 'Em desenvolvimento'],
   ]}
   status="As telas deste case são capturas do protótipo em SwiftUI rodando no simulador, com dados simulados. Ainda não há integração com o servidor nem testes com usuários."
   related={{ text: 'Este é um de dois cases conectados do PACE.', label: 'Ver o PACE Administrativo, no Mac', href: '/pace-administrativo.html' }}
-  cover={{ src: 'pace-ios/cover.png', alt: 'Quatro telas do protótipo PACE Torcedor: Início com jogo ao vivo, detalhe da partida, chave da eliminatória e perfil da atlética' }}
+  cover={{ src: 'pace-ios/cover.png', alt: 'Quatro telas do protótipo PACE Torcedor com a Início, o detalhe da partida, a chave da eliminatória e o perfil da atlética' }}
   toc={[
     { id: 'resumo', label: 'Resumo' },
     { id: 'pace-contexto', label: 'Contexto' },
@@ -32,7 +32,7 @@ import Note from '../components/Note.astro';
     { id: 'pace-decisoes', label: 'Decisões' },
     { id: 'pace-navegacao', label: 'Navegação' },
     { id: 'pace-acessibilidade', label: 'Acessibilidade' },
-    { id: 'pace-ia', label: 'Design Engineering' },
+    { id: 'pace-ia', label: 'Prototipação com IA' },
     { id: 'pace-resultado', label: 'Estado atual' },
     { id: 'artefatos', label: 'Artefatos' },
   ]}
@@ -42,8 +42,8 @@ import Note from '../components/Note.astro';
     <h2 id="t-resumo" class="label">Em 30 segundos</h2>
     <Summary>
       <Row label="Problema">Em campeonatos universitários, horários, resultados e chaves circulam por grupos de WhatsApp, prints e stories. Quem está na arquibancada descobre o próprio jogo em cima da hora.</Row>
-      <Row label="Meu papel">Product Designer do app do torcedor num time de 5. Defini o processo, tomei as decisões de UX e UI e conduzi a construção do protótipo em SwiftUI com o Claude Code, aprovando cada etapa. A visão e a documentação do produto foram escritas pelo time.</Row>
-      <Row label="Decisão-chave">A atlética de coração como fio condutor do app, sem cadastro, e uma tela própria para cada formato de competição.</Row>
+      <Row label="Meu papel">Product Designer do app do torcedor num time de 5. Defini o processo, tomei as decisões de UX e UI e conduzi o protótipo funcional, construído com o Claude Code e aprovado por mim a cada etapa. A visão e a documentação do produto foram escritas pelo time.</Row>
+      <Row label="Decisão-chave">Personalizar o app pela atlética de coração, sem exigir cadastro, e dar a cada formato de competição uma tela própria.</Row>
       <Row label="Estado atual">Protótipo de alta fidelidade com as 17 telas do wireframe e seus estados, construído entre 17 e 29 de outubro de 2026. O produto segue em desenvolvimento.</Row>
     </Summary>
   </section>
@@ -53,13 +53,13 @@ import Note from '../components/Note.astro';
     <h2>Um campeonato inteiro espalhado em grupos de WhatsApp.</h2>
     <div class="block-grid">
       <div class="prose">
-        <p>O PACE é um ecossistema para campeonatos esportivos universitários: um sistema de gestão para quem organiza, uma súmula digital para o mesário e um app para quem acompanha. A documentação do time parte de um problema concreto: os dados do evento ficam espalhados entre planilhas, grupos e stories, e resultados, classificação e próximos jogos quase nunca são divulgados de forma organizada.</p>
+        <p>O PACE é um ecossistema para campeonatos esportivos universitários, com um sistema de gestão para quem organiza, uma súmula digital para o mesário e um app para quem acompanha. A documentação do time parte de um problema concreto. Os dados do evento ficam espalhados entre planilhas, grupos e stories, e resultados, classificação e próximos jogos quase nunca são divulgados de forma organizada.</p>
         <p>No app do torcedor, a persona é o Thiago, 20 anos, que alterna entre jogar pela atlética e torcer na arquibancada. Ele abre o celular por poucos segundos, quer ver o placar e o próximo jogo e não aceita criar conta para isso.</p>
       </div>
       <Note label="Frustração registrada na persona">“Aplicativos que exigem criação de conta e formulários longos apenas para consultar o horário ou o local de um jogo.”</Note>
     </div>
     <dl class="changes">
-      <Row label="Uso rápido">Início orientada ao agora: ao vivo primeiro, depois próximos jogos e últimos resultados.</Row>
+      <Row label="Uso rápido">A Início mostra primeiro o que está ao vivo, depois os próximos jogos e os últimos resultados.</Row>
       <Row label="Sem conta">A entrada pede só a atlética, e até isso pode ser pulado.</Row>
       <Row label="Pertencer">A atlética de coração aparece destacada em todo o app.</Row>
       <Row label="Tudo junto">Cronograma, chaves e rankings no mesmo lugar, com filtros.</Row>
@@ -71,8 +71,8 @@ import Note from '../components/Note.astro';
     <h2>Os wireframes eram o ponto de partida, não a especificação.</h2>
     <div class="block-grid">
       <div class="prose">
-        <p>O ponto de partida foram 17 telas de média fidelidade no Figma e o documento de regras do produto. Em vez de reproduzir as telas uma a uma, organizei o trabalho em blocos funcionais completos: Início e partidas, cronograma e filtros, ranking e atléticas, modalidades. Cada bloco precisava fechar o fluxo de ponta a ponta, com carregamento, erro, vazio e indisponível.</p>
-        <p>Primeiro veio uma média fidelidade em SwiftUI, de propósito sem cor, para que nenhum estado dependesse dela. Depois, a alta fidelidade em nove etapas, da base para as telas: paleta e tokens, componentes, navegação, cada área do app e uma auditoria final.</p>
+        <p>O ponto de partida foram 17 telas de média fidelidade no Figma e o documento de regras do produto. Em vez de reproduzir as telas uma a uma, organizei o trabalho em blocos funcionais completos, como Início e partidas, cronograma e filtros, ranking e atléticas, e modalidades. Cada bloco precisava fechar o fluxo de ponta a ponta, com carregamento, erro, vazio e indisponível.</p>
+        <p>Primeiro veio uma média fidelidade em SwiftUI, de propósito sem cor, para que nenhum estado dependesse dela. Depois, a alta fidelidade em nove etapas, da base para as telas, passando por paleta e tokens, componentes, navegação, cada área do app e uma auditoria final.</p>
       </div>
       <Note label="Regra que escrevi para o projeto">“Os wireframes são a referência inicial, não uma especificação imutável.”</Note>
     </div>
@@ -90,9 +90,9 @@ import Note from '../components/Note.astro';
 
   <section id="pace-decisoes" class="block">
     <p class="label">Decisões</p>
-    <h2>Quatro decisões que deram forma ao app.</h2>
+    <h2>As decisões que mais mudaram o app.</h2>
     <Decision n="01" title="Uma tela de partida, três momentos" id="d1">
-      <Row label="Contexto">O wireframe tinha três telas para a mesma partida: ao vivo, encerrada e a iniciar.</Row>
+      <Row label="Contexto">O wireframe tinha três telas para a mesma partida, uma para cada situação do jogo.</Row>
       <Row label="Escolha" choice>Uma única tela que muda conforme a situação do jogo. O vencedor aparece pelo peso do texto, e quem perdeu fica em cinza.</Row>
       <Row label="Por quê">Menos telas para manter e um padrão que o torcedor aprende uma vez. Como a média fidelidade não tinha cor, o vencedor precisava ser legível sem ela, e a solução continuou na alta.</Row>
       <Row label="Origem">Proposta do Claude durante a construção, aprovada por mim.</Row>
@@ -114,7 +114,7 @@ import Note from '../components/Note.astro';
       <Row label="Por quê">“Todas” marcado deixa claro que nada está filtrado e funciona como atalho para limpar. As pílulas aparecem só depois de aplicar, para não poluir o momento da escolha.</Row>
       <Row label="Origem">A múltipla escolha e as pílulas foram ideia minha. “Todas” marcado por padrão foi recomendação do Claude, que avisou que isso mudava uma regra funcional.</Row>
       <Gallery slot="figure" cols={3} phone items={[
-        { src: 'pace-ios/mid-filtro.png', alt: 'Wireframe da folha de filtros com uma opção por campo', caption: 'Wireframe: uma opção por campo' },
+        { src: 'pace-ios/mid-filtro.png', alt: 'Wireframe da folha de filtros com uma opção por campo', caption: 'Wireframe com uma opção por campo' },
         { src: 'pace-ios/hi-filtro-selecionado.png', alt: 'Folha de filtros em alta fidelidade com Feminino, Série Ouro e Série Prata marcados', caption: 'Várias opções na folha' },
         { src: 'pace-ios/hi-filtro-aplicado.png', alt: 'Cronograma filtrado com pílulas removíveis Feminino, Série Ouro e Série Prata', caption: 'Pílulas depois de aplicar' },
       ]} />
@@ -134,10 +134,10 @@ import Note from '../components/Note.astro';
 
   <section id="pace-navegacao" class="block">
     <p class="label">Navegação</p>
-    <h2>Quatro abas e um destino comum: o cronograma.</h2>
+    <h2>O cronograma virou o destino comum da navegação.</h2>
     <div class="prose">
-      <p>O app tem quatro abas, Início, Cronograma, Ranking e Modalidades, e as notificações abrem pelo sino. Partidas, atléticas e modalidades se ligam nos dois sentidos: da partida se chega à chave, do ranking à atlética, da atlética às suas modalidades.</p>
-      <p>O cronograma virou o destino comum. “Ver mais” na Início abre o cronograma já filtrado pela sua atlética. Nos perfis, “Ver todos” abre o cronograma dentro da mesma pilha, com o Voltar do sistema. Eu tinha proposto uma seta de voltar só nesse caminho; o Claude argumentou que isso fugiria do padrão do iOS, e a solução dele ficou.</p>
+      <p>O app tem quatro abas, Início, Cronograma, Ranking e Modalidades, e as notificações abrem pelo sino. Partidas, atléticas e modalidades se ligam nos dois sentidos. Da partida se chega à chave, do ranking à atlética, da atlética às suas modalidades.</p>
+      <p>“Ver mais” na Início abre o cronograma já filtrado pela sua atlética. Nos perfis, “Ver todos” abre o cronograma dentro da mesma pilha, com o Voltar do sistema. Eu tinha proposto uma seta de voltar só nesse caminho; o Claude argumentou que isso fugiria do padrão do iOS, e a solução dele ficou.</p>
     </div>
     <div class="sub-block">
       <h3>Entrar sem cadastro</h3>
@@ -163,7 +163,7 @@ import Note from '../components/Note.astro';
     <h2>Com texto grande, o layout empilha em vez de cortar.</h2>
     <div class="prose">
       <p>Tratei o Dynamic Type como critério de layout, não como ajuste final. No maior tamanho de texto, o cabeçalho fixo da Início chegava a ocupar cerca de 45% da tela. A solução foi deixar o cabeçalho rolar com o conteúdo e manter fixas só as abas “Minha atlética” e “Geral”, que ficam em cerca de 10%. O pódio vira lista, as parciais viram tabela vertical, e o sino e o filtro param de crescer, usando a ampliação de conteúdo do próprio sistema.</p>
-      <p>Nomes longos de atléticas também pediam decisão. A primeira proposta empilhava os times no cartão; recusei, porque quebrava a leitura do confronto lado a lado. Ficou assim: colunas sempre, até duas linhas com reticências e o nome completo lido pelo VoiceOver.</p>
+      <p>Nomes longos de atléticas também pediam decisão. A primeira proposta empilhava os times no cartão, e recusei porque quebrava a leitura do confronto lado a lado. Os times ficam sempre em colunas, com até duas linhas, reticências e o nome completo lido pelo VoiceOver.</p>
     </div>
     <div class="compare compare-phone">
       <Figure src="pace-ios/hi-inicio.png" alt="Início no tamanho de texto padrão" tag="Texto padrão" />
@@ -171,7 +171,7 @@ import Note from '../components/Note.astro';
     </div>
     <div class="sub-block">
       <h3>A voz do produto</h3>
-      <p class="sub-lede">Pedi uma revisão de UX Writing com uma regra: informação primeiro, emoção depois, sem prometer tempo real. Cerca de 640 textos foram levantados, e um glossário fixou os termos.</p>
+      <p class="sub-lede">Pedi uma revisão de UX Writing com uma regra simples, informação primeiro e emoção depois, sem prometer tempo real. Cerca de 640 textos foram levantados, e um glossário fixou os termos.</p>
       <dl class="changes">
         <Row label="Entrada">“Entrar” → “Continuar”</Row>
         <Row label="Seções">“Ao vivo e próximo” → “Ao vivo e a seguir”</Row>
@@ -184,7 +184,7 @@ import Note from '../components/Note.astro';
   </section>
 
   <section id="pace-ia" class="block">
-    <p class="label">Design Engineering com IA</p>
+    <p class="label">Prototipação com IA</p>
     <h2>O Claude implementava. As decisões de produto passavam por mim.</h2>
     <div class="prose">
       <p>Construí o protótipo com o Claude Code, num processo desenhado para que nenhuma decisão de produto entrasse no código sem aprovação. Cada etapa começava com um pedido que eu escrevia, com escopo, o que não podia mudar, critérios da HIG e formato do relatório, e terminava com “pare e aguarde minha aprovação”.</p>
@@ -199,7 +199,7 @@ import Note from '../components/Note.astro';
       <h3>Quem decidiu o quê</h3>
       <dl class="changes">
         <Row label="Minhas">Processo e aprovações, faixas na cor da atlética, branco para a atlética de coração, pílulas de filtro, cabeçalho que rola, ícone de chave para “Etapa”.</Row>
-        <Row label="Do Claude">Aprovadas por mim: tela única de partida, abas por formato, “Todas” por padrão, cronograma na pilha, glossário de escrita.</Row>
+        <Row label="Do Claude">Propostas que aprovei, como a tela única de partida, as abas por formato, “Todas” por padrão, o cronograma na pilha e o glossário de escrita.</Row>
         <Row label="Recusadas">Empilhar times com nome longo e listas sem limite nos perfis, que viraram resumos com “Ver todos”.</Row>
         <Row label="Do time">Reorganização do Design System em Atomic Design, por Gustavo Souto, e a documentação do produto.</Row>
       </dl>
@@ -211,7 +211,7 @@ import Note from '../components/Note.astro';
     <h2>Um protótipo completo, ainda sem usuários reais.</h2>
     <Summary plain>
       <Row label="Implementado">As 17 telas do wireframe em alta fidelidade, com seus estados, filtros de múltipla escolha, cronograma contextual, notificações lidas e não lidas, entrada opcional e cor por atlética. O Design System tem 42 componentes.</Row>
-      <Row label="Limitações">Dados simulados, sem integração com o servidor, e escolhas guardadas só enquanto o app está aberto. Nenhum teste com usuários: a validação foi minha, no simulador. VoiceOver e “Reduzir movimento” não foram operados nos testes.</Row>
+      <Row label="Limitações">Dados simulados, sem integração com o servidor, e escolhas guardadas só enquanto o app está aberto. Ainda não houve testes com usuários, e a validação foi feita por mim no simulador. VoiceOver e “Reduzir movimento” não foram operados nos testes.</Row>
       <Row label="Próximos passos">Torcidômetro, adiado até ter regras; foto da atlética no lugar do escudo genérico; escolha da cor do evento com verificação de contraste no sistema de gestão.</Row>
       <Row label="Time">Beatriz Medina, Enzo Henrique, Filipi Romão, Gustavo Souto e Kenay Nobre, na Apple Developer Academy.</Row>
     </Summary>

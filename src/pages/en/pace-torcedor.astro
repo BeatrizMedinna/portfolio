@@ -10,21 +10,21 @@ import Note from '../../components/Note.astro';
 <Case
   slug="pace-torcedor"
   title="PACE Fan App · Product Design Case Study · Beatriz Medina"
-  description="Designing PACE’s iOS app for people following college sports championships: live games, schedule, brackets and rankings, with a SwiftUI prototype built with Claude Code."
-  kicker='<span class="idx">Case 04</span>iOS · 2026'
-  lede="An app for following a college sports championship from the stands: what’s happening now, what’s next and how your athletic club is doing, with no sign-up."
-  chips={['Athletic club as the common thread', 'Knockout and timed events', 'Accessibility in the layout', 'SwiftUI with Claude Code']}
+  description="Designing PACE’s app for people following college sports championships, with live games, schedule, brackets and rankings, and a functional prototype built with AI support."
+  kicker='<span class="idx">Case 01</span>iOS · 2026'
+  lede="An app for following a college sports championship from the stands, showing what’s happening now, what’s next and how your athletic club is doing, with no sign-up."
+  chips={['Navigation and filters', 'Knockout and timed events', 'Accessibility', 'Functional prototyping']}
   spec={[
-    ['Role', 'Product Designer · Design Engineering'],
+    ['Role', 'Product Designer'],
     ['Team', '5 people at the Apple Developer Academy'],
     ['Timeline', 'October 2026'],
     ['Platform', 'iOS (iPhone)'],
-    ['Prototype', 'SwiftUI, simulated data'],
+    ['Prototype', 'SwiftUI with simulated data'],
     ['Status', 'In development'],
   ]}
   status="The screens in this case study are captures of the SwiftUI prototype running in the simulator with simulated data. There is no server integration yet and no user testing."
   related={{ text: 'This is one of two connected PACE case studies.', label: 'See PACE Admin, on the Mac', href: '/en/pace-administrativo.html' }}
-  cover={{ src: 'pace-ios/cover.png', alt: 'Four screens from the PACE fan app prototype: Home with a live game, match detail, knockout bracket and athletic club profile' }}
+  cover={{ src: 'pace-ios/cover.png', alt: 'Four screens from the PACE fan app prototype showing Home, match detail, a knockout bracket and a club profile' }}
   toc={[
     { id: 'resumo', label: 'Summary' },
     { id: 'pace-contexto', label: 'Context' },
@@ -32,7 +32,7 @@ import Note from '../../components/Note.astro';
     { id: 'pace-decisoes', label: 'Decisions' },
     { id: 'pace-navegacao', label: 'Navigation' },
     { id: 'pace-acessibilidade', label: 'Accessibility' },
-    { id: 'pace-ia', label: 'Design Engineering' },
+    { id: 'pace-ia', label: 'Prototyping with AI' },
     { id: 'pace-resultado', label: 'Where it stands' },
     { id: 'artefatos', label: 'Artifacts' },
   ]}
@@ -42,8 +42,8 @@ import Note from '../../components/Note.astro';
     <h2 id="t-resumo" class="label">In 30 seconds</h2>
     <Summary>
       <Row label="Problem">In college championships, schedules, results and brackets spread through WhatsApp groups, screenshots and stories. People in the stands find out about their own game at the last minute.</Row>
-      <Row label="My role">Product Designer for the fan app on a team of 5. I set the process, made the UX and UI decisions and led the SwiftUI prototype with Claude Code, approving every stage. The product vision and documentation were written by the team.</Row>
-      <Row label="Key decision">Your athletic club as the app’s common thread, with no sign-up, and a dedicated screen for each competition format.</Row>
+      <Row label="My role">Product Designer for the fan app on a team of 5. I set the process, made the UX and UI decisions and led the functional prototype, built with Claude Code and approved by me at every stage. The product vision and documentation were written by the team.</Row>
+      <Row label="Key decision">Personalize the app around your athletic club, with no sign-up, and give each competition format its own screen.</Row>
       <Row label="Where it stands">A high-fidelity prototype covering the 17 wireframe screens and their states, built between October 17 and 29, 2026. The product is still in development.</Row>
     </Summary>
   </section>
@@ -53,13 +53,13 @@ import Note from '../../components/Note.astro';
     <h2>A whole championship scattered across WhatsApp groups.</h2>
     <div class="block-grid">
       <div class="prose">
-        <p>PACE is an ecosystem for college sports championships: a management system for organizers, a digital scoresheet for officials and an app for people following along. The team’s documentation starts from a concrete problem: event data is scattered across spreadsheets, group chats and stories, and results, standings and upcoming games are rarely published in an organized way.</p>
+        <p>PACE is an ecosystem for college sports championships, with a management system for organizers, a digital scoresheet for officials and an app for people following along. The team’s documentation starts from a concrete problem. Event data is scattered across spreadsheets, group chats and stories, and results, standings and upcoming games are rarely published in an organized way.</p>
         <p>For the fan app, the persona is Thiago, 20, who switches between playing for his athletic club and cheering in the stands. He opens his phone for a few seconds, wants the score and the next game, and won’t create an account for that.</p>
       </div>
       <Note label="Frustration recorded in the persona">“Aplicativos que exigem criação de conta e formulários longos apenas para consultar o horário ou o local de um jogo.”<span class="quote-tr" lang="en">Apps that require an account and long forms just to check the time or place of a game.</span></Note>
     </div>
     <dl class="changes">
-      <Row label="Quick use">A Home built around now: live first, then upcoming games and latest results.</Row>
+      <Row label="Quick use">Home shows what’s live first, then upcoming games and latest results.</Row>
       <Row label="No account">Onboarding only asks for your athletic club, and even that can be skipped.</Row>
       <Row label="Belonging">Your athletic club stands out across the whole app.</Row>
       <Row label="All in one">Schedule, brackets and rankings in one place, with filters.</Row>
@@ -71,8 +71,8 @@ import Note from '../../components/Note.astro';
     <h2>The wireframes were a starting point, not a spec.</h2>
     <div class="block-grid">
       <div class="prose">
-        <p>The starting point was 17 mid-fidelity Figma screens and the product rules document. Instead of rebuilding screens one by one, I organized the work into complete functional blocks: Home and matches, schedule and filters, rankings and athletic clubs, sports. Each block had to close its flow end to end, with loading, error, empty and unavailable states.</p>
-        <p>First came a mid-fidelity version in SwiftUI, deliberately without color, so no state depended on it. Then high fidelity in nine stages, from the foundation up: palette and tokens, components, navigation, each area of the app and a final audit.</p>
+        <p>The starting point was 17 mid-fidelity Figma screens and the product rules document. Instead of rebuilding screens one by one, I organized the work into complete functional blocks, such as Home and matches, schedule and filters, rankings and athletic clubs, and sports. Each block had to close its flow end to end, with loading, error, empty and unavailable states.</p>
+        <p>First came a mid-fidelity version in SwiftUI, deliberately without color, so no state depended on it. Then high fidelity in nine stages, from the foundation up, covering palette and tokens, components, navigation, each area of the app and a final audit.</p>
       </div>
       <Note label="A rule I wrote for the project">“Os wireframes são a referência inicial, não uma especificação imutável.”<span class="quote-tr" lang="en">The wireframes are the initial reference, not an immutable specification.</span></Note>
     </div>
@@ -90,9 +90,9 @@ import Note from '../../components/Note.astro';
 
   <section id="pace-decisoes" class="block">
     <p class="label">Decisions</p>
-    <h2>Four decisions that shaped the app.</h2>
+    <h2>The decisions that changed the app most.</h2>
     <Decision n="01" title="One match screen, three moments" id="d1">
-      <Row label="Context">The wireframe had three screens for the same match: live, finished and upcoming.</Row>
+      <Row label="Context">The wireframe had three screens for the same match, one for each state of the game.</Row>
       <Row label="Choice" choice>A single screen that changes with the state of the game. The winner stands out through text weight, and the losing side turns gray.</Row>
       <Row label="Why">Fewer screens to maintain and one pattern fans learn once. Since mid-fidelity had no color, the winner had to be readable without it, and the solution carried into high fidelity.</Row>
       <Row label="Origin">Proposed by Claude during the build, approved by me.</Row>
@@ -114,7 +114,7 @@ import Note from '../../components/Note.astro';
       <Row label="Why">“All” selected makes it clear nothing is filtered and doubles as a shortcut to clear. Pills only appear after applying, so they don’t clutter the moment of choosing.</Row>
       <Row label="Origin">Multiple choice and pills were my idea. “All” by default was Claude’s recommendation, flagged as a change to a functional rule.</Row>
       <Gallery slot="figure" cols={3} phone items={[
-        { src: 'pace-ios/mid-filtro.png', alt: 'Filter sheet wireframe with one option per field', caption: 'Wireframe: one option per field' },
+        { src: 'pace-ios/mid-filtro.png', alt: 'Filter sheet wireframe with one option per field', caption: 'Wireframe with one option per field' },
         { src: 'pace-ios/hi-filtro-selecionado.png', alt: 'High-fidelity filter sheet with Women’s, Gold Series and Silver Series selected', caption: 'Several options in the sheet' },
         { src: 'pace-ios/hi-filtro-aplicado.png', alt: 'Filtered schedule with removable pills for Women’s, Gold Series and Silver Series', caption: 'Pills after applying' },
       ]} />
@@ -134,10 +134,10 @@ import Note from '../../components/Note.astro';
 
   <section id="pace-navegacao" class="block">
     <p class="label">Navigation</p>
-    <h2>Four tabs and one shared destination: the schedule.</h2>
+    <h2>The schedule became the shared destination in navigation.</h2>
     <div class="prose">
-      <p>The app has four tabs, Home, Schedule, Ranking and Sports, and notifications open from the bell. Matches, clubs and sports link both ways: from a match to its bracket, from the ranking to a club, from a club to its sports.</p>
-      <p>The schedule became the shared destination. “See more” on Home opens the schedule already filtered by your club. On profiles, “See all” opens the schedule within the same stack, with the system Back button. I had proposed a back arrow just for that path; Claude argued it would break the iOS pattern, and that solution stayed.</p>
+      <p>The app has four tabs, Home, Schedule, Ranking and Sports, and notifications open from the bell. Matches, clubs and sports link both ways, from a match to its bracket, from the ranking to a club, from a club to its sports.</p>
+      <p>“See more” on Home opens the schedule already filtered by your club. On profiles, “See all” opens the schedule within the same stack, with the system Back button. I had proposed a back arrow just for that path; Claude argued it would break the iOS pattern, and that solution stayed.</p>
     </div>
     <div class="sub-block">
       <h3>Getting in without signing up</h3>
@@ -163,7 +163,7 @@ import Note from '../../components/Note.astro';
     <h2>With large text, the layout stacks instead of cutting off.</h2>
     <div class="prose">
       <p>I treated Dynamic Type as a layout criterion, not a final tweak. At the largest text size, the fixed Home header took up about 45% of the screen. The fix was to let the header scroll with the content and keep only the “My club” and “General” tabs pinned, which take about 10%. The podium becomes a list, period scores become a vertical table, and the bell and filter buttons stop growing, relying on the system’s large content viewer.</p>
-      <p>Long club names also needed a decision. The first proposal stacked the teams on the card; I turned it down because it broke the side-by-side reading of the matchup. The result: columns always, up to two lines with an ellipsis, and the full name read by VoiceOver.</p>
+      <p>Long club names also needed a decision. The first proposal stacked the teams on the card, and I turned it down because it broke the side-by-side reading of the matchup. Teams always stay in columns, with up to two lines, an ellipsis and the full name read by VoiceOver.</p>
     </div>
     <div class="compare compare-phone">
       <Figure src="pace-ios/hi-inicio.png" alt="Home at the default text size" tag="Default text" />
@@ -171,7 +171,7 @@ import Note from '../../components/Note.astro';
     </div>
     <div class="sub-block">
       <h3>The product’s voice</h3>
-      <p class="sub-lede">I asked for a UX Writing review with one rule: information first, emotion second, and no promise of real time. About 640 strings were reviewed, and a glossary locked in the terms. The app is in Portuguese; the examples below are translated.</p>
+      <p class="sub-lede">I asked for a UX Writing review with one simple rule, information first and emotion second, with no promise of real time. About 640 strings were reviewed, and a glossary locked in the terms. The app is in Portuguese; the examples below are translated.</p>
       <dl class="changes">
         <Row label="Onboarding">“Sign in” → “Continue”</Row>
         <Row label="Sections">“Live and next” → “Live and coming up”</Row>
@@ -184,7 +184,7 @@ import Note from '../../components/Note.astro';
   </section>
 
   <section id="pace-ia" class="block">
-    <p class="label">Design Engineering with AI</p>
+    <p class="label">Prototyping with AI</p>
     <h2>Claude implemented. Product decisions went through me.</h2>
     <div class="prose">
       <p>I built the prototype with Claude Code, in a process designed so that no product decision reached the code without approval. Each stage started with a brief I wrote, covering scope, what must not change, HIG criteria and the report format, and ended with “stop and wait for my approval”.</p>
@@ -199,7 +199,7 @@ import Note from '../../components/Note.astro';
       <h3>Who decided what</h3>
       <dl class="changes">
         <Row label="Mine">Process and approvals, club-color stripes, white for your club, filter pills, scrolling header, a bracket icon for “Round”.</Row>
-        <Row label="Claude’s">Approved by me: one match screen, tabs by format, “All” by default, schedule in the stack, the writing glossary.</Row>
+        <Row label="Claude’s">Proposals I approved, such as one match screen, tabs by format, “All” by default, the schedule in the stack and the writing glossary.</Row>
         <Row label="Turned down">Stacking teams with long names, and unlimited lists on profiles, which became summaries with “See all”.</Row>
         <Row label="The team’s">Restructuring the Design System with Atomic Design, by Gustavo Souto, and the product documentation.</Row>
       </dl>
@@ -211,7 +211,7 @@ import Note from '../../components/Note.astro';
     <h2>A complete prototype, still without real users.</h2>
     <Summary plain>
       <Row label="Built">The 17 wireframe screens in high fidelity with their states, multiple-choice filters, a contextual schedule, read and unread notifications, optional onboarding and color per club. The Design System has 42 components.</Row>
-      <Row label="Limitations">Simulated data with no server integration, and choices kept only while the app is open. No user testing: validation was mine, in the simulator. VoiceOver and Reduce Motion were not operated during testing.</Row>
+      <Row label="Limitations">Simulated data with no server integration, and choices kept only while the app is open. There has been no user testing yet, and I did the validation in the simulator. VoiceOver and Reduce Motion were not operated during testing.</Row>
       <Row label="Next steps">The Fan Meter, postponed until it has rules; club photos replacing the generic crest; event color selection with a contrast check in the management system.</Row>
       <Row label="Team">Beatriz Medina, Enzo Henrique, Filipi Romão, Gustavo Souto and Kenay Nobre, at the Apple Developer Academy.</Row>
     </Summary>

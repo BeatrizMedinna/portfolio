@@ -7,14 +7,14 @@ import { img } from '../lib/images';
 const process = [
   ['Pesquisa', 'Entrevistas e síntese de achados para entender o problema antes de desenhar.'],
   ['Figma', 'Fluxos, protótipos e um design system com componentes desde o início.'],
-  ['SwiftUI + Claude', 'Interfaces funcionais construídas em SwiftUI, com o Claude como apoio no código.'],
-  ['Simulador', 'Valido o comportamento real no simulador, não só a tela estática.'],
+  ['Prototipação funcional', 'Transformo decisões de design em interfaces interativas, na tecnologia adequada ao projeto, com IA como apoio quando faz sentido.'],
+  ['Validação', 'Testo o comportamento real do protótipo, não só a tela estática.'],
   ['Handoff', 'Componentes e especificações prontos para o time de desenvolvimento.'],
 ];
 
 const skills = [
   { group: 'Design', items: ['Figma', 'Prototipagem em alta fidelidade', 'Design systems e componentes', 'UX Writing', 'Handoff'] },
-  { group: 'Engenharia', items: ['SwiftUI', 'Xcode e simulador', 'React e React Native', 'Claude no fluxo de prototipação'] },
+  { group: 'Tecnologia', items: ['Prototipação funcional', 'SwiftUI e Xcode', 'React e React Native', 'IA como apoio à prototipação'] },
   { group: 'Métodos', items: ['Entrevistas', 'Síntese de achados', 'Personas', 'Jornada do usuário', 'Histórias de usuário', 'Benchmarking', 'Design Thinking'] },
 ];
 
@@ -28,16 +28,16 @@ const principles = [
 
 type Award = { imgs: string[]; alt: string; caption: string };
 const recognition: Award[] = [
-  { imgs: ['recognition/m_m_1.jpg'], alt: 'Instituto Memaker', caption: 'Instituto Memaker: estudando expressão criativa e robótica.' },
-  { imgs: ['recognition/m_m_2.jpg'], alt: 'Time premiado no Hackathon InovaTI, 3º lugar', caption: '3º lugar, Hackathon InovaTI: solução para automatizar o carregamento de carros elétricos em condomínios.' },
-  { imgs: ['recognition/m_m_3.jpg', 'recognition/m_m_3_1.jpg'], alt: 'Time premiado no Hackathon InovaTI, 1º lugar', caption: '1º lugar, Hackathon InovaTI: solução para aluguel inteligente e otimizado de imóveis.' },
-  { imgs: ['recognition/m_m_4.jpg'], alt: 'Time premiado no HackaCity Guará, 1º lugar', caption: '1º lugar, HackaCity Guará: solução para ampliar a reciclagem e engajar a população.' },
-  { imgs: ['recognition/m_m_5.jpg'], alt: 'Time premiado no Hackideias Elas, 3º lugar', caption: '3º lugar, Hackideias Elas: solução para prevenir a violência doméstica contra mulheres.' },
-  { imgs: ['recognition/m_m_6.jpg', 'recognition/m_m_6_1.jpg'], alt: 'Premiação do Hackathon Sinfor/DF', caption: '2º e 3º lugares, Hackathon Sinfor/DF: plataforma para arquitetos e clientes e um chat inteligente voltado à saúde mental.' },
-  { imgs: ['recognition/m_m_7.jpg'], alt: 'Prêmio Sindesei Tech Excellence 2024', caption: 'Prêmio Sindesei Tech Excellence 2024: aluna destaque da Universidade Católica de Brasília.' },
+  { imgs: ['recognition/m_m_1.jpg'], alt: 'Instituto Memaker', caption: 'Instituto Memaker, onde estudei expressão criativa e robótica.' },
+  { imgs: ['recognition/m_m_2.jpg'], alt: 'Time premiado no Hackathon InovaTI, 3º lugar', caption: '3º lugar no Hackathon InovaTI, com uma solução para automatizar o carregamento de carros elétricos em condomínios.' },
+  { imgs: ['recognition/m_m_3.jpg', 'recognition/m_m_3_1.jpg'], alt: 'Time premiado no Hackathon InovaTI, 1º lugar', caption: '1º lugar no Hackathon InovaTI, com uma solução para aluguel inteligente e otimizado de imóveis.' },
+  { imgs: ['recognition/m_m_4.jpg'], alt: 'Time premiado no HackaCity Guará, 1º lugar', caption: '1º lugar no HackaCity Guará, com uma solução para ampliar a reciclagem e engajar a população.' },
+  { imgs: ['recognition/m_m_5.jpg'], alt: 'Time premiado no Hackideias Elas, 3º lugar', caption: '3º lugar no Hackideias Elas, com uma solução para prevenir a violência doméstica contra mulheres.' },
+  { imgs: ['recognition/m_m_6.jpg', 'recognition/m_m_6_1.jpg'], alt: 'Premiação do Hackathon Sinfor/DF', caption: '2º e 3º lugares no Hackathon Sinfor/DF, com uma plataforma para arquitetos e clientes e um chat inteligente voltado à saúde mental.' },
+  { imgs: ['recognition/m_m_7.jpg'], alt: 'Prêmio Sindesei Tech Excellence 2024', caption: 'Prêmio Sindesei Tech Excellence 2024, como aluna destaque da Universidade Católica de Brasília.' },
   { imgs: ['recognition/m_m_8.jpg', 'recognition/m_m_8_1.jpg'], alt: 'Lançamento do app SETE na App Store', caption: 'Lançamento do meu primeiro app na App Store, o SETE.' },
-  { imgs: ['recognition/m_m_9.jpg'], alt: 'Time premiado no Open Connections + InCoDay, 2º lugar', caption: '2º lugar, Hackathon Open Connections + InCoDay: solução para conectar talentos negros ao mercado jurídico.' },
-  { imgs: ['recognition/m_m_10.jpg'], alt: 'Time premiado no Hackathon Cerrado Tech, 1º lugar', caption: '1º lugar, Hackathon Cerrado Tech: solução para produtores rurais acompanharem suas plantações.' },
+  { imgs: ['recognition/m_m_9.jpg'], alt: 'Time premiado no Open Connections + InCoDay, 2º lugar', caption: '2º lugar no Hackathon Open Connections + InCoDay, com uma solução para conectar talentos negros ao mercado jurídico.' },
+  { imgs: ['recognition/m_m_10.jpg'], alt: 'Time premiado no Hackathon Cerrado Tech, 1º lugar', caption: '1º lugar no Hackathon Cerrado Tech, com uma solução para produtores rurais acompanharem suas plantações.' },
   { imgs: ['recognition/m_m_11.jpg'], alt: 'Lançamento do app BorAli? Explore Brasília na App Store', caption: 'Lançamento do meu segundo app na App Store, o BorAli? Explore Brasília.' },
 ];
 ---
@@ -53,9 +53,9 @@ const recognition: Award[] = [
         <p class="kicker">Sobre</p>
         <h1>Da pesquisa à interface, com formação técnica no caminho.</h1>
         <div class="prose">
-          <p>Comecei na tecnologia ainda no ensino médio, em Recife, no curso técnico de Análise e Desenvolvimento de Sistemas do Porto Digital. Ali vi a tecnologia resolvendo problemas reais e descobri o que mais me interessava: transformar essa capacidade em experiências que fizessem sentido para as pessoas.</p>
+          <p>Comecei na tecnologia ainda no ensino médio, em Recife, no curso técnico de Análise e Desenvolvimento de Sistemas do Porto Digital. Ali vi a tecnologia resolvendo problemas reais e descobri o que mais me interessava, transformar essa capacidade em experiências que fizessem sentido para as pessoas.</p>
           <p>Na graduação em Ciência da Computação, na Universidade Católica de Brasília, encontrei no Product Design uma forma de unir o conhecimento técnico à experiência do usuário. Entre hackathons, projetos em grupo e o estágio na Cria Incubator, assumir o papel de designer aconteceu de forma natural.</p>
-          <p>Hoje, como Product Designer na Apple Developer Academy, desenho produtos para o ecossistema Apple e gosto de participar do processo inteiro, da compreensão do problema à interface final. Moro em Brasília e estou aberta a oportunidades remotas.</p>
+          <p>Hoje sou Product Designer na Apple Developer Academy, em Brasília, e participo do processo inteiro, da compreensão do problema ao protótipo funcional.</p>
         </div>
       </div>
       <figure class="about-photo">
