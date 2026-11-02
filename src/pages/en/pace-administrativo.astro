@@ -1,0 +1,193 @@
+---
+import Case from '../../layouts/Case.astro';
+import Summary from '../../components/Summary.astro';
+import Row from '../../components/Row.astro';
+import Decision from '../../components/Decision.astro';
+import Figure from '../../components/Figure.astro';
+import Gallery from '../../components/Gallery.astro';
+import Note from '../../components/Note.astro';
+---
+<Case
+  slug="pace-administrativo"
+  title="PACE Admin · Product Design Case Study · Beatriz Medina"
+  description="Designing PACE’s management system for people who organize college sports championships, with information architecture, error prevention, contextual help and a functional prototype."
+  kicker='<span class="idx">Case 02</span>macOS · 2026'
+  lede="The organizer’s system, bringing editions, athletic clubs, brackets, schedule and matches into a Mac app designed to prevent mistakes that cost a lot on game day."
+  chips={['Information architecture', 'Error prevention', 'Contextual help', 'Management system']}
+  spec={[
+    ['Role', 'Product Designer'],
+    ['Team', '5 people at the Apple Developer Academy'],
+    ['Timeline', 'October 2026'],
+    ['Platform', 'macOS'],
+    ['Prototype', 'SwiftUI with simulated data'],
+    ['Status', 'In development'],
+  ]}
+  status="The screens are captures of the SwiftUI prototype running on a Mac with simulated data. The team has already connected part of the prototype to the API, but nothing here shows real data, and there has been no user testing yet."
+  related={{ text: 'This is one of two connected PACE case studies.', label: 'See the PACE fan app, on iPhone', href: '/en/pace-torcedor.html' }}
+  cover={{ src: 'pace-macos/cover.png', alt: 'PACE Admin prototype window on a Mac showing the edition dashboard with items needing attention, today’s games and progress' }}
+  toc={[
+    { id: 'resumo', label: 'Summary' },
+    { id: 'adm-contexto', label: 'Context' },
+    { id: 'adm-arquitetura', label: 'Architecture' },
+    { id: 'adm-decisoes', label: 'Decisions' },
+    { id: 'adm-plataforma', label: 'Language and Mac' },
+    { id: 'adm-ia', label: 'Validation with AI' },
+    { id: 'adm-resultado', label: 'Where it stands' },
+    { id: 'artefatos', label: 'Artifacts' },
+  ]}
+  next={{ href: '/en/handraw.html', title: 'Handraw', sub: 'macOS · 2026' }}
+>
+  <section id="resumo" aria-labelledby="t-resumo">
+    <h2 id="t-resumo" class="label">In 30 seconds</h2>
+    <Summary>
+      <Row label="Problem">People organizing a college championship build brackets and schedules by hand and redo everything whenever something changes, with data scattered across spreadsheets and group chats.</Row>
+      <Row label="My role">Product Designer for the management system on a team of 5. I defined scope, stages and interaction direction, and led the functional prototype, built with Claude Code. Gustavo Souto and Kenay Nobre integrated real data on top of that prototype.</Row>
+      <Row label="Key decision">Design for someone who has never used a competition system. The app explains what’s blocked, shows the outcome before running it and only asks for confirmation when the risk justifies it.</Row>
+      <Row label="Where it stands">About 20 management areas prototyped from 7 wireframe screens, with high fidelity applied on top of the version the team integrated. The product is still in development.</Row>
+    </Summary>
+  </section>
+
+  <section id="adm-contexto" class="block">
+    <p class="label">Context</p>
+    <h2>For the organizer, game day is crisis management.</h2>
+    <div class="block-grid">
+      <div class="prose">
+        <p>The persona on this side is Carlos, 32, who runs the event. Outside game days he sets up divisions, sports and athletic clubs. During the competition, in the persona’s words, his routine becomes real-time crisis management against delays and surprises. His biggest frustration is rebuilding brackets and schedules by hand without double-booking courts.</p>
+        <p>Two scope decisions came before any screen. The documentation described management as a web dashboard; I decided to prototype it as a native Mac app. And the first plan mixed the organizer with the team that runs the platform; I narrowed the scope to the Event Admin, which removed pickers and actions he would never use.</p>
+      </div>
+      <Note label="The goal I set for the project">“Quero uma experiência que seja intuitiva inclusive para um organizador de eventos que nunca utilizou um sistema de gestão de competições esportivas.”<span class="quote-tr" lang="en">I want an experience that feels intuitive even to an event organizer who has never used a sports competition management system.</span></Note>
+    </div>
+  </section>
+
+  <section id="adm-arquitetura" class="block">
+    <p class="label">Information architecture</p>
+    <h2>From 5 menu items to 20 areas, ordered by use.</h2>
+    <div class="prose">
+      <p>The Figma wireframes covered a small part of the system, and the sidebar showed only 5 of the 17 documented areas. The prototype organizes about 20 areas in a three-part window, with a sidebar, content and an inspector on the right for match details.</p>
+      <p>The sidebar follows frequency of use. Operations sits at the top, because that’s what Carlos opens on game day, and setup sits below, because it’s seasonal. “Teams” became “Athletic clubs”, so it wouldn’t be confused with the staff accounts, and the event catalog and the current edition became tabs in the same area, because they follow different rules.</p>
+    </div>
+    <div class="compare">
+      <Figure src="pace-macos/mid-equipes.png" alt="Teams wireframe with a four-item sidebar and a table of repeated teams" tag="Wireframe · Figma" />
+      <Figure src="pace-macos/hi-atleticas.png" alt="High-fidelity athletic clubs screen with a dark sidebar grouped by use, This edition and Event catalog tabs and an approval table" tag="High fidelity · SwiftUI" after />
+    </div>
+    <Figure src="pace-macos/hi-inspector.png" alt="Match list with the inspector open on the right showing the score, Summary, Lineup, Scoresheet and Access tabs and shortcuts to the bracket and schedule" caption="Clicking a match opens the inspector, with no extra button. I asked for it to be wider, like Notion’s side panels, and to close when you change sections without reopening on its own." n={1} />
+  </section>
+
+  <section id="adm-decisoes" class="block">
+    <p class="label">Decisions</p>
+    <h2>Prevent the mistake before asking for confirmation.</h2>
+    <Decision n="01" title="A dashboard for deciding, not for impressing" id="d1">
+      <Row label="Context">The dashboard wireframe opened with four numbers, late games, missing officials, forfeits and fans. None of them was backed by data the system actually records.</Row>
+      <Row label="Choice" choice>A dashboard ordered by urgency, starting with what needs attention now and followed by today’s games, bracket progress, open scoresheets and schedule status. Each item leads to the right area, already filtered.</Row>
+      <Row label="Why">The criterion I wrote was to never show falsely precise indicators when the available data can’t support the calculation. On an operations dashboard, a made-up number leads to a wrong decision.</Row>
+      <div slot="figure" class="compare">
+        <Figure src="pace-macos/mid-painel.png" alt="Dashboard wireframe with four indicators at the top, today’s games, a match chart and latest notifications" tag="Wireframe" />
+        <Figure src="pace-macos/hi-painel.png" alt="High-fidelity edition dashboard with Needs attention, today’s games, match progress, open scoresheets and the published schedule" tag="High fidelity" after />
+      </div>
+    </Decision>
+    <div class="decision-gap"></div>
+    <Decision n="02" title="Explain the block on the button itself" id="d2">
+      <Row label="Context">Many actions depend on the state of the championship. You can’t regenerate a bracket that already has scoresheets, or publish without a draft. In the first blocks, the button just appeared disabled, with no explanation.</Row>
+      <Row label="Alternative">An ⓘ icon next to the control, used in the third block. I asked to replace it because I didn’t want people to have to look for or click that icon.</Row>
+      <Row label="Choice" choice>When the pointer rests on the control, a bubble appears in under half a second with the reason, what to do and a shortcut to fix it. It also opens with Tab or a click and is read by VoiceOver.</Row>
+      <Row label="Why">What explains the current state stays visible on screen, and only the reason a specific action is blocked goes into the bubble. That keeps the interface from turning into a collection of captions.</Row>
+      <div slot="figure" class="compare">
+        <Figure src="pace-macos/hi-ajuda-gerar.png" alt="Bubble over the Regenerate button explaining that the bracket already has scoresheets or lineups and that adjustments now happen in the schedule, with a Go to Schedule button" caption="With scoresheets already recorded, the bubble explains the block and leads to the schedule. The app is in Portuguese." />
+        <Figure src="pace-macos/hi-ajuda-publicar.png" alt="Bubble over the Publish button explaining there is no draft and suggesting one be created from the published version, with a Create draft button" caption="With no draft, the bubble itself offers to create one." />
+      </div>
+    </Decision>
+    <div class="decision-gap"></div>
+    <Decision n="03" title="See the outcome before generating" id="d3">
+      <Row label="Context">Generating brackets and publishing the schedule affects athletes and fans. The persona asked to work on a draft before publishing the official version.</Row>
+      <Row label="Choice" choice>A schedule with draft and published always explicit, plus a view of open items. Before generating brackets, a sheet shows the plan per division, with which ones will get a bracket, which are left out and why.</Row>
+      <Row label="Why">Fixing a published bracket means undoing scheduled games. Seeing the plan first costs one click and saves that rework.</Row>
+      <div slot="figure" class="compare">
+        <Figure src="pace-macos/hi-cronograma.png" alt="Published schedule in a grid by court and time, with a notice that fans see this version and a Create draft link" caption="On the published version, the notice says who sees it and how to change it." />
+        <Figure src="pace-macos/hi-chave-plano.png" alt="Generate brackets sheet with the plan per division, where Gold and Silver series get a bracket, Bronze series is left out for lack of eligible clubs" caption="Before generating, the plan per division shows who is left out and why." />
+      </div>
+    </Decision>
+    <div class="decision-gap"></div>
+    <Decision n="04" title="Confirmation that matches the risk" id="d4">
+      <Row label="Context">Confirming everything is tiring and teaches people to click without reading. Confirming nothing is dangerous in a system that publishes to the public.</Row>
+      <Row label="Choice" choice>“Undo” right after the action, inspired by Gmail, for local and reversible operations. Confirmation before publishing, discarding and generating brackets. And every form with changes asks before closing, whether through Cancel, Esc or ×.</Row>
+      <Row label="Why">Friction shows up only where a mistake is expensive.</Row>
+      <div slot="figure" class="compare">
+        <Figure src="pace-macos/hi-descartar.png" alt="Discard changes dialog over the New athletic club form, with a red Discard changes button and Keep editing" caption="In a form with changes, Esc asks before closing." />
+        <Figure src="pace-macos/hi-crono-rascunho.png" alt="Schedule in draft mode with a notice saying the draft was created from the published version" caption="Creating a draft is reversible, so a quiet notice is enough." />
+      </div>
+    </Decision>
+  </section>
+
+  <section id="adm-plataforma" class="block">
+    <p class="label">Language and platform</p>
+    <h2>No rule codes on screen, with the Mac as the reference.</h2>
+    <div class="prose">
+      <p>The product documents identify rules by codes. I decided they belong in the code and the project log, never in the interface. Terms follow the organizer’s vocabulary rather than technical words, such as “advances directly” instead of “bye”, “time” instead of “slot”, “left out” instead of “skipped”. Blocking messages say why and what to do, and the dashboard never calls the final’s winner the “champion”, because recording champions doesn’t exist in the system yet.</p>
+      <p>In high fidelity, the composition is a dark sidebar with light content, using the ecosystem’s brand palette. I asked that Apple’s guidelines be actually consulted, because I didn’t want a superficial aesthetic reading of Apple but decisions grounded in its interface principles. That kept native tables, lists, sheets and dialogs, the system focus ring instead of a custom one, and macOS glass only on the bars.</p>
+    </div>
+    <Figure src="pace-macos/hi-partidas.png" alt="Match list in a native table with status, sport and day filters, and statuses shown with a symbol and text" caption="Matches in a native table, with filters at the top and status always shown with a symbol and text, never color alone." n={2} />
+    <div class="sub-block">
+      <h3>Contrast measured on what’s actually on screen</h3>
+      <p class="sub-lede">The tokens passed contrast checks, but the screen didn’t. Measuring the rendered pixels revealed three failures. The selection in the dark sidebar was at 2.7:1, badges on the toolbar glass dropped to 3.96:1, and text on selected rows with the Graphite accent didn’t pass. I refused to keep the failure as a design decision. The fix was dark text only on the emphasized selection, checked against all eight macOS accent colors.</p>
+    </div>
+  </section>
+
+  <section id="adm-ia" class="block">
+    <p class="label">Validation with AI</p>
+    <h2>Testing rules I didn’t fully know.</h2>
+    <div class="block-grid">
+      <div class="prose">
+        <p>In the management system, the hardest part was the championship rules. From the third block on, each major stage came with a validation guide generated from the real code, which I ran in Xcode. In one of them I went through 12 journeys and brought back my own findings, such as filters that jumped around and dead ends when removing items from a draft.</p>
+      </div>
+      <Note label="What I wrote to Claude">“Como Product Designer, não conheço em profundidade todas as regras e dependências operacionais do sistema. Preciso que você me ajude a testar corretamente a experiência que implementou.”<span class="quote-tr" lang="en">As a Product Designer, I don’t know every rule and operational dependency of the system in depth. I need you to help me properly test the experience you built.</span></Note>
+    </div>
+    <Summary plain>
+      <Row label="Rules checked">511 automated rule checks against the simulated data by the end of mid-fidelity.</Row>
+      <Row label="Before and after">In high fidelity, a test opened the real window and compared data and behavior before and after each visual change, to make sure the visuals didn’t touch the logic the team had integrated.</Row>
+      <Row label="Doubting the numbers">When the selection was about to be called fixed, I questioned the measurement. The tool was converting colors incorrectly; it was redone with the real values and an active window.</Row>
+      <Row label="Clear limits">Claude didn’t make commits or touch the team’s data layers. Real tests, simulations and code reading were reported separately.</Row>
+    </Summary>
+    <div class="sub-block">
+      <h3>A handoff that became the foundation</h3>
+      <p class="sub-lede">On October 23 and 24, Gustavo Souto and Kenay Nobre built the data layer and the API integration on top of the prototype, keeping the simulated data so design work could continue. High fidelity came afterwards, in the presentation layer only. The team’s implementation plan lists, among the strengths of the design work, an excellent macOS experience and complete visual coverage of the 20 business areas.</p>
+    </div>
+  </section>
+
+  <section id="adm-resultado" class="block">
+    <p class="label">Where it stands</p>
+    <h2>A system prototyped end to end, still under construction.</h2>
+    <Summary plain>
+      <Row label="Built">Edition setup, staff and access, athletic clubs, athletes and registrations, brackets, schedule, matches, timed events, scoresheets and the dashboard, with high fidelity applied.</Row>
+      <Row label="Open">Closing an edition and recording champions haven’t started. Some rules remain open questions to settle with the developers.</Row>
+      <Row label="Limitations">There has been no user testing yet, and validation was done by me and by automated tests. VoiceOver and full keyboard navigation were not tested.</Row>
+      <Row label="Team">Beatriz Medina, Enzo Henrique, Filipi Romão, Gustavo Souto and Kenay Nobre, at the Apple Developer Academy.</Row>
+    </Summary>
+  </section>
+
+  <section id="artefatos" class="block">
+    <p class="label">Artifacts</p>
+    <h2>More screens and the research behind them.</h2>
+    <details class="artifacts" id="adm-telas">
+      <summary>More prototype screens</summary>
+      <Gallery cols={2} items={[
+        { src: 'pace-macos/hi-chaveamentos.png', alt: 'Knockout bracket as a tree with a direct advance and a scheduled final', caption: 'Brackets as a tree' },
+        { src: 'pace-macos/hi-chave-vazia.png', alt: 'Brackets not generated yet, with the plan per division and a Generate brackets button', caption: 'Before the first bracket' },
+        { src: 'pace-macos/hi-crono-pendencias.png', alt: 'Schedule open items view with nothing left unscheduled', caption: 'Schedule open items' },
+        { src: 'pace-macos/hi-atletas.png', alt: 'Athletes and registrations table', caption: 'Athletes and registrations' },
+        { src: 'pace-macos/hi-login.png', alt: 'Sign-in screen with the Design Lab panel for filling in test accounts', caption: 'Sign-in, with Design Lab test shortcuts' },
+      ]} />
+    </details>
+    <details class="artifacts" id="adm-wireframes">
+      <summary>Mid-fidelity wireframes</summary>
+      <p>Seven Figma screens served as the starting point.</p>
+      <Gallery cols={2} items={[
+        { src: 'pace-macos/mid-painel.png', alt: 'Dashboard wireframe', caption: 'Dashboard' },
+        { src: 'pace-macos/mid-equipes.png', alt: 'Teams wireframe', caption: 'Teams' },
+      ]} />
+    </details>
+    <details class="artifacts" id="adm-pesquisa">
+      <summary>Carlos’s empathy map</summary>
+      <Figure src="pace-macos/empatia-carlos.png" alt="Empathy map for Carlos, a college event organizer" caption="Empathy map made by the team (in Portuguese)." />
+    </details>
+  </section>
+</Case>

@@ -1,0 +1,6 @@
+---
+// Linha "rótulo / conteúdo" usada em Resumo, Decisão e Mudanças
+interface Props { label: string; choice?: boolean }
+const { label, choice = false } = Astro.props;
+---
+<div class:list={{ 'is-choice': choice }}><dt>{label}</dt><dd><slot /></dd></div>

@@ -1,0 +1,129 @@
+---
+import { Image } from 'astro:assets';
+import { projects } from '../data/projects';
+import { journey, location } from '../data/profile';
+import Base from '../layouts/Base.astro';
+import Chips from '../components/Chips.astro';
+import { img } from '../lib/images';
+
+const photo = img('profile.jpg');
+---
+<Base
+  title="Beatriz Medina · Product Designer"
+  description="Product Designer em Brasília. Pesquisa, decisões de produto e prototipação funcional para apps e sistemas, com três apps publicados na App Store."
+  page="work"
+  bodyClass="page-home"
+>
+  <section class="hero has-photo" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-main">
+        <p class="kicker"><span class="status-dot" aria-hidden="true"></span>Product Designer</p>
+        <h1>Desenho produtos digitais da pesquisa ao <em>protótipo funcional</em>.</h1>
+        <p class="lede">Investigo o problema, transformo os achados em decisões de produto e desenho interfaces para apps e sistemas. A formação em Ciência da Computação me ajuda a trabalhar junto com engenharia e a testar ideias em protótipos interativos, na tecnologia que cada projeto pede.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">Ver projetos</a>
+          <a class="btn btn-quiet" href="/about.html">Sobre mim</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <Image src={photo} alt="Retrato de Beatriz Medina" widths={[160, 400, 700]} sizes="(max-width: 860px) 72px, 360px" loading="eager" fetchpriority="high" />
+      </figure>
+    </div>
+    <div class="wrap">
+      <dl class="hero-spec">
+        <div><dt>Foco</dt><dd>Product Design · UX/UI</dd></div>
+        <div><dt>Diferencial</dt><dd>Prototipação funcional</dd></div>
+        <div><dt>Na App Store</dt><dd>3 apps publicados</dd></div>
+        <div><dt>Base</dt><dd>{location}</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="work" class="work">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 class="label">Trabalho selecionado</h2>
+        <p class="section-title">Dois cases recentes em desenvolvimento e três produtos publicados na App Store.</p>
+      </header>
+      <ol class="projects">
+        {projects.map((p) => (
+          <li class="project">
+            <div class="project-media">
+              <Image src={img(p.image.src)} alt={p.image.alt} widths={[600, 900, 1300]} sizes="(max-width: 860px) 100vw, 680px" />
+            </div>
+            <div class="project-text">
+              <p class="project-meta">{p.status && <span class="status-badge">{p.status}</span>}<span class="idx">{p.year}</span>{p.platform}</p>
+              <h3><a class="stretch" href={`/${p.slug}.html`}>{p.name}</a></h3>
+              <p class="project-line">{p.line}</p>
+              <Chips items={p.shows} />
+              <dl class="spec-rows">
+                <div><dt>Papel</dt><dd>{p.role}</dd></div>
+                <div><dt>Time</dt><dd>{p.team}</dd></div>
+                {p.launch
+                  ? <div><dt>Lançamento</dt><dd>{p.launch}</dd></div>
+                  : <div><dt>Situação</dt><dd>{p.status}</dd></div>}
+              </dl>
+              <div class="project-actions">
+                <span class="cta">Ler o case <span class="arrow" aria-hidden="true">→</span></span>
+                {p.store && <a class="store above" href={p.store.href} target="_blank" rel="noopener">{p.store.label} <span aria-hidden="true">↗</span></a>}
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="value">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 class="label">O que levo para um time</h2>
+        <p class="section-title">Design de produto com fluência técnica.</p>
+      </header>
+      <ol class="value-list">
+        <li>
+          <h3>Pesquisa que vira decisão</h3>
+          <p>Entrevistas, síntese de achados e priorização antes da tela final. No Handraw, priorizei com o time 6 requisitos vitais entre 29 mapeados.</p>
+          <a href="/handraw.html#handraw-ideacao">Ver a priorização no Handraw <span aria-hidden="true">→</span></a>
+        </li>
+        <li>
+          <h3>Clareza em sistemas complexos</h3>
+          <p>No PACE Administrativo, organizei cerca de 20 áreas de gestão pela frequência de uso e desenhei a interface para explicar bloqueios e prevenir erros antes de pedir confirmação.</p>
+          <a href="/pace-administrativo.html#adm-decisoes">Ver as decisões no PACE <span aria-hidden="true">→</span></a>
+        </li>
+        <li>
+          <h3>Prototipação funcional</h3>
+          <p>Transformo decisões de design em interfaces interativas, na tecnologia adequada ao projeto e com IA como apoio quando faz sentido. Assim o time avalia comportamento, não só telas estáticas.</p>
+          <a href="/pace-torcedor.html#pace-ia">Ver o processo no PACE Torcedor <span aria-hidden="true">→</span></a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="journey">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 class="label">Trajetória</h2>
+        <p class="section-title">Formação técnica, prática em produto.</p>
+      </header>
+      <table class="cv">
+        <caption class="sr-only">Trajetória profissional e formação</caption>
+        <tbody>
+          {journey.map((j) => (
+            <tr>
+              <th scope="row">{j.when}</th>
+              <td><strong>{j.what}</strong></td>
+              <td>{j.where}</td>
+            </tr>
+          ))}
+          <tr>
+            <th scope="row">Prêmios</th>
+            <td><strong>Pódios em hackathons como product designer</strong></td>
+            <td>Prêmio Sindesei Tech Excellence 2024, aluna destaque da UCB</td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="text-link" href="/about.html#reconhecimento">Trajetória completa e prêmios <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</Base>

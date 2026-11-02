@@ -1,0 +1,174 @@
+---
+import Case from '../layouts/Case.astro';
+import Summary from '../components/Summary.astro';
+import Row from '../components/Row.astro';
+import Decision from '../components/Decision.astro';
+import Figure from '../components/Figure.astro';
+import Gallery from '../components/Gallery.astro';
+import Note from '../components/Note.astro';
+import Todo from '../components/Todo.astro';
+---
+<Case
+  slug="borali"
+  title="BorAli? Explore Brasília · Case de Product Design · Beatriz Medina"
+  description="Design do BorAli?, app que ajuda quem quer sair de casa em Brasília a decidir o que fazer, com 12 entrevistas, menos opções de propósito e sugestões a partir do humor do momento."
+  kicker='<span class="idx">Case 04</span>iOS · 2026'
+  lede="Para quem quer sair de casa, mas trava na hora de escolher o programa. O app parte de como a pessoa está se sentindo e entrega poucas opções, já pensadas."
+  chips={['12 entrevistas', 'Menos opções, mais decisão', 'Mapeamento de histórias', 'UX Writing']}
+  spec={[
+    ['Papel', 'Product Designer (UX/UI)'],
+    ['Time', '5 pessoas na Apple Developer Academy'],
+    ['Duração', '7 semanas'],
+    ['Plataforma', 'iOS (iPhone)'],
+    ['Lançamento', 'Maio de 2026'],
+  ]}
+  store={{ href: 'https://apps.apple.com/br/app/borali-explore-bras%C3%ADlia/id6764412373', label: 'App Store' }}
+  cover={{ src: 'borali/screenshots.png', alt: 'Telas do BorAli? com seletor de humor, roteiros prontos, caminhos de exploração e detalhes de um lugar em Brasília' }}
+  toc={[
+    { id: 'resumo', label: 'Resumo' },
+    { id: 'borali-pesquisa', label: 'Pesquisa' },
+    { id: 'borali-ideacao', label: 'Decisões' },
+    { id: 'borali-interface', label: 'Três caminhos' },
+    { id: 'borali-validacao', label: 'Linguagem' },
+    { id: 'borali-resultado', label: 'Resultado' },
+    { id: 'artefatos', label: 'Artefatos' },
+  ]}
+  next={{ href: '/sete.html', title: 'SETE', sub: 'iOS + watchOS · 2025' }}
+>
+  <section id="resumo" aria-labelledby="t-resumo">
+    <h2 id="t-resumo" class="label">Em 30 segundos</h2>
+    <Summary>
+      <Row label="Problema">Muita gente quer sair para conhecer a cidade, mas adia ou desiste na hora de escolher o programa.</Row>
+      <Row label="Meu papel">Product Designer num time de 5 pessoas. Conduzi pesquisa e entrevistas, participei da análise e ajudei a reenquadrar o problema. Não faltavam opções, faltava conseguir decidir. As decisões de design e desenvolvimento foram do time.</Row>
+      <Row label="Decisão-chave">Limitar as escolhas de propósito, com uma sugestão por vez a partir do humor e combos de programas já montados.</Row>
+      <Row label="Resultado">Publicado na App Store em maio de 2026.</Row>
+    </Summary>
+    <div class="prose lead-in" id="borali-estrategia">
+      <p>O desafio da Academy começou amplo, perguntando como ampliar a visão de mundo por meio de uma experiência imersiva. Estudando espaços urbanos e como a cidade influencia o comportamento, o time chegou a um problema bem mais concreto, que era sair de casa.</p>
+    </div>
+  </section>
+
+  <section id="borali-pesquisa" class="block">
+    <p class="label">Pesquisa · 12 entrevistas</p>
+    <h2>Não faltavam opções. Sobrava o cansaço de escolher.</h2>
+    <div class="block-grid">
+      <div class="prose">
+        <p>Conduzi entrevistas junto com o time, 12 no total, com um roteiro de sete perguntas, de “Já aconteceu de você querer sair, mas acabar não indo? Por quê?” a “Imagina que você está com vontade de sair agora, mas sem plano. O que faria primeiro?”.</p>
+        <p>As respostas falavam de preguiça, cansaço, falta de companhia, dinheiro e indecisão. Uma pessoa descreveu o app ideal como um lugar onde ela diria como está se sentindo e receberia sugestões que combinassem.</p>
+      </div>
+      <Note label="Minha contribuição">Na análise, ajudei a reenquadrar o problema. Ele deixou de ser mostrar opções e passou a ser ajudar a decidir. Esse achado orientou a proposta de recomendações pelo contexto e pelo estado emocional.</Note>
+    </div>
+    <ul class="quotes">
+      <li><blockquote>“Muitas vezes vejo algum lugar que eu queria sair depois com os amigos, mas em meio a rotina corrida, acabo deixando pra depois e me esquecendo.”</blockquote><span>Entrevista 5</span></li>
+      <li><blockquote>“Dá preguiça de procurar um novo lugar. Acho que assim eu teria uma recomendação menos enviesada do influencers”</blockquote><span>Entrevista 6</span></li>
+      <li><blockquote>“Eu só queria saber o que tá acontecendo”</blockquote><span>Entrevista 9</span></li>
+    </ul>
+    <Figure src="borali/entrevistas.png" alt="Síntese das 12 entrevistas, com cada entrevistado marcado pela persona correspondente" caption="As 12 entrevistas, coloridas pela persona com que cada pessoa mais se parecia." n={1} crop />
+
+    <div class="sub-block" id="borali-personas">
+      <h3>Dois jeitos de travar</h3>
+      <p class="sub-lede">Agrupando as entrevistas, surgiram duas personas. Amanda, a exploradora cansada, tem rotina intensa e quer experiências prontas, e o problema dela é decidir. Wallace, o social travado, depende de convite e frequenta sempre os mesmos lugares, e o problema dele é descobrir.</p>
+      <Gallery items={[
+        { src: 'borali/persona-1.png', alt: 'Persona Amanda, a exploradora cansada, profissional estabelecida de 28 a 40 anos', caption: 'Amanda, a exploradora cansada' },
+        { src: 'borali/persona-2.png', alt: 'Persona Wallace, o social travado, estudante universitário de 18 a 26 anos', caption: 'Wallace, o social travado' },
+      ]} />
+    </div>
+    <p class="aside-line">A síntese do time também registrou hipóteses de comportamento que guiaram o conceito. As pessoas saem para sentir algo, não pelo lugar; ficar em casa gera mais vontade de ficar em casa; e descoberta guiada tende a funcionar melhor que descoberta livre.</p>
+  </section>
+
+  <section id="borali-ideacao" class="block">
+    <p class="label">Decisões</p>
+    <h2>Menos opções, de propósito.</h2>
+    <p class="sub-lede decision-intro">A partir do problema reenquadrado, o time definiu o conceito e o formato das sugestões.</p>
+    <Decision n="01" title="O conceito" id="d1">
+      <Row label="Opções">Um mapa do movimento dos lugares em tempo real, com avaliações de quem está lá; um catálogo de aulas e atividades experimentais; e um mapa de atrativos de Brasília para combinar rolês em grupo.</Row>
+      <Row label="Escolha" choice>Uma experiência guiada pelo momento da pessoa, considerando como ela quer se sentir, com quem está e o que pretende fazer.</Row>
+      <Row label="Por quê">Os três conceitos ainda pediam que a pessoa comparasse opções. Era justamente aí que as entrevistas mostravam o atrito.</Row>
+    </Decision>
+    <div class="decision-gap"></div>
+    <Decision n="02" title="Quantas opções mostrar" id="d2">
+      <Row label="Base">Uma das histórias de usuário que guiaram a priorização dizia “Como uma pessoa que se sente sobrecarregada com muitas escolhas, quero ver poucas opções bem selecionadas, para conseguir decidir rapidamente sem ficar travada.”</Row>
+      <Row label="Escolha" choice>No mapa de histórias, a sugestão personalizada aparece uma por vez, com até três trocas. Os combos do dia são três, com uma troca.</Row>
+      <Row label="Por quê">Um limite claro empurra para a decisão. Quem não gosta de nenhuma opção ainda tem o Explorar, sem que a tela inicial vire uma lista infinita.</Row>
+      <Figure slot="figure" src="borali/mapeamento.png" alt="Mapeamento de histórias com três atividades, encontrar um lazer personalizado, escolher um combo pronto e explorar lugares sem formato de lista" caption="Mapeamento de histórias com os três caminhos e onde cada um pode terminar em decisão ou desistência." n={2} crop />
+    </Decision>
+    <p class="aside-line">Na matriz de impacto e esforço, informar humor e ver poucas opções ficaram como alto impacto e alto esforço; plano completo, decisão em grupo, lugares salvos e avaliações confiáveis entraram como alto impacto e pouco esforço.</p>
+  </section>
+
+  <section id="borali-interface" class="block">
+    <p class="label">Três caminhos para decidir</p>
+    <h2>Pelo humor, por um combo pronto ou explorando do seu jeito.</h2>
+    <div class="prose">
+      <p>A versão publicada organiza a decisão em três entradas. Na tela inicial, a pessoa diz como está, por ícone ou por texto, e escolhe a região. Logo abaixo ficam combos de dois programas já montados. No Explorar, há quatro caminhos, Para mim, Fora da bolha, Surpresa e Aqui perto.</p>
+    </div>
+    <Gallery cols={4} phone items={[
+      { src: 'borali/hi-01-inicio.png', alt: 'Tela inicial com seletor de humor por ícone ou texto, região e combos', caption: 'Humor e combos' },
+      { src: 'borali/hi-03-explorar-a.png', alt: 'Explorar com quatro caminhos, Para mim, Fora da bolha, Surpresa e Aqui perto', caption: 'Explorar do seu jeito' },
+      { src: 'borali/hi-04-explorar-b.png', alt: 'Tela de exploração de lugares', caption: 'Exploração' },
+      { src: 'borali/hi-02-detalhes.png', alt: 'Detalhes de um lugar com fotos, localização e avaliações', caption: 'Detalhes do lugar' },
+    ]} />
+    <div class="sub-block">
+      <h3>Base visual</h3>
+      <p class="sub-lede">Cores e tipografia foram definidas como variáveis no Figma antes das telas finais, o que facilitou a evolução das interfaces e a passagem para o desenvolvimento.</p>
+      <div class="compare">
+        <Figure src="borali/var-cores.png" alt="Variáveis de cor do BorAli?" caption="Variáveis de cor." crop />
+        <Figure src="borali/var-tipografia.png" alt="Variáveis de tipografia do BorAli?" caption="Variáveis de tipografia." crop />
+      </div>
+    </div>
+  </section>
+
+  <section id="borali-validacao" class="block">
+    <p class="label">Linguagem</p>
+    <h2>“Como você se sente?” virou “Hoje eu tô…”.</h2>
+    <div class="prose">
+      <p>Da média para a alta fidelidade, a estrutura da tela inicial ficou praticamente igual. O que mudou foi o tom. Os textos passaram a falar como quem chama um amigo para sair.</p>
+    </div>
+    <div class="compare compare-phone">
+      <Figure src="borali/mid-01-inicio.png" alt="Tela inicial em média fidelidade com os textos Olá Amanda, Como você se sente e Encontrar" tag="Média fidelidade" />
+      <Figure src="borali/hi-01-inicio.png" alt="Tela inicial em alta fidelidade com os textos E aí, Hoje eu tô e Ver sugestões" tag="Alta fidelidade" after />
+    </div>
+    <dl class="changes">
+      <Row label="Saudação">“Olá, Amanda” → “E aí”</Row>
+      <Row label="Pergunta">“Como você se sente?” → “Hoje eu tô…”</Row>
+      <Row label="Região">“Sem preferência” → “Qualquer canto”</Row>
+      <Row label="Ação">“Encontrar” → “Ver sugestões”</Row>
+    </dl>
+  </section>
+
+  <section id="borali-resultado" class="block">
+    <p class="label">Resultado</p>
+    <h2>Publicado na App Store em maio de 2026.</h2>
+    <Summary plain>
+      <Row label="Publicado">Sugestões a partir do humor, do momento e do contexto, combos prontos, exploração por caminhos e lugares salvos. A versão atual, 1.4.1, é de 7 de maio de 2026.</Row>
+      <Row label="O que aprendi">Eu buscava na pesquisa respostas que confirmassem minhas ideias. Hoje uso a descoberta para questionar minhas suposições e deixar os achados guiarem as decisões.</Row>
+      <Row label="Time">Ana Luísa Coleone, Beatriz Medina, Enzo Henrique, Lizandra Malta e Vinícius de Oliveira, com orientação de Júlio César e Felipe Carvalho.</Row>
+    </Summary>
+  </section>
+
+  <section id="artefatos" class="block">
+    <p class="label">Artefatos do processo</p>
+    <h2>Jornada, priorização e benchmarking.</h2>
+    <details class="artifacts" id="borali-jornada">
+      <summary>Jornada do usuário</summary>
+      <Figure src="borali/jornada.png" alt="Jornada da persona Amanda do momento de procurar até a resposta do app" caption="Jornada da Amanda, do momento de procurar até a resposta do app." />
+    </details>
+    <details class="artifacts" id="borali-priorizacao">
+      <summary>Histórias de usuário e priorização</summary>
+      <Gallery items={[
+        { src: 'borali/historias.png', alt: 'Onze histórias de usuário do BorAli?', caption: 'Histórias de usuário' },
+        { src: 'borali/matriz.png', alt: 'Matriz de impacto e esforço com as histórias de usuário', caption: 'Matriz impacto x esforço' },
+      ]} />
+    </details>
+    <details class="artifacts" id="borali-benchmarking">
+      <summary>Benchmarking</summary>
+      <Figure src="borali/benchmarking.png" alt="Benchmarking de aplicativos de descoberta de lugares e eventos" caption="Benchmarking competitivo." />
+    </details>
+    <details class="artifacts" id="borali-telas">
+      <summary>Mais telas</summary>
+      <Gallery cols={3} phone items={[
+        { src: 'borali/mid-02-detalhes.png', alt: 'Detalhes de um lugar em média fidelidade', caption: 'Detalhes, média fidelidade' },
+        { src: 'borali/hi-overview.png', alt: 'Visão geral do protótipo em alta fidelidade', caption: 'Visão geral' },
+      ]} />
+    </details>
+  </section>
+</Case>

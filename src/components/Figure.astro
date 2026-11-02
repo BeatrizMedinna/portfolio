@@ -1,0 +1,34 @@
+---
+import { Image, getImage } from 'astro:assets';
+import { img } from '../lib/images';
+import { t } from '../lib/i18n';
+const s = t(Astro.url);
+interface Props {
+  src: string;          // caminho em src/assets
+  alt: string;
+  caption?: string;
+  n?: number;           // número da figura
+  crop?: boolean;       // recorta artefatos altos
+  zoom?: boolean;
+  tag?: string;         // rótulo acima (antes/depois)
+  after?: boolean;
+  id?: string;
+  eager?: boolean;
+  focus?: 'top' | 'center';  // ponto do recorte quando crop
+}
+const { src, alt, caption, n, crop = false, zoom = true, tag, after = false, id, eager = false, focus = 'top' } = Astro.props;
+const meta = img(src);
+const full = zoom ? await getImage({ src: meta, width: Math.min(meta.width, 2000), format: 'webp' }) : null;
+const widths = [480, 800, 1200, 1600].filter((w) => w < meta.width).concat(meta.width);
+---
+<figure class:list={['fig', { 'fig-crop': crop, 'crop-center': crop && focus === 'center' }]} id={id}>
+  {tag && <span class:list={['compare-tag', { 'is-after': after }]}>{tag}</span>}
+  {zoom ? (
+    <button class="zoom" type="button" data-full={full!.src} aria-label={`${s.zoom}: ${alt}`}>
+      <Image src={meta} alt={alt} widths={widths} sizes="(max-width: 860px) 100vw, 880px" loading={eager ? 'eager' : 'lazy'} />
+    </button>
+  ) : (
+    <div class="zoom no-zoom"><Image src={meta} alt={alt} widths={widths} sizes="(max-width: 860px) 100vw, 880px" loading={eager ? 'eager' : 'lazy'} /></div>
+  )}
+  {caption && <figcaption>{n && <span class="fig-n">Fig. {n}</span>}{caption}</figcaption>}
+</figure>

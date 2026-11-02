@@ -1,0 +1,146 @@
+---
+import Case from '../../layouts/Case.astro';
+import Summary from '../../components/Summary.astro';
+import Row from '../../components/Row.astro';
+import Decision from '../../components/Decision.astro';
+import Figure from '../../components/Figure.astro';
+import Gallery from '../../components/Gallery.astro';
+import Note from '../../components/Note.astro';
+---
+<Case
+  slug="sete"
+  title="SETE · Product Design Case Study · Beatriz Medina"
+  description="How a challenge about exclusivity became SETE, an iPhone and Apple Watch app that brings pro-level metrics to people who play court sports."
+  kicker='<span class="idx">Case 05</span>iOS + watchOS · 2025'
+  lede="Training metrics for people who play court sports. Apple Watch records the match and iPhone shows performance and progress over time."
+  chips={['From abstract theme to product', 'iPhone + Apple Watch', 'HealthKit data', 'Gamification']}
+  spec={[
+    ['Role', 'Product Designer (UX/UI)'],
+    ['Team', '5 people at the Apple Developer Academy'],
+    ['Timeline', '7 weeks'],
+    ['Platform', 'iOS + watchOS'],
+    ['Launch', 'August 2025'],
+  ]}
+  store={{ href: 'https://apps.apple.com/br/app/sete-esporte-e-performance/id6751563867', label: 'App Store' }}
+  cover={{ src: 'sete/screenshots.png', alt: 'SETE screens on iPhone and Apple Watch showing games, progress and achievements' }}
+  toc={[
+    { id: 'resumo', label: 'Summary' },
+    { id: 'sete-estrategia', label: 'The challenge' },
+    { id: 'sete-conceito', label: 'Decisions' },
+    { id: 'sete-watchos', label: 'Two moments' },
+    { id: 'sete-validacao', label: 'Interface' },
+    { id: 'sete-resultado', label: 'Outcome' },
+    { id: 'artefatos', label: 'Artifacts' },
+  ]}
+  next={{ href: '/en/pace-torcedor.html', title: 'PACE Fan App', sub: 'iOS · In development' }}
+>
+  <section id="resumo" aria-labelledby="t-resumo">
+    <h2 id="t-resumo" class="label">In 30 seconds</h2>
+    <Summary>
+      <Row label="Challenge">Turn a broad theme, exclusivity, into a useful product in seven weeks.</Row>
+      <Row label="My role">Product Designer on a cross-functional team of 5. I took part in research, in defining the solution and in designing the experience for iPhone and Apple Watch. The decisions and screens shown here were built together.</Row>
+      <Row label="Key decision">Exclusivity as access to pro-level data, not as restriction. People who play for fun get to see their game the way an athlete does.</Row>
+      <Row label="Outcome">Released in August 2025, my first app on the App Store. The current version, 1.6.0, is from October 2025.</Row>
+    </Summary>
+  </section>
+
+  <section id="sete-estrategia" class="block">
+    <p class="label">The challenge</p>
+    <h2>The starting point was a single word, exclusivity.</h2>
+    <div class="block-grid">
+      <div class="prose">
+        <p>The Apple Developer Academy challenge began with an open question about how exclusivity shapes behavior, access and emotions in social relationships. On day one, the team mapped everything the word brought to mind, from parties and travel to status, community, competition and sports.</p>
+        <p>Exploratory research moved through competition, experiences and exclusive features, then HealthKit and sports audiences. That’s where the theme took shape. In amateur sports, the data exists, but pro-level insight stays with professional athletes.</p>
+      </div>
+      <Note label="From my research notes">“É possível oferecer exclusividade sem escassez”<span class="quote-tr" lang="en">Exclusivity can be offered without scarcity.</span></Note>
+    </div>
+    <div class="compare" id="sete-pesquisa">
+      <Figure src="sete/engage-quadro.jpg" alt="Day-one whiteboard with the word exclusivity and related themes such as parties, sports, community and status" caption="What exclusivity meant to the team on day one." n={1} crop focus="center" />
+      <Figure src="sete/pesquisa-exclusividade.png" alt="Research board with notes on exclusivity, personalization, competition and the most-played sports in Brazil" caption="The team’s exploratory research on exclusivity (in Portuguese)." n={2} crop />
+    </div>
+  </section>
+
+  <section id="sete-conceito" class="block">
+    <p class="label">Decisions</p>
+    <h2>Two team decisions shaped the product.</h2>
+    <Decision n="01" title="What “exclusive” means here" id="d1">
+      <Row label="Options">Before landing on sports, the team explored directions like digital networking, travel experiences, paid event access and personalized training.</Row>
+      <Row label="Choice" choice>Give amateur court-sport players the kind of metrics once reserved for elite athletes.</Row>
+      <Row label="Why">The native Health app already collects the data but presents it generically. The idea was to translate it for each sport and capture what was missing, around a single core feature.</Row>
+    </Decision>
+    <div class="decision-gap"></div>
+    <Decision n="02" title="Exclusivity as achievement, not a lock" id="d2">
+      <Row label="Basis">In my notes, I wrote that exclusivity in apps doesn’t have to be a feature for the few and can come from levels or from being among the first to achieve something. The team’s synthesis listed community, achievement levels and personalization as ways to keep that sense of exclusivity.</Row>
+      <Row label="Choice" choice>Weekly play streaks, badges based on total games and a performance card ready to share.</Row>
+      <Row label="Why">“Exclusive” becomes something players earn and show off, without closing the app to beginners.</Row>
+      <Row label="In the store">All three appear in the current App Store screenshots.</Row>
+    </Decision>
+  </section>
+
+  <section id="sete-watchos" class="block">
+    <p class="label">Two moments of use</p>
+    <h2>On the wrist during the game. On the iPhone afterwards.</h2>
+    <div class="prose">
+      <p>The data is born on the Apple Watch, mid-match, when nobody wants to read text. In the prototype, the watch does little and does it fast. It starts recording, counts down 3, 2, 1, shows time, heart rate, calories and distance in large numbers, and offers three actions, end, pause or start the next game.</p>
+      <p>Reading happens later, on the iPhone, with match metrics, progress over time and training suggestions. The prototypes also explored a heat map showing where the player moved on the court.</p>
+    </div>
+    <Figure src="sete/watch-fluxo.png" alt="Apple Watch flow with welcome, start recording, 3-2-1 countdown, live metrics and end, pause and next-game controls" caption="Apple Watch flow, from start to next game." n={3} />
+  </section>
+
+  <section id="sete-validacao" class="block">
+    <p class="label">Interface</p>
+    <h2>From grayscale structure to the game in color.</h2>
+    <div class="prose">
+      <p>Mid-fidelity locked in what each screen needed to show. In high fidelity, with a visual foundation built in Figma following Apple’s guidelines, the heat map gained color, the game count became a badge progression and navigation moved into tabs.</p>
+    </div>
+    <div class="compare compare-phone">
+      <Figure src="sete/mid-01-inicio.png" alt="Mid-fidelity home screen in grayscale with heat map, metrics and total games" tag="Mid-fidelity" />
+      <Figure src="sete/hi-01-inicio.png" alt="High-fidelity home screen with colored heat map, metrics, badges and tab bar" tag="High-fidelity" after />
+    </div>
+    <dl class="changes">
+      <Row label="Heat map">From a gray blob to a color scale that’s easier to read.</Row>
+      <Row label="Progress">Total games now shows badges between milestones.</Row>
+      <Row label="Consistency">A count of consecutive weeks played, at the top.</Row>
+      <Row label="Navigation">Tabs for workouts, metrics and games.</Row>
+    </dl>
+    <div class="sub-block">
+      <h3>States almost nobody designs</h3>
+      <p class="sub-lede">The exploration covered first launch, with no workouts recorded yet, and days without a game, with an encouraging message instead of an empty screen. The share card got versions with and without a background.</p>
+      <Figure src="sete/exploracao-telas.png" alt="SETE screen exploration with home, progress, share card with and without background, first launch and no-game day" caption="Screen and state exploration." n={4} />
+    </div>
+  </section>
+
+  <section id="sete-resultado" class="block">
+    <p class="label">Outcome</p>
+    <h2>My first app on the App Store, released in August 2025.</h2>
+    <Summary plain>
+      <Row label="Shipped">According to the store listing, the app offers heart rate, speed, distance and performance metrics, streaks and challenges, full history, Apple Watch integration and result sharing.</Row>
+      <Row label="Prototype only">The heat map appears in the prototypes and early promotional screens, but not in the current store screenshots or description.</Row>
+      <Row label="After launch">Six versions in the store history, from 1.2.1 on August 29 to 1.6.0 on October 11, 2025.</Row>
+      <Row label="What I learned">Innovation doesn’t always mean building something new. Sometimes the value is in rearranging existing technology for a specific context.</Row>
+      <Row label="Team">Beatriz Medina, Cauê Carneiro, Filipi Romão, Gustavo Souto and João Pedro Leonel, mentored by Felipe Carvalho and Júlio Cézar Alves do Santos.</Row>
+    </Summary>
+    <div class="sub-block">
+      <h3>In the store today</h3>
+      <Gallery cols={3} phone items={[
+        { src: 'sete/loja-conquistas.jpg', alt: 'App Store screenshot: games screen with a 20-week streak, metrics and badges by total games', caption: 'Streaks and badges' },
+        { src: 'sete/loja-compartilhar.jpg', alt: 'App Store screenshot: performance cards to share on stories', caption: 'Sharing' },
+        { src: 'sete/loja-evolucao.jpg', alt: 'App Store screenshot: monthly calories progress, training suggestions and Apple Watch', caption: 'Progress and suggestions' },
+      ]} />
+    </div>
+  </section>
+  <section id="artefatos" class="block">
+    <p class="label">Artifacts</p>
+    <h2>High-fidelity screens and palette.</h2>
+    <details class="artifacts" id="sete-interface">
+      <summary>More screens and palette</summary>
+      <Gallery cols={4} phone items={[
+        { src: 'sete/hi-02-evolucao.png', alt: 'Progress screen with a daily calories chart and training suggestions', caption: 'Progress' },
+        { src: 'sete/hi-03-compartilhar-a.png', alt: 'Share screen with heat map and match metrics', caption: 'Share' },
+        { src: 'sete/hi-03-compartilhar-b.png', alt: 'Sharing options for the performance card', caption: 'Share options' },
+        { src: 'sete/mid-02-evolucao.png', alt: 'Mid-fidelity progress screen', caption: 'Progress, mid-fidelity' },
+      ]} />
+      <Figure src="sete/palette.png" alt="SETE color palette" caption="Palette with a dark background and lime green as the accent color." zoom={false} />
+    </details>
+  </section>
+</Case>
