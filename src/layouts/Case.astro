@@ -14,7 +14,9 @@ interface Props {
   lede: string;
   chips: string[];
   spec: [string, string][];
-  store: { href: string; label: string };
+  store?: { href: string; label: string };
+  status?: string;      // aviso exibido abaixo da ficha (ex.: projeto em desenvolvimento)
+  related?: { href: string; label: string; text: string };
   cover: { src: string; alt: string };
   toc: { id: string; label: string }[];
   next: { href: string; title: string; sub: string };
@@ -35,6 +37,8 @@ const b = base(lang);
         <p class="case-lede">{p.lede}</p>
         <Chips items={p.chips} />
         <Spec items={p.spec} store={p.store} />
+        {p.status && <p class="case-status"><span class="status-badge">{s.inDevelopment}</span>{p.status}</p>}
+        {p.related && <p class="case-related">{p.related.text} <a href={p.related.href}>{p.related.label} <span aria-hidden="true">→</span></a></p>}
       </header>
       <figure class="case-cover">
         <Image src={cover} alt={p.cover.alt} widths={[800, 1200, 1600, cover.width]} sizes="(max-width: 1200px) 100vw, 1120px" loading="eager" fetchpriority="high" />

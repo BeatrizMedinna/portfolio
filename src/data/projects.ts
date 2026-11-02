@@ -83,3 +83,56 @@ const en: Record<string, Partial<Project>> = {
   },
 };
 export const projectsEn: Project[] = projects.map((p) => ({ ...p, ...en[p.slug] }));
+
+// Cases do PACE: produto em desenvolvimento, sem loja. Contam à parte dos 3 apps publicados.
+export interface DevCase {
+  slug: string;
+  name: string;
+  platform: string;
+  image: { src: string; alt: string };
+  line: string;
+  shows: string[];
+  role: string;
+  status: string;
+}
+
+export const paceCases: DevCase[] = [
+  {
+    slug: 'pace-torcedor',
+    name: 'PACE Torcedor',
+    platform: 'iOS · 2026',
+    image: { src: 'pace-ios/cover.png', alt: 'Quatro telas do protótipo PACE Torcedor: Início com jogo ao vivo, detalhe da partida, chave da eliminatória e perfil da atlética' },
+    line: 'O app de quem acompanha o campeonato universitário da arquibancada, com a atlética de coração no centro e sem cadastro.',
+    shows: ['Navegação e filtros', 'Acessibilidade', 'SwiftUI com Claude Code'],
+    role: 'Product Designer',
+    status: 'Protótipo de alta fidelidade',
+  },
+  {
+    slug: 'pace-administrativo',
+    name: 'PACE Administrativo',
+    platform: 'macOS · 2026',
+    image: { src: 'pace-macos/cover.png', alt: 'Janela do protótipo PACE Administrativo no Mac mostrando o Painel da edição com pendências, jogos do dia e andamento' },
+    line: 'O sistema de quem organiza o campeonato: chaves, cronograma e partidas num app para Mac que previne erros caros.',
+    shows: ['Arquitetura da informação', 'Prevenção de erros', 'HIG do macOS'],
+    role: 'Product Designer',
+    status: 'Protótipo de alta fidelidade',
+  },
+];
+
+const paceEn: Record<string, Partial<DevCase>> = {
+  'pace-torcedor': {
+    name: 'PACE Fan App',
+    image: { src: 'pace-ios/cover.png', alt: 'Four screens from the PACE fan app prototype: Home with a live game, match detail, knockout bracket and athletic club profile' },
+    line: 'An app for following a college sports championship from the stands, built around your athletic club and with no sign-up.',
+    shows: ['Navigation and filters', 'Accessibility', 'SwiftUI with Claude Code'],
+    status: 'High-fidelity prototype',
+  },
+  'pace-administrativo': {
+    name: 'PACE Admin',
+    image: { src: 'pace-macos/cover.png', alt: 'PACE Admin prototype window on a Mac showing the edition dashboard with items needing attention, today’s games and progress' },
+    line: 'The organizer’s system: brackets, schedule and matches in a Mac app designed to prevent costly mistakes.',
+    shows: ['Information architecture', 'Error prevention', 'macOS HIG'],
+    status: 'High-fidelity prototype',
+  },
+};
+export const paceCasesEn: DevCase[] = paceCases.map((p) => ({ ...p, ...paceEn[p.slug] }));

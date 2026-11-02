@@ -1,0 +1,250 @@
+---
+import Case from '../../layouts/Case.astro';
+import Summary from '../../components/Summary.astro';
+import Row from '../../components/Row.astro';
+import Decision from '../../components/Decision.astro';
+import Figure from '../../components/Figure.astro';
+import Gallery from '../../components/Gallery.astro';
+import Note from '../../components/Note.astro';
+---
+<Case
+  slug="pace-torcedor"
+  title="PACE Fan App · Product Design Case Study · Beatriz Medina"
+  description="Designing PACE’s iOS app for people following college sports championships: live games, schedule, brackets and rankings, with a SwiftUI prototype built with Claude Code."
+  kicker='<span class="idx">Case 04</span>iOS · 2026'
+  lede="An app for following a college sports championship from the stands: what’s happening now, what’s next and how your athletic club is doing, with no sign-up."
+  chips={['Athletic club as the common thread', 'Knockout and timed events', 'Accessibility in the layout', 'SwiftUI with Claude Code']}
+  spec={[
+    ['Role', 'Product Designer · Design Engineering'],
+    ['Team', '5 people at the Apple Developer Academy'],
+    ['Timeline', 'October 2026'],
+    ['Platform', 'iOS (iPhone)'],
+    ['Prototype', 'SwiftUI, simulated data'],
+    ['Status', 'In development'],
+  ]}
+  status="The screens in this case study are captures of the SwiftUI prototype running in the simulator with simulated data. There is no server integration yet and no user testing."
+  related={{ text: 'This is one of two connected PACE case studies.', label: 'See PACE Admin, on the Mac', href: '/en/pace-administrativo.html' }}
+  cover={{ src: 'pace-ios/cover.png', alt: 'Four screens from the PACE fan app prototype: Home with a live game, match detail, knockout bracket and athletic club profile' }}
+  toc={[
+    { id: 'resumo', label: 'Summary' },
+    { id: 'pace-contexto', label: 'Context' },
+    { id: 'pace-processo', label: 'Process' },
+    { id: 'pace-decisoes', label: 'Decisions' },
+    { id: 'pace-navegacao', label: 'Navigation' },
+    { id: 'pace-acessibilidade', label: 'Accessibility' },
+    { id: 'pace-ia', label: 'Design Engineering' },
+    { id: 'pace-resultado', label: 'Where it stands' },
+    { id: 'artefatos', label: 'Artifacts' },
+  ]}
+  next={{ href: '/en/pace-administrativo.html', title: 'PACE Admin', sub: 'macOS · In development' }}
+>
+  <section id="resumo" aria-labelledby="t-resumo">
+    <h2 id="t-resumo" class="label">In 30 seconds</h2>
+    <Summary>
+      <Row label="Problem">In college championships, schedules, results and brackets spread through WhatsApp groups, screenshots and stories. People in the stands find out about their own game at the last minute.</Row>
+      <Row label="My role">Product Designer for the fan app on a team of 5. I set the process, made the UX and UI decisions and led the SwiftUI prototype with Claude Code, approving every stage. The product vision and documentation were written by the team.</Row>
+      <Row label="Key decision">Your athletic club as the app’s common thread, with no sign-up, and a dedicated screen for each competition format.</Row>
+      <Row label="Where it stands">A high-fidelity prototype covering the 17 wireframe screens and their states, built between October 17 and 29, 2026. The product is still in development.</Row>
+    </Summary>
+  </section>
+
+  <section id="pace-contexto" class="block">
+    <p class="label">Context</p>
+    <h2>A whole championship scattered across WhatsApp groups.</h2>
+    <div class="block-grid">
+      <div class="prose">
+        <p>PACE is an ecosystem for college sports championships: a management system for organizers, a digital scoresheet for officials and an app for people following along. The team’s documentation starts from a concrete problem: event data is scattered across spreadsheets, group chats and stories, and results, standings and upcoming games are rarely published in an organized way.</p>
+        <p>For the fan app, the persona is Thiago, 20, who switches between playing for his athletic club and cheering in the stands. He opens his phone for a few seconds, wants the score and the next game, and won’t create an account for that.</p>
+      </div>
+      <Note label="Frustration recorded in the persona">“Aplicativos que exigem criação de conta e formulários longos apenas para consultar o horário ou o local de um jogo.”<span class="quote-tr" lang="en">Apps that require an account and long forms just to check the time or place of a game.</span></Note>
+    </div>
+    <dl class="changes">
+      <Row label="Quick use">A Home built around now: live first, then upcoming games and latest results.</Row>
+      <Row label="No account">Onboarding only asks for your athletic club, and even that can be skipped.</Row>
+      <Row label="Belonging">Your athletic club stands out across the whole app.</Row>
+      <Row label="All in one">Schedule, brackets and rankings in one place, with filters.</Row>
+    </dl>
+  </section>
+
+  <section id="pace-processo" class="block">
+    <p class="label">Process</p>
+    <h2>The wireframes were a starting point, not a spec.</h2>
+    <div class="block-grid">
+      <div class="prose">
+        <p>The starting point was 17 mid-fidelity Figma screens and the product rules document. Instead of rebuilding screens one by one, I organized the work into complete functional blocks: Home and matches, schedule and filters, rankings and athletic clubs, sports. Each block had to close its flow end to end, with loading, error, empty and unavailable states.</p>
+        <p>First came a mid-fidelity version in SwiftUI, deliberately without color, so no state depended on it. Then high fidelity in nine stages, from the foundation up: palette and tokens, components, navigation, each area of the app and a final audit.</p>
+      </div>
+      <Note label="A rule I wrote for the project">“Os wireframes são a referência inicial, não uma especificação imutável.”<span class="quote-tr" lang="en">The wireframes are the initial reference, not an immutable specification.</span></Note>
+    </div>
+    <div class="compare compare-phone">
+      <Figure src="pace-ios/mid-inicio.png" alt="Grayscale Home wireframe with a live game, upcoming games and latest games" tag="Wireframe · Figma" />
+      <Figure src="pace-ios/hi-inicio.png" alt="Dark high-fidelity Home with the favorite athletic club Búfalos, My club and General tabs, a live game and upcoming games" tag="High fidelity · SwiftUI" after />
+    </div>
+    <dl class="changes">
+      <Row label="Live">A neutral outline on the live card, at my request. Red stays on the badge only, always with text.</Row>
+      <Row label="Club">A favorite club picker under the title, which can be changed or removed.</Row>
+      <Row label="Teams">A side stripe in each athletic club’s color on the cards.</Row>
+      <Row label="Labels">Clearer section names, such as “Latest results” instead of “Latest games”.</Row>
+    </dl>
+  </section>
+
+  <section id="pace-decisoes" class="block">
+    <p class="label">Decisions</p>
+    <h2>Four decisions that shaped the app.</h2>
+    <Decision n="01" title="One match screen, three moments" id="d1">
+      <Row label="Context">The wireframe had three screens for the same match: live, finished and upcoming.</Row>
+      <Row label="Choice" choice>A single screen that changes with the state of the game. The winner stands out through text weight, and the losing side turns gray.</Row>
+      <Row label="Why">Fewer screens to maintain and one pattern fans learn once. Since mid-fidelity had no color, the winner had to be readable without it, and the solution carried into high fidelity.</Row>
+      <Row label="Origin">Proposed by Claude during the build, approved by me.</Row>
+    </Decision>
+    <div class="decision-gap"></div>
+    <Decision n="02" title="Each competition format gets its own screen" id="d2">
+      <Row label="Context">I asked that knockout and timed events not get the same layout by default. A swimming event has no bracket, and a knockout has no points.</Row>
+      <Row label="Choice" choice>Knockout events with Games, Bracket and Standings. Timed events with Event and Results. In the bracket, each matchup says in words what happens next, such as “The winner moves on to the final”.</Row>
+      <Row label="Why">The wireframe’s connector lines don’t fit the width of a phone. And knockout standings show how far each club got, without inventing a scoring system the rules don’t define.</Row>
+      <div slot="figure" class="compare compare-phone">
+        <Figure src="pace-ios/mid-chave.png" alt="Bracket wireframe with round tabs and connector lines between matchups" tag="Wireframe" />
+        <Figure src="pace-ios/hi-elim-chave.png" alt="High-fidelity knockout bracket with round tabs and a line on each game saying the winner moves on to the final" tag="High fidelity" after />
+      </div>
+    </Decision>
+    <div class="decision-gap"></div>
+    <Decision n="03" title="Multiple-choice filters" id="d3">
+      <Row label="Context">In the wireframe, each filter took a single option. In a prototype review, I raised that they should accept more than one.</Row>
+      <Row label="Choice" choice>Multiple choice with “All” selected by default. Inside the filter sheet, options that are easy to scan. After applying, each filter becomes a pill that can be removed on its own.</Row>
+      <Row label="Why">“All” selected makes it clear nothing is filtered and doubles as a shortcut to clear. Pills only appear after applying, so they don’t clutter the moment of choosing.</Row>
+      <Row label="Origin">Multiple choice and pills were my idea. “All” by default was Claude’s recommendation, flagged as a change to a functional rule.</Row>
+      <Gallery slot="figure" cols={3} phone items={[
+        { src: 'pace-ios/mid-filtro.png', alt: 'Filter sheet wireframe with one option per field', caption: 'Wireframe: one option per field' },
+        { src: 'pace-ios/hi-filtro-selecionado.png', alt: 'High-fidelity filter sheet with Women’s, Gold Series and Silver Series selected', caption: 'Several options in the sheet' },
+        { src: 'pace-ios/hi-filtro-aplicado.png', alt: 'Filtered schedule with removable pills for Women’s, Gold Series and Silver Series', caption: 'Pills after applying' },
+      ]} />
+    </Decision>
+    <div class="decision-gap"></div>
+    <Decision n="04" title="Color for belonging, without competing" id="d4">
+      <Row label="Context">In the first high-fidelity version, your club was highlighted in teal, one of the brand colors. Later, each athletic club got its own color, set at registration, and the event colors became the organizer’s choice.</Row>
+      <Row label="Choice" choice>Stripes in each club’s color on cards and rankings, a colored outline on the profile crest, and your club marked in white. The event color stays on actions and selection only.</Row>
+      <Row label="Why">With several colorful clubs on one screen, a teal for “yours” would get lost. White doesn’t compete with any color and still works with whatever palette the organizer picks.</Row>
+      <Row label="Origin">The stripes, the crest outline and the white were my decisions. Claude recommended a single primary color with neutrals and agreed with the white.</Row>
+      <div slot="figure" class="compare compare-phone">
+        <Figure src="pace-ios/hi-atletica-bufalos.png" alt="Profile of the favorite club Búfalos with a red crest outline, a Your club label and an option to remove it" tag="Your club" />
+        <Figure src="pace-ios/hi-atletica-imortal.png" alt="Profile of the club Imortal with a purple crest outline and a button to cheer for Imortal" tag="Another club" after />
+      </div>
+    </Decision>
+  </section>
+
+  <section id="pace-navegacao" class="block">
+    <p class="label">Navigation</p>
+    <h2>Four tabs and one shared destination: the schedule.</h2>
+    <div class="prose">
+      <p>The app has four tabs, Home, Schedule, Ranking and Sports, and notifications open from the bell. Matches, clubs and sports link both ways: from a match to its bracket, from the ranking to a club, from a club to its sports.</p>
+      <p>The schedule became the shared destination. “See more” on Home opens the schedule already filtered by your club. On profiles, “See all” opens the schedule within the same stack, with the system Back button. I had proposed a back arrow just for that path; Claude argued it would break the iOS pattern, and that solution stayed.</p>
+    </div>
+    <div class="sub-block">
+      <h3>Getting in without signing up</h3>
+      <p class="sub-lede">The only question at the start is your athletic club. “Sign in” became “Continue”, because it sounded like a login, and a “Continue without a club” option was added for people who just want to look around.</p>
+      <div class="compare compare-phone">
+        <Figure src="pace-ios/mid-onboarding.png" alt="Club picker wireframe with a sign-in button" tag="Wireframe" />
+        <Figure src="pace-ios/hi-onboarding.png" alt="High-fidelity club picker with search, a list of clubs, a Continue button and a Continue without a club link" tag="High fidelity" after />
+      </div>
+    </div>
+    <div class="sub-block">
+      <h3>States that close the flow</h3>
+      <p class="sub-lede">Every area has loading, an error with “Try again”, a schedule not yet published and searches or filters with no results, always with a way out.</p>
+      <Gallery cols={3} phone items={[
+        { src: 'pace-ios/hi-estado-carregando.png', alt: 'Home loading with gray placeholders for the cards', caption: 'Loading' },
+        { src: 'pace-ios/hi-estado-erro.png', alt: 'Home with a message saying games could not be loaded and a Try again button', caption: 'Error with a way out' },
+        { src: 'pace-ios/hi-estado-vazio.png', alt: 'Home with a message saying the schedule is not published yet', caption: 'Not published yet' },
+      ]} />
+    </div>
+  </section>
+
+  <section id="pace-acessibilidade" class="block">
+    <p class="label">Accessibility and writing</p>
+    <h2>With large text, the layout stacks instead of cutting off.</h2>
+    <div class="prose">
+      <p>I treated Dynamic Type as a layout criterion, not a final tweak. At the largest text size, the fixed Home header took up about 45% of the screen. The fix was to let the header scroll with the content and keep only the “My club” and “General” tabs pinned, which take about 10%. The podium becomes a list, period scores become a vertical table, and the bell and filter buttons stop growing, relying on the system’s large content viewer.</p>
+      <p>Long club names also needed a decision. The first proposal stacked the teams on the card; I turned it down because it broke the side-by-side reading of the matchup. The result: columns always, up to two lines with an ellipsis, and the full name read by VoiceOver.</p>
+    </div>
+    <div class="compare compare-phone">
+      <Figure src="pace-ios/hi-inicio.png" alt="Home at the default text size" tag="Default text" />
+      <Figure src="pace-ios/hi-ax-inicio-rolada.png" alt="Home at the largest accessibility text size, scrolled, with the tabs pinned at the top and the live card stacked" tag="Largest size, scrolled" after />
+    </div>
+    <div class="sub-block">
+      <h3>The product’s voice</h3>
+      <p class="sub-lede">I asked for a UX Writing review with one rule: information first, emotion second, and no promise of real time. About 640 strings were reviewed, and a glossary locked in the terms. The app is in Portuguese; the examples below are translated.</p>
+      <dl class="changes">
+        <Row label="Onboarding">“Sign in” → “Continue”</Row>
+        <Row label="Sections">“Live and next” → “Live and coming up”</Row>
+        <Row label="Bracket">“BYE” → “Advances directly”</Row>
+        <Row label="Event">“Event finished.” → “Final result.”</Row>
+        <Row label="Notification">“About to start!” → “Starting now”, naming the game and the club</Row>
+        <Row label="Terms">Consistent words for knockout, notifications and champion</Row>
+      </dl>
+    </div>
+  </section>
+
+  <section id="pace-ia" class="block">
+    <p class="label">Design Engineering with AI</p>
+    <h2>Claude implemented. Product decisions went through me.</h2>
+    <div class="prose">
+      <p>I built the prototype with Claude Code, in a process designed so that no product decision reached the code without approval. Each stage started with a brief I wrote, covering scope, what must not change, HIG criteria and the report format, and ended with “stop and wait for my approval”.</p>
+    </div>
+    <Summary plain>
+      <Row label="Three levels of autonomy">Adjustments that preserve the design intent could be implemented. States and feedback needed to close a flow too, as long as they were logged. New features and product decisions, only with my approval.</Row>
+      <Row label="Project memory">A file with the lab’s rules and a status log updated with every delivery, holding decisions, hypotheses and open questions. No session had to redo audits.</Row>
+      <Row label="Critique both ways">I asked Claude to assess my observations before changing anything. Of the eight I brought to one review, it agreed with some, counter-proposed others and recommended postponing the Fan Meter, which had no defined rules yet.</Row>
+      <Row label="Honest validation">Builds and real taps in the simulator for every block, calculated contrast and limitations always listed. When a blank screen after changing text size was logged as a SwiftUI limitation, I asked for an investigation; the issue was reproduced and fixed.</Row>
+    </Summary>
+    <div class="sub-block">
+      <h3>Who decided what</h3>
+      <dl class="changes">
+        <Row label="Mine">Process and approvals, club-color stripes, white for your club, filter pills, scrolling header, a bracket icon for “Round”.</Row>
+        <Row label="Claude’s">Approved by me: one match screen, tabs by format, “All” by default, schedule in the stack, the writing glossary.</Row>
+        <Row label="Turned down">Stacking teams with long names, and unlimited lists on profiles, which became summaries with “See all”.</Row>
+        <Row label="The team’s">Restructuring the Design System with Atomic Design, by Gustavo Souto, and the product documentation.</Row>
+      </dl>
+    </div>
+  </section>
+
+  <section id="pace-resultado" class="block">
+    <p class="label">Where it stands</p>
+    <h2>A complete prototype, still without real users.</h2>
+    <Summary plain>
+      <Row label="Built">The 17 wireframe screens in high fidelity with their states, multiple-choice filters, a contextual schedule, read and unread notifications, optional onboarding and color per club. The Design System has 42 components.</Row>
+      <Row label="Limitations">Simulated data with no server integration, and choices kept only while the app is open. No user testing: validation was mine, in the simulator. VoiceOver and Reduce Motion were not operated during testing.</Row>
+      <Row label="Next steps">The Fan Meter, postponed until it has rules; club photos replacing the generic crest; event color selection with a contrast check in the management system.</Row>
+      <Row label="Team">Beatriz Medina, Enzo Henrique, Filipi Romão, Gustavo Souto and Kenay Nobre, at the Apple Developer Academy.</Row>
+    </Summary>
+  </section>
+
+  <section id="artefatos" class="block">
+    <p class="label">Artifacts</p>
+    <h2>More screens and the research behind them.</h2>
+    <details class="artifacts" id="pace-telas">
+      <summary>More prototype screens</summary>
+      <Gallery cols={4} phone items={[
+        { src: 'pace-ios/hi-partida-aovivo.png', alt: 'Live match with score, details with icons and a shortcut to the bracket and standings', caption: 'Live match' },
+        { src: 'pace-ios/hi-cronograma.png', alt: 'Day schedule with a timeline and live games', caption: 'Schedule' },
+        { src: 'pace-ios/hi-ranking.png', alt: 'Ranking with podium and marked ties', caption: 'Ranking' },
+        { src: 'pace-ios/hi-notificacoes.png', alt: 'Notifications with a permission prompt and unread items', caption: 'Notifications' },
+        { src: 'pace-ios/hi-modalidades.png', alt: 'List of sports with My club and General tabs', caption: 'Sports' },
+        { src: 'pace-ios/hi-elim-classificacao.png', alt: 'Knockout standings by round reached', caption: 'Standings by round' },
+        { src: 'pace-ios/hi-prova.png', alt: 'Results of a swimming event with ties', caption: 'Timed event' },
+        { src: 'pace-ios/hi-filtro-modalidades.png', alt: 'List of sports inside the filter sheet', caption: 'Choosing a sport' },
+      ]} />
+    </details>
+    <details class="artifacts" id="pace-wireframes">
+      <summary>Mid-fidelity wireframes</summary>
+      <p>The 17 Figma screens that served as the starting point.</p>
+      <Gallery cols={3} phone items={[
+        { src: 'pace-ios/mid-partida.png', alt: 'Live match wireframe', caption: 'Live match' },
+        { src: 'pace-ios/mid-inicio.png', alt: 'Home wireframe', caption: 'Home' },
+        { src: 'pace-ios/mid-chave.png', alt: 'Bracket wireframe', caption: 'Bracket' },
+      ]} />
+    </details>
+    <details class="artifacts" id="pace-pesquisa">
+      <summary>Thiago’s empathy map</summary>
+      <Figure src="pace-ios/empatia-thiago.png" alt="Empathy map for Thiago, a college fan and athlete" caption="Empathy map made by the team (in Portuguese)." />
+    </details>
+  </section>
+</Case>

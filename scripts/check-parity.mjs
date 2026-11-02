@@ -40,7 +40,7 @@ for (const f of all) {
     if (href.startsWith('/_astro') || ['favicon.svg', 'sitemap-index.xml'].includes(file)) continue;
     if (!existsSync(join(dist, file))) bad(`${f}: link ${href}`);
   }
-  for (const [, page, hash] of s.matchAll(/href="\/([a-z]+\.html)#([^"]+)"/g)) if (!ids(html(page)).has(hash)) bad(`${f}: âncora ${page}#${hash}`);
+  for (const [, page, hash] of s.matchAll(/href="\/([a-z-]+\.html)#([^"]+)"/g)) if (!ids(html(page)).has(hash)) bad(`${f}: âncora ${page}#${hash}`);
   for (const [, hash] of s.matchAll(/href="#([^"]+)"/g)) if (!ids(s).has(hash)) bad(`${f}: âncora local #${hash}`);
   const imgTags = [...s.matchAll(/<img\b[^>]*>/g)].map((m) => m[0]);
   for (const t of imgTags) if (t.includes('src="/_astro') && !/alt="[^"]+"/.test(t)) bad(`${f}: imagem sem alt`);
@@ -48,7 +48,9 @@ for (const f of all) {
   if ((s.match(/<h1\b/g) || []).length !== 1) bad(`${f}: deve ter exatamente um h1`);
 }
 // 4. Versão em inglês: mesmas páginas e mesmos ids da versão em português
-for (const p of pages) {
+const newPages = ['pace-torcedor.html', 'pace-administrativo.html'];
+for (const p of newPages) if (!existsSync(join(dist, p))) bad(`página ausente: ${p}`);
+for (const p of [...pages, ...newPages]) {
   const en = join('en', p);
   if (!existsSync(join(dist, en))) { bad(`página EN ausente: ${en}`); continue; }
   const pt = ids(html(p)), e = ids(html(en));
@@ -65,7 +67,7 @@ for (const f of enAll) {
     const file = href === '/' ? 'index.html' : href === '/en/' ? 'en/index.html' : href.slice(1);
     if (!existsSync(join(dist, file))) bad(`en/${f}: link ${href}`);
   }
-  for (const [, page, hash] of s.matchAll(/href="\/en\/([a-z]+\.html)#([^"]+)"/g)) if (!ids(html(join('en', page))).has(hash)) bad(`en/${f}: âncora ${page}#${hash}`);
+  for (const [, page, hash] of s.matchAll(/href="\/en\/([a-z-]+\.html)#([^"]+)"/g)) if (!ids(html(join('en', page))).has(hash)) bad(`en/${f}: âncora ${page}#${hash}`);
   if ((s.match(/<h1\b/g) || []).length !== 1) bad(`en/${f}: deve ter exatamente um h1`);
 }
 
